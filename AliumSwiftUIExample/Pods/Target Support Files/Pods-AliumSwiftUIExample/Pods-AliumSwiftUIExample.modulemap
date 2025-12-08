@@ -1,0 +1,6 @@
+framework module Pods_AliumSwiftUIExample {
+  umbrella header "Pods-AliumSwiftUIExample-umbrella.h"
+
+  export *
+  module * { export * }
+}

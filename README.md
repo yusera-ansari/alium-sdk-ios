@@ -1,1 +1,1 @@
-# alium-sdk-ios
+# alium-sdk

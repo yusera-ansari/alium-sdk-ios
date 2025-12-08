@@ -1,0 +1,6 @@
+framework module Pods_AliumUIKitExample_AliumUIKitExampleUITests {
+  umbrella header "Pods-AliumUIKitExample-AliumUIKitExampleUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

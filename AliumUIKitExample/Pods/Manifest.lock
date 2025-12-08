@@ -1,0 +1,16 @@
+PODS:
+  - alium_sdk (0.0.1)
+
+DEPENDENCIES:
+  - alium_sdk (from `../`)
+
+EXTERNAL SOURCES:
+  alium_sdk:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  alium_sdk: bc5e01d7d21d2cfa51259e7f8fa67f5f6e74395f
+
+PODFILE CHECKSUM: 9feff3d4c57002baddf81df1a961a449a6af5525
+
+COCOAPODS: 1.16.2

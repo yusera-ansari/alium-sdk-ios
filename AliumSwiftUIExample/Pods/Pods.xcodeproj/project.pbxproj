@@ -1,0 +1,1000 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		035E3D7C90F5FD3D7C470D8AFD59FEBC /* Pods-AliumSwiftUIExample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 63943C1D51DAA01C1D86F9BB3607F1E6 /* Pods-AliumSwiftUIExample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		10A33770CFACDB40E37803472112CC96 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
+		256C1E8A365BB1C9288572803BCDEFB4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
+		4A3D21736428174BC0995AD1D674132D /* Pods-AliumSwiftUIExampleTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DB4D3C7DDFE28DEBDD76198C9ACD2944 /* Pods-AliumSwiftUIExampleTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65FDB47E94CBD04B8699E7FD3EF84465 /* Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 189B3AD7D4574AEB74A34B2BE5533319 /* Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests-dummy.m */; };
+		6ED3CAABAB2BD023A16FC69A114EAD2A /* alium_sdk-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CBB620F118E3473AC20046B289741F7 /* alium_sdk-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		935745739D26D1710E9DAE3B6318EEB7 /* Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9351DF71A45585C28BA711D91250B9E2 /* Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9AFA6C8990D988ACE2DB3259FE9726E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
+		A60E1A93BB04EAA929795D1E12F36504 /* Alium.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E5A367B40955C2B5DE522A78FEC670 /* Alium.swift */; };
+		A72AB68BA18A0DAF870A3A83C7AA987C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
+		B7FA3D1B342D9FB067D9B0F4332E86A8 /* Pods-AliumSwiftUIExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B279383D48D458BC7FEAA4D34BBB84D /* Pods-AliumSwiftUIExample-dummy.m */; };
+		BC9F6D6360787FCA8DA4B549F27D060C /* alium_sdk-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 64589CDAF5C5A55603500CB255767EDC /* alium_sdk-dummy.m */; };
+		FE008A20260769DE7F6117CC9B4BBFC7 /* Pods-AliumSwiftUIExampleTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F07785ED73ABC11C8B0CD5145CA548E /* Pods-AliumSwiftUIExampleTests-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		08DDF293D6647BC0F0DB1D170403EA32 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C6035E4D3A6927D1439D89B77222C52;
+			remoteInfo = alium_sdk;
+		};
+		2D7A4EAAA418CA93F7C27BCE34534BD6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C6035E4D3A6927D1439D89B77222C52;
+			remoteInfo = alium_sdk;
+		};
+		753DF3EF6D52A8E8B82CC169842122C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D015D2885E218EEBA7EBACE0B8E8A8F5;
+			remoteInfo = "Pods-AliumSwiftUIExample";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0B279383D48D458BC7FEAA4D34BBB84D /* Pods-AliumSwiftUIExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AliumSwiftUIExample-dummy.m"; sourceTree = "<group>"; };
+		0F1CA8FC382CC23F794F9077E2A4288D /* Pods-AliumSwiftUIExample */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-AliumSwiftUIExample"; path = Pods_AliumSwiftUIExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		189B3AD7D4574AEB74A34B2BE5533319 /* Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests-dummy.m"; sourceTree = "<group>"; };
+		191AC328DD1846D86CC1A35D3724F74B /* alium_sdk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = alium_sdk.debug.xcconfig; sourceTree = "<group>"; };
+		1AA82AE096450ECCC69AD8386DBD62F4 /* Pods-AliumSwiftUIExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AliumSwiftUIExampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		260A61F6A66D72BDFF8D28B77B98D160 /* alium_sdk.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = alium_sdk.modulemap; sourceTree = "<group>"; };
+		30F1DD141A124315A998ED70042B36BA /* Pods-AliumSwiftUIExampleTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AliumSwiftUIExampleTests-Info.plist"; sourceTree = "<group>"; };
+		319AF4A30F19503B95ADF73A26DE81D9 /* Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		4CBB620F118E3473AC20046B289741F7 /* alium_sdk-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "alium_sdk-umbrella.h"; sourceTree = "<group>"; };
+		543306ECA11DEBACAF28157095A16A78 /* Pods-AliumSwiftUIExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AliumSwiftUIExample-acknowledgements.plist"; sourceTree = "<group>"; };
+		5AB06B130F672C9386783E64EA9A8983 /* alium_sdk-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "alium_sdk-prefix.pch"; sourceTree = "<group>"; };
+		62DE641945C675E2EF77BA80729F71B2 /* Pods-AliumSwiftUIExampleTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AliumSwiftUIExampleTests.modulemap"; sourceTree = "<group>"; };
+		63943C1D51DAA01C1D86F9BB3607F1E6 /* Pods-AliumSwiftUIExample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AliumSwiftUIExample-umbrella.h"; sourceTree = "<group>"; };
+		64589CDAF5C5A55603500CB255767EDC /* alium_sdk-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "alium_sdk-dummy.m"; sourceTree = "<group>"; };
+		685F6056BF93E944E0650B9AB136255A /* Pods-AliumSwiftUIExampleTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AliumSwiftUIExampleTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		694AAC436427B5BA9F5384D3000B3F6B /* Pods-AliumSwiftUIExample-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AliumSwiftUIExample-Info.plist"; sourceTree = "<group>"; };
+		6EEF40C32A0430F28F9C3E0D452B9C8D /* Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests"; path = Pods_AliumSwiftUIExample_AliumSwiftUIExampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		77DBA0C79638C026565EAED8F0904918 /* Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		791163C30ED83364B61A74128C95E05D /* alium_sdk.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = alium_sdk.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		81B1058456908823A0ECB9848EE367D7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		8B09ACA619B92F837C9530477A87F30B /* Pods-AliumSwiftUIExample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AliumSwiftUIExample.modulemap"; sourceTree = "<group>"; };
+		8F07785ED73ABC11C8B0CD5145CA548E /* Pods-AliumSwiftUIExampleTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AliumSwiftUIExampleTests-dummy.m"; sourceTree = "<group>"; };
+		8FBB57678F0A4F6E64AB108DC09A1EDE /* Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		8FDCF31363F44B6DC28D3FD39C424820 /* alium_sdk */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = alium_sdk; path = alium_sdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		902DA45B8C4AF5EFE180DDC9EAEED496 /* Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests.modulemap"; sourceTree = "<group>"; };
+		9351DF71A45585C28BA711D91250B9E2 /* Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests-umbrella.h"; sourceTree = "<group>"; };
+		936CE50B1AB01596F7D516102FC7CB85 /* Pods-AliumSwiftUIExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AliumSwiftUIExample-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9EA446F9B8EF13C0AC58B337FF767841 /* Pods-AliumSwiftUIExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AliumSwiftUIExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A0E2F27FF3AF9C772465124E5A128CCA /* alium_sdk-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "alium_sdk-Info.plist"; sourceTree = "<group>"; };
+		AB76A2345E515CAB06DDB1341B9D5AC4 /* alium_sdk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = alium_sdk.release.xcconfig; sourceTree = "<group>"; };
+		C0BFF63E0DADBB8C3C5469C11D8F697B /* Pods-AliumSwiftUIExampleTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-AliumSwiftUIExampleTests"; path = Pods_AliumSwiftUIExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1CE1658F310BE877040DFD47F6AA7AD /* Pods-AliumSwiftUIExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AliumSwiftUIExample.release.xcconfig"; sourceTree = "<group>"; };
+		D108C5038044E8D1232D1E71C853DB8A /* Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests-frameworks.sh"; sourceTree = "<group>"; };
+		D578C39F9E9D796C045E48177A14B2D0 /* Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DB4D3C7DDFE28DEBDD76198C9ACD2944 /* Pods-AliumSwiftUIExampleTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AliumSwiftUIExampleTests-umbrella.h"; sourceTree = "<group>"; };
+		E9E5A367B40955C2B5DE522A78FEC670 /* Alium.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alium.swift; path = alium_sdk/Sources/classes/Alium.swift; sourceTree = "<group>"; };
+		F0520BE86EAAB6AEA642E553018FBA82 /* Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests-Info.plist"; sourceTree = "<group>"; };
+		F580F17A80834A51A1B07C78B14FE0D9 /* Pods-AliumSwiftUIExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AliumSwiftUIExample-frameworks.sh"; sourceTree = "<group>"; };
+		FB9962DC04A19237B8F564627245ED9D /* Pods-AliumSwiftUIExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AliumSwiftUIExample.debug.xcconfig"; sourceTree = "<group>"; };
+		FE4D80C0870BB3CDC46C98B5B94C408D /* Pods-AliumSwiftUIExampleTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AliumSwiftUIExampleTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		324E5B4BA3CCFA98ABF3340FAAFB256B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10A33770CFACDB40E37803472112CC96 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4AEED3BF1FC4D997AF077D8615B1361D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AFA6C8990D988ACE2DB3259FE9726E5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B84A12AD01847FA2D655E99D55000C5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				256C1E8A365BB1C9288572803BCDEFB4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBDA9F34D37E34A65BB642A26202C201 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A72AB68BA18A0DAF870A3A83C7AA987C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		26E03D8F2EE43D5E0A76D41631F4BE0C /* Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				902DA45B8C4AF5EFE180DDC9EAEED496 /* Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests.modulemap */,
+				319AF4A30F19503B95ADF73A26DE81D9 /* Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests-acknowledgements.markdown */,
+				8FBB57678F0A4F6E64AB108DC09A1EDE /* Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests-acknowledgements.plist */,
+				189B3AD7D4574AEB74A34B2BE5533319 /* Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests-dummy.m */,
+				D108C5038044E8D1232D1E71C853DB8A /* Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests-frameworks.sh */,
+				F0520BE86EAAB6AEA642E553018FBA82 /* Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests-Info.plist */,
+				9351DF71A45585C28BA711D91250B9E2 /* Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests-umbrella.h */,
+				77DBA0C79638C026565EAED8F0904918 /* Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests.debug.xcconfig */,
+				D578C39F9E9D796C045E48177A14B2D0 /* Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests.release.xcconfig */,
+			);
+			name = "Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests";
+			path = "Target Support Files/Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests";
+			sourceTree = "<group>";
+		};
+		2FD2ADA5DA345C21CB4BE5BAF15D8F95 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8FDCF31363F44B6DC28D3FD39C424820 /* alium_sdk */,
+				0F1CA8FC382CC23F794F9077E2A4288D /* Pods-AliumSwiftUIExample */,
+				6EEF40C32A0430F28F9C3E0D452B9C8D /* Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests */,
+				C0BFF63E0DADBB8C3C5469C11D8F697B /* Pods-AliumSwiftUIExampleTests */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3720E0E28DB9D1827F61B09D9420990B /* alium_sdk */ = {
+			isa = PBXGroup;
+			children = (
+				E9E5A367B40955C2B5DE522A78FEC670 /* Alium.swift */,
+				B84CB291C98A84B01B93277A37D9D41F /* Pod */,
+				D8D9FB6F32B996B9D1E456C2FCE75273 /* Support Files */,
+			);
+			name = alium_sdk;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		892904D2B8D95D02CD0BEA05EA86EB32 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3720E0E28DB9D1827F61B09D9420990B /* alium_sdk */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		B84CB291C98A84B01B93277A37D9D41F /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				791163C30ED83364B61A74128C95E05D /* alium_sdk.podspec */,
+				81B1058456908823A0ECB9848EE367D7 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		CEBF9E642E6DEF02C4323F86D9E2FAE4 /* Pods-AliumSwiftUIExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				62DE641945C675E2EF77BA80729F71B2 /* Pods-AliumSwiftUIExampleTests.modulemap */,
+				FE4D80C0870BB3CDC46C98B5B94C408D /* Pods-AliumSwiftUIExampleTests-acknowledgements.markdown */,
+				685F6056BF93E944E0650B9AB136255A /* Pods-AliumSwiftUIExampleTests-acknowledgements.plist */,
+				8F07785ED73ABC11C8B0CD5145CA548E /* Pods-AliumSwiftUIExampleTests-dummy.m */,
+				30F1DD141A124315A998ED70042B36BA /* Pods-AliumSwiftUIExampleTests-Info.plist */,
+				DB4D3C7DDFE28DEBDD76198C9ACD2944 /* Pods-AliumSwiftUIExampleTests-umbrella.h */,
+				9EA446F9B8EF13C0AC58B337FF767841 /* Pods-AliumSwiftUIExampleTests.debug.xcconfig */,
+				1AA82AE096450ECCC69AD8386DBD62F4 /* Pods-AliumSwiftUIExampleTests.release.xcconfig */,
+			);
+			name = "Pods-AliumSwiftUIExampleTests";
+			path = "Target Support Files/Pods-AliumSwiftUIExampleTests";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				892904D2B8D95D02CD0BEA05EA86EB32 /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				2FD2ADA5DA345C21CB4BE5BAF15D8F95 /* Products */,
+				F6E8DF5542427C76309A90A2155C21EA /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E4801F62A6B08CD9B5410329F1A18FDE /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D8D9FB6F32B996B9D1E456C2FCE75273 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				260A61F6A66D72BDFF8D28B77B98D160 /* alium_sdk.modulemap */,
+				64589CDAF5C5A55603500CB255767EDC /* alium_sdk-dummy.m */,
+				A0E2F27FF3AF9C772465124E5A128CCA /* alium_sdk-Info.plist */,
+				5AB06B130F672C9386783E64EA9A8983 /* alium_sdk-prefix.pch */,
+				4CBB620F118E3473AC20046B289741F7 /* alium_sdk-umbrella.h */,
+				191AC328DD1846D86CC1A35D3724F74B /* alium_sdk.debug.xcconfig */,
+				AB76A2345E515CAB06DDB1341B9D5AC4 /* alium_sdk.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "AliumSwiftUIExample/Pods/Target Support Files/alium_sdk";
+			sourceTree = "<group>";
+		};
+		E4801F62A6B08CD9B5410329F1A18FDE /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		E895FEF55A7F67DBC4C5E42D08A438EE /* Pods-AliumSwiftUIExample */ = {
+			isa = PBXGroup;
+			children = (
+				8B09ACA619B92F837C9530477A87F30B /* Pods-AliumSwiftUIExample.modulemap */,
+				936CE50B1AB01596F7D516102FC7CB85 /* Pods-AliumSwiftUIExample-acknowledgements.markdown */,
+				543306ECA11DEBACAF28157095A16A78 /* Pods-AliumSwiftUIExample-acknowledgements.plist */,
+				0B279383D48D458BC7FEAA4D34BBB84D /* Pods-AliumSwiftUIExample-dummy.m */,
+				F580F17A80834A51A1B07C78B14FE0D9 /* Pods-AliumSwiftUIExample-frameworks.sh */,
+				694AAC436427B5BA9F5384D3000B3F6B /* Pods-AliumSwiftUIExample-Info.plist */,
+				63943C1D51DAA01C1D86F9BB3607F1E6 /* Pods-AliumSwiftUIExample-umbrella.h */,
+				FB9962DC04A19237B8F564627245ED9D /* Pods-AliumSwiftUIExample.debug.xcconfig */,
+				C1CE1658F310BE877040DFD47F6AA7AD /* Pods-AliumSwiftUIExample.release.xcconfig */,
+			);
+			name = "Pods-AliumSwiftUIExample";
+			path = "Target Support Files/Pods-AliumSwiftUIExample";
+			sourceTree = "<group>";
+		};
+		F6E8DF5542427C76309A90A2155C21EA /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E895FEF55A7F67DBC4C5E42D08A438EE /* Pods-AliumSwiftUIExample */,
+				26E03D8F2EE43D5E0A76D41631F4BE0C /* Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests */,
+				CEBF9E642E6DEF02C4323F86D9E2FAE4 /* Pods-AliumSwiftUIExampleTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		68A57BADB32F29C5D46983ECB87924E5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A3D21736428174BC0995AD1D674132D /* Pods-AliumSwiftUIExampleTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC37E565DABFCC4A5BB87B9571ED358E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				035E3D7C90F5FD3D7C470D8AFD59FEBC /* Pods-AliumSwiftUIExample-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF2DCD4C6782F2B2CB8EC09ECE7C40AC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				935745739D26D1710E9DAE3B6318EEB7 /* Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFF1C2D6C36FD18F3615A9EC8EC72BAA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6ED3CAABAB2BD023A16FC69A114EAD2A /* alium_sdk-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		418F14976A37C394DC14BB47101E88C4 /* Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5375DF0AB0DC26805C60C153C6738599 /* Build configuration list for PBXNativeTarget "Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests" */;
+			buildPhases = (
+				DF2DCD4C6782F2B2CB8EC09ECE7C40AC /* Headers */,
+				2C5443CAF3166594D5642BAB50ED673D /* Sources */,
+				DBDA9F34D37E34A65BB642A26202C201 /* Frameworks */,
+				4F8D5A5E15F78623A42CA5E2915BE8F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A35350B1DC6F82366E1CE791ABF73E59 /* PBXTargetDependency */,
+			);
+			name = "Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests";
+			productName = Pods_AliumSwiftUIExample_AliumSwiftUIExampleUITests;
+			productReference = 6EEF40C32A0430F28F9C3E0D452B9C8D /* Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests */;
+			productType = "com.apple.product-type.framework";
+		};
+		5C6035E4D3A6927D1439D89B77222C52 /* alium_sdk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F59295B88494D69E9D142A7BAB74B79 /* Build configuration list for PBXNativeTarget "alium_sdk" */;
+			buildPhases = (
+				EFF1C2D6C36FD18F3615A9EC8EC72BAA /* Headers */,
+				07968E2DFF3D8702F3077D176EC9A110 /* Sources */,
+				4AEED3BF1FC4D997AF077D8615B1361D /* Frameworks */,
+				4DECF84B4572C3DE22B1DA97E8D943E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = alium_sdk;
+			productName = alium_sdk;
+			productReference = 8FDCF31363F44B6DC28D3FD39C424820 /* alium_sdk */;
+			productType = "com.apple.product-type.framework";
+		};
+		8DF8F6F2440B40F9CD071F8FFF7087A0 /* Pods-AliumSwiftUIExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28495C2CA073300AD01144263F1C5735 /* Build configuration list for PBXNativeTarget "Pods-AliumSwiftUIExampleTests" */;
+			buildPhases = (
+				68A57BADB32F29C5D46983ECB87924E5 /* Headers */,
+				4FBD88B902D45ED3FB0914643F01B450 /* Sources */,
+				324E5B4BA3CCFA98ABF3340FAAFB256B /* Frameworks */,
+				1ED1BB31F79DF1A16F11710992F834B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B91F5ADC35F822BF03A133B149D1DB88 /* PBXTargetDependency */,
+			);
+			name = "Pods-AliumSwiftUIExampleTests";
+			productName = Pods_AliumSwiftUIExampleTests;
+			productReference = C0BFF63E0DADBB8C3C5469C11D8F697B /* Pods-AliumSwiftUIExampleTests */;
+			productType = "com.apple.product-type.framework";
+		};
+		D015D2885E218EEBA7EBACE0B8E8A8F5 /* Pods-AliumSwiftUIExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76C784EA4E643D3F1524DB4A30555EF5 /* Build configuration list for PBXNativeTarget "Pods-AliumSwiftUIExample" */;
+			buildPhases = (
+				AC37E565DABFCC4A5BB87B9571ED358E /* Headers */,
+				0A5E73B1D19A397AD34579B333236BBF /* Sources */,
+				B84A12AD01847FA2D655E99D55000C5F /* Frameworks */,
+				1552C85579C4EE7E8DBECE1611A7B2F2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D6E01D77E003E28A253927EA9CEE490F /* PBXTargetDependency */,
+			);
+			name = "Pods-AliumSwiftUIExample";
+			productName = Pods_AliumSwiftUIExample;
+			productReference = 0F1CA8FC382CC23F794F9077E2A4288D /* Pods-AliumSwiftUIExample */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 16.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			minimizedProjectReferenceProxies = 0;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 2FD2ADA5DA345C21CB4BE5BAF15D8F95 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5C6035E4D3A6927D1439D89B77222C52 /* alium_sdk */,
+				D015D2885E218EEBA7EBACE0B8E8A8F5 /* Pods-AliumSwiftUIExample */,
+				418F14976A37C394DC14BB47101E88C4 /* Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests */,
+				8DF8F6F2440B40F9CD071F8FFF7087A0 /* Pods-AliumSwiftUIExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1552C85579C4EE7E8DBECE1611A7B2F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1ED1BB31F79DF1A16F11710992F834B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DECF84B4572C3DE22B1DA97E8D943E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F8D5A5E15F78623A42CA5E2915BE8F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		07968E2DFF3D8702F3077D176EC9A110 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A60E1A93BB04EAA929795D1E12F36504 /* Alium.swift in Sources */,
+				BC9F6D6360787FCA8DA4B549F27D060C /* alium_sdk-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A5E73B1D19A397AD34579B333236BBF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7FA3D1B342D9FB067D9B0F4332E86A8 /* Pods-AliumSwiftUIExample-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C5443CAF3166594D5642BAB50ED673D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65FDB47E94CBD04B8699E7FD3EF84465 /* Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FBD88B902D45ED3FB0914643F01B450 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE008A20260769DE7F6117CC9B4BBFC7 /* Pods-AliumSwiftUIExampleTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A35350B1DC6F82366E1CE791ABF73E59 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = alium_sdk;
+			target = 5C6035E4D3A6927D1439D89B77222C52 /* alium_sdk */;
+			targetProxy = 08DDF293D6647BC0F0DB1D170403EA32 /* PBXContainerItemProxy */;
+		};
+		B91F5ADC35F822BF03A133B149D1DB88 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-AliumSwiftUIExample";
+			target = D015D2885E218EEBA7EBACE0B8E8A8F5 /* Pods-AliumSwiftUIExample */;
+			targetProxy = 753DF3EF6D52A8E8B82CC169842122C6 /* PBXContainerItemProxy */;
+		};
+		D6E01D77E003E28A253927EA9CEE490F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = alium_sdk;
+			target = 5C6035E4D3A6927D1439D89B77222C52 /* alium_sdk */;
+			targetProxy = 2D7A4EAAA418CA93F7C27BCE34534BD6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4722E5C89F3FDF43844535B3EFFC376B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 191AC328DD1846D86CC1A35D3724F74B /* alium_sdk.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/alium_sdk/alium_sdk-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/alium_sdk/alium_sdk-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/alium_sdk/alium_sdk.modulemap";
+				PRODUCT_MODULE_NAME = alium_sdk;
+				PRODUCT_NAME = alium_sdk;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4836BC8B2B8D9045B37FC82A7858A52D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AA82AE096450ECCC69AD8386DBD62F4 /* Pods-AliumSwiftUIExampleTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-AliumSwiftUIExampleTests/Pods-AliumSwiftUIExampleTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AliumSwiftUIExampleTests/Pods-AliumSwiftUIExampleTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		793529C6EDA278AAFB43276844AAB07D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D578C39F9E9D796C045E48177A14B2D0 /* Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests/Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests/Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A32DCB4F760B44EB48B1E63CBEBD67D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77DBA0C79638C026565EAED8F0904918 /* Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests/Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests/Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A3CA710B05DD0D38FF0C61760F3B99FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		C11BBAE34B90E428A5B2DD18C3B87763 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1CE1658F310BE877040DFD47F6AA7AD /* Pods-AliumSwiftUIExample.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-AliumSwiftUIExample/Pods-AliumSwiftUIExample-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AliumSwiftUIExample/Pods-AliumSwiftUIExample.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D14401A53B103F5262DC0C8C0E08E8FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB76A2345E515CAB06DDB1341B9D5AC4 /* alium_sdk.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/alium_sdk/alium_sdk-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/alium_sdk/alium_sdk-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/alium_sdk/alium_sdk.modulemap";
+				PRODUCT_MODULE_NAME = alium_sdk;
+				PRODUCT_NAME = alium_sdk;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D9E233236522A66A396758A0BDEA4D31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9EA446F9B8EF13C0AC58B337FF767841 /* Pods-AliumSwiftUIExampleTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-AliumSwiftUIExampleTests/Pods-AliumSwiftUIExampleTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AliumSwiftUIExampleTests/Pods-AliumSwiftUIExampleTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E2364721D6682F8B9E80045232309A09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		E85425F2D8DCD91EBCAE07523BFB2C3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB9962DC04A19237B8F564627245ED9D /* Pods-AliumSwiftUIExample.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-AliumSwiftUIExample/Pods-AliumSwiftUIExample-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AliumSwiftUIExample/Pods-AliumSwiftUIExample.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		28495C2CA073300AD01144263F1C5735 /* Build configuration list for PBXNativeTarget "Pods-AliumSwiftUIExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9E233236522A66A396758A0BDEA4D31 /* Debug */,
+				4836BC8B2B8D9045B37FC82A7858A52D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F59295B88494D69E9D142A7BAB74B79 /* Build configuration list for PBXNativeTarget "alium_sdk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4722E5C89F3FDF43844535B3EFFC376B /* Debug */,
+				D14401A53B103F5262DC0C8C0E08E8FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3CA710B05DD0D38FF0C61760F3B99FB /* Debug */,
+				E2364721D6682F8B9E80045232309A09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5375DF0AB0DC26805C60C153C6738599 /* Build configuration list for PBXNativeTarget "Pods-AliumSwiftUIExample-AliumSwiftUIExampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A32DCB4F760B44EB48B1E63CBEBD67D8 /* Debug */,
+				793529C6EDA278AAFB43276844AAB07D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		76C784EA4E643D3F1524DB4A30555EF5 /* Build configuration list for PBXNativeTarget "Pods-AliumSwiftUIExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E85425F2D8DCD91EBCAE07523BFB2C3B /* Debug */,
+				C11BBAE34B90E428A5B2DD18C3B87763 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

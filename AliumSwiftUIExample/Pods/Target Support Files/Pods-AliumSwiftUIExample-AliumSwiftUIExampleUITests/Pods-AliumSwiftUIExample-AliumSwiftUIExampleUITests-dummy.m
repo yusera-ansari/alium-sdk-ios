@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_AliumSwiftUIExample_AliumSwiftUIExampleUITests : NSObject
+@end
+@implementation PodsDummy_Pods_AliumSwiftUIExample_AliumSwiftUIExampleUITests
+@end
