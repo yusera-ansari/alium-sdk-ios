@@ -5,29 +5,33 @@ import Foundation
 @MainActor
 public final class Alium{
     public static let shared = Alium()
-    private static var configUrl:String?
-    private static var surveyConfig:SurveyConfig?=nil;
+    private var configUrl:String?
+    private  var surveyConfig:SurveyConfig?=nil;
+    private var requestQueue:[AliumRequest] = [];
+    private var isConfigFetching = false
     public static func testAlium(){
         print("ALium is running!");
     }
     
     public static func config(key:String){
-        guard configUrl == nil else {
-            NSLog("config url is already set to: \(configUrl)")
+        guard shared.configUrl == nil else {
+            NSLog("config url is already set to: \(shared.configUrl)")
             return;
         }
-        configUrl = key;
+        shared.configUrl = key;
         shared.fetchConfigJson()
+     }
+    
+    public static func trigger(on screen:String, parameters:SurveyParameters){
+        guard let configUrl = shared.configUrl else{return}
+        shared.requestQueue.append(AliumRequest(type: .trigger( parameters: parameters)))
         
     }
-    
-   
     func fetchConfigJson() {
-        print("fetch config")
-        guard let configUrl = Alium.configUrl,let url = URL( string:configUrl)  else{
-            print ("failed....")
-            return;
-        }
+        guard let urlStr = configUrl, let url = URL(string: urlStr) else { return }
+
+        self.isConfigFetching = true
+               print("Fetching config…")
         
          
         var session = URLSession.shared.dataTask(with: URLRequest(url: url))
@@ -35,18 +39,32 @@ public final class Alium{
             
             if err != nil{
                 print("\(err?.localizedDescription)")
+                DispatchQueue.main.async {
+                    self.isConfigFetching = false
+                }
                 return;
             }
             guard let data,  let response = response as? HTTPURLResponse, (200...299).contains(response.statusCode) else{
-                print(response, data)
+                print("Invalid response")
+                DispatchQueue.main.async {
+                    self.isConfigFetching = false
+                }
                 return;
             }
             
             do{
                 let surveyData = try JSONDecoder().decode(SurveyConfig.self, from: data);
                 print(surveyData);
+                DispatchQueue.main.async {
+                                   self.surveyConfig = surveyData
+                                   self.isConfigFetching = false
+                                   
+                }
             }catch{
                 print(error)
+                DispatchQueue.main.async {
+                    self.isConfigFetching = false
+                }
             }
                         
         }
