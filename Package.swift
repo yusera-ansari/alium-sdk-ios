@@ -10,6 +10,7 @@ let package = Package(
         .library(
             name: "alium_sdk",
             targets: ["alium_sdk"]),
+
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.

@@ -7,99 +7,107 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		030435FB3F66299E87A0E4C0A5EE4D60 /* SurveyConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8235E52E597A51FE328A6A8181137A /* SurveyConfig.swift */; };
 		073DD47DAA8861C40991F96A1E6905DB /* Pods-AliumUIKitExample-AliumUIKitExampleUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DD425D08F40E43062E805B9C90A463EE /* Pods-AliumUIKitExample-AliumUIKitExampleUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07C61222C3BEBE385658F5CBBE50E8BF /* CustomSurveyDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE21866515FA3F350C3D041479FE38E /* CustomSurveyDetails.swift */; };
+		0C21D1512F233E9DDA122AAE6F66E3D3 /* ThemeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8ADEF2E280E47FCBB7C57CB6D024908 /* ThemeColors.swift */; };
 		29953B87BEEDCCB5F470ACA0C6A7481C /* Pods-AliumUIKitExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA1E455B13F8E98BCA2AB7C4156982B /* Pods-AliumUIKitExample-dummy.m */; };
+		37474880706FECCF1E948F2198B26F46 /* alium_sdk-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D0285927B373895F86F07F1B6ECFB2EA /* alium_sdk-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5590695EE1284F16E9450283C00E2540 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
+		597813E027F17C1A899E6F7C848F3DC9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
 		5ECB5476F2EF02F81442BEFC40D284F4 /* Pods-AliumUIKitExample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D81C0255A9C957636A4A3CFEFFF6705 /* Pods-AliumUIKitExample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		66F3C9B2C405D0A46327EFA807B81119 /* Pods-AliumUIKitExample-AliumUIKitExampleUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A29C07F04591515836AD976AEB793FA8 /* Pods-AliumUIKitExample-AliumUIKitExampleUITests-dummy.m */; };
-		6ED3CAABAB2BD023A16FC69A114EAD2A /* alium_sdk-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 67F23C0A44F4D60B32FE27B5D9694BF1 /* alium_sdk-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		68A8F43D3FDBCB2B03BC3CC4A92BD654 /* Alium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C00F46E19606917CA3F52216911E7F /* Alium.swift */; };
+		7992A667B7533A0045C476A539566A36 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022A0F38FFB614CEDDB64FA2BF5F02A7 /* App.swift */; };
 		818A71BCAB4845F7D722761348721DCA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
 		823DE9AD16093FD608882430A02DAF52 /* Pods-AliumUIKitExampleTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E4AA1A016E4B96095398B3D6BC45915C /* Pods-AliumUIKitExampleTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9AFA6C8990D988ACE2DB3259FE9726E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
+		9257242AF9DCC17886839C2EB3578BCE /* alium_sdk-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F06060E2708B46E9AF5F818C984134ED /* alium_sdk-dummy.m */; };
 		9EB41C29B2C02E74ACE756326A7DBD10 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
-		A60E1A93BB04EAA929795D1E12F36504 /* Alium.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCD75017EC5C9EE5C29C95E8B4D4192 /* Alium.swift */; };
-		BC9F6D6360787FCA8DA4B549F27D060C /* alium_sdk-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F3B753D91A5A92E022E880C2D216C3A6 /* alium_sdk-dummy.m */; };
+		A7901EEA36EA352EDD21003A7008D85F /* TypeOfSur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E50B68624DF02549694A20CEAD0BDDE /* TypeOfSur.swift */; };
+		A86DE05F0C095D0A06583F2F20CD99F1 /* UrlMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4589313D882334ACCB245157B56FF4D /* UrlMatch.swift */; };
+		AD7812A432DC3C8CA56DA2E8634AD827 /* SurInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA03CECA70D6F22387768D19FB47A399 /* SurInfo.swift */; };
+		D11EEB65A7629E724547EDC2A8B0A1E3 /* SurveyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990FFCC760888C2C343B886161D6EA29 /* SurveyInfo.swift */; };
 		DB99F33C74CB16986D1703DA444426B9 /* Pods-AliumUIKitExampleTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D65E9E9FF338D1F86EA7914897C51CA1 /* Pods-AliumUIKitExampleTests-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		76AA19CC614724D5FBBC834DBADEC78E /* PBXContainerItemProxy */ = {
+		09148A70B958369D4A444EE34945A33B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 5C6035E4D3A6927D1439D89B77222C52;
 			remoteInfo = alium_sdk;
 		};
-		8785945E588A1E4B96645FB9002AE4B9 /* PBXContainerItemProxy */ = {
+		23D2F6589146ED272B675B81866924B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C6035E4D3A6927D1439D89B77222C52;
+			remoteInfo = alium_sdk;
+		};
+		38961D53E319EBB986138DC978E33B69 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = BF74BED6A3103B4063BE8C8D06117F14;
 			remoteInfo = "Pods-AliumUIKitExample";
 		};
-		D7E04019632D5D7BCFB296F5D38EEB0B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5C6035E4D3A6927D1439D89B77222C52;
-			remoteInfo = alium_sdk;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		022A0F38FFB614CEDDB64FA2BF5F02A7 /* App.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		06C22707032741497ABA607BEDE4B9E8 /* alium_sdk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = alium_sdk.debug.xcconfig; sourceTree = "<group>"; };
 		099156E26A75145B3FD05F0CA76B46D9 /* Pods-AliumUIKitExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AliumUIKitExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		0D953E2132AA8FA5F5100873B1A49939 /* Pods-AliumUIKitExample-AliumUIKitExampleUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AliumUIKitExample-AliumUIKitExampleUITests.modulemap"; sourceTree = "<group>"; };
 		0FDD0E49218CA8AB965F1D18EB63C18B /* Pods-AliumUIKitExampleTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AliumUIKitExampleTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		1371B10F6C3E328D21BDBF11B21E49FD /* Pods-AliumUIKitExample-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AliumUIKitExample-Info.plist"; sourceTree = "<group>"; };
 		1666CE55CC854C3FE3A1103385C3F4D3 /* Pods-AliumUIKitExample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AliumUIKitExample.modulemap"; sourceTree = "<group>"; };
 		384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		3A5871D25FFCC9CA34C3E16194E331D8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		3A5CF2B5A91E5556F8E4947F9F0581A2 /* Pods-AliumUIKitExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AliumUIKitExample-frameworks.sh"; sourceTree = "<group>"; };
 		3FE042F91C7A8F601ECB3440A5AF98FC /* Pods-AliumUIKitExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AliumUIKitExample.debug.xcconfig"; sourceTree = "<group>"; };
 		48ED19E227D7D291B33A92617F9DD301 /* Pods-AliumUIKitExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AliumUIKitExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		4A2D4218E8DD61DC750CD7B18D5704C8 /* Pods-AliumUIKitExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AliumUIKitExample.release.xcconfig"; sourceTree = "<group>"; };
 		4CD50609C6E2FF4047CF1222A34EBD0F /* Pods-AliumUIKitExample-AliumUIKitExampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AliumUIKitExample-AliumUIKitExampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4DA1E455B13F8E98BCA2AB7C4156982B /* Pods-AliumUIKitExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AliumUIKitExample-dummy.m"; sourceTree = "<group>"; };
-		63FFB36E2C76DB18CB7BF2427EEC050A /* alium_sdk-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "alium_sdk-prefix.pch"; sourceTree = "<group>"; };
-		67F23C0A44F4D60B32FE27B5D9694BF1 /* alium_sdk-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "alium_sdk-umbrella.h"; sourceTree = "<group>"; };
+		5DC27510432F0C28A40E53536609BBA9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		5DE21866515FA3F350C3D041479FE38E /* CustomSurveyDetails.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CustomSurveyDetails.swift; sourceTree = "<group>"; };
+		6E50B68624DF02549694A20CEAD0BDDE /* TypeOfSur.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TypeOfSur.swift; sourceTree = "<group>"; };
+		6E8509DCFF8613B6A4E8C9E2C80BCB43 /* alium_sdk-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "alium_sdk-Info.plist"; sourceTree = "<group>"; };
 		713BD5827134DE1F100E14C20F3C0DFC /* Pods-AliumUIKitExample */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-AliumUIKitExample"; path = Pods_AliumUIKitExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		739FC82C2115B2114709E9C6F008E55C /* alium_sdk-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "alium_sdk-Info.plist"; sourceTree = "<group>"; };
+		745177B2F1ED875C4EECEBF596F60E67 /* alium_sdk.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = alium_sdk.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		75C00F46E19606917CA3F52216911E7F /* Alium.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alium.swift; path = alium_sdk/Sources/classes/Alium.swift; sourceTree = "<group>"; };
 		7D81C0255A9C957636A4A3CFEFFF6705 /* Pods-AliumUIKitExample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AliumUIKitExample-umbrella.h"; sourceTree = "<group>"; };
+		80736FD3665CAEE754465655908D6D60 /* alium_sdk-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "alium_sdk-prefix.pch"; sourceTree = "<group>"; };
 		821E3D0C4A2C61767DF5918CE00D99EB /* Pods-AliumUIKitExample-AliumUIKitExampleUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-AliumUIKitExample-AliumUIKitExampleUITests"; path = Pods_AliumUIKitExample_AliumUIKitExampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86D9EACEDB35E8DC3D0F93DCB327C47F /* Pods-AliumUIKitExampleTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-AliumUIKitExampleTests"; path = Pods_AliumUIKitExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		891ABB9115A756B8E5C6DC9E81A1546F /* alium_sdk.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = alium_sdk.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		87EB48EA3D1E202DACF02E3E791F77C2 /* alium_sdk.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = alium_sdk.modulemap; sourceTree = "<group>"; };
 		8FDCF31363F44B6DC28D3FD39C424820 /* alium_sdk */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = alium_sdk; path = alium_sdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9750B007F9956ADC32CD98FD5931D1AE /* Pods-AliumUIKitExample-AliumUIKitExampleUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AliumUIKitExample-AliumUIKitExampleUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		9D4AAB46B590393E5E79DC2996E8B2A6 /* alium_sdk.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = alium_sdk.modulemap; sourceTree = "<group>"; };
+		990FFCC760888C2C343B886161D6EA29 /* SurveyInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SurveyInfo.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A07ECC70FBB44BE791A56E012BCD40C9 /* Pods-AliumUIKitExample-AliumUIKitExampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AliumUIKitExample-AliumUIKitExampleUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A1AF268993C94E5B42C75643C0B0C40D /* Pods-AliumUIKitExample-AliumUIKitExampleUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AliumUIKitExample-AliumUIKitExampleUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		A29C07F04591515836AD976AEB793FA8 /* Pods-AliumUIKitExample-AliumUIKitExampleUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AliumUIKitExample-AliumUIKitExampleUITests-dummy.m"; sourceTree = "<group>"; };
 		A61D2812BA677D77AD535141141FACB9 /* Pods-AliumUIKitExampleTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AliumUIKitExampleTests-Info.plist"; sourceTree = "<group>"; };
+		AA8235E52E597A51FE328A6A8181137A /* SurveyConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SurveyConfig.swift; sourceTree = "<group>"; };
 		B2A018CFCD3F22CD0726EFC849E17ABB /* Pods-AliumUIKitExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AliumUIKitExample-acknowledgements.plist"; sourceTree = "<group>"; };
-		C34C7CED64A7E9F40C6649EE36655AEB /* alium_sdk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = alium_sdk.debug.xcconfig; sourceTree = "<group>"; };
-		D4D2A6D387CCE9CA66E72A9251653D9E /* alium_sdk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = alium_sdk.release.xcconfig; sourceTree = "<group>"; };
+		B4589313D882334ACCB245157B56FF4D /* UrlMatch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UrlMatch.swift; sourceTree = "<group>"; };
+		B8ADEF2E280E47FCBB7C57CB6D024908 /* ThemeColors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ThemeColors.swift; sourceTree = "<group>"; };
+		B91C8D330CD17756E38080D8F958EC0E /* alium_sdk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = alium_sdk.release.xcconfig; sourceTree = "<group>"; };
+		D0285927B373895F86F07F1B6ECFB2EA /* alium_sdk-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "alium_sdk-umbrella.h"; sourceTree = "<group>"; };
 		D65E9E9FF338D1F86EA7914897C51CA1 /* Pods-AliumUIKitExampleTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AliumUIKitExampleTests-dummy.m"; sourceTree = "<group>"; };
 		DD425D08F40E43062E805B9C90A463EE /* Pods-AliumUIKitExample-AliumUIKitExampleUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AliumUIKitExample-AliumUIKitExampleUITests-umbrella.h"; sourceTree = "<group>"; };
 		E4AA1A016E4B96095398B3D6BC45915C /* Pods-AliumUIKitExampleTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AliumUIKitExampleTests-umbrella.h"; sourceTree = "<group>"; };
 		E96FF7D798AD2366388FFA05EC0EF12F /* Pods-AliumUIKitExample-AliumUIKitExampleUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AliumUIKitExample-AliumUIKitExampleUITests-Info.plist"; sourceTree = "<group>"; };
+		EA03CECA70D6F22387768D19FB47A399 /* SurInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SurInfo.swift; sourceTree = "<group>"; };
 		EBE6577D72063A00A0F179242C992538 /* Pods-AliumUIKitExample-AliumUIKitExampleUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AliumUIKitExample-AliumUIKitExampleUITests-frameworks.sh"; sourceTree = "<group>"; };
 		ECCDC10499576072872634111B9CA8CE /* Pods-AliumUIKitExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AliumUIKitExample-acknowledgements.markdown"; sourceTree = "<group>"; };
 		ED9AF1B6594DC1617FC81B3372328A69 /* Pods-AliumUIKitExampleTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AliumUIKitExampleTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		F3B753D91A5A92E022E880C2D216C3A6 /* alium_sdk-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "alium_sdk-dummy.m"; sourceTree = "<group>"; };
+		F06060E2708B46E9AF5F818C984134ED /* alium_sdk-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "alium_sdk-dummy.m"; sourceTree = "<group>"; };
 		F4258409424E89BFECF849B71C2776E6 /* Pods-AliumUIKitExampleTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AliumUIKitExampleTests.modulemap"; sourceTree = "<group>"; };
-		FFCD75017EC5C9EE5C29C95E8B4D4192 /* Alium.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alium.swift; path = alium_sdk/Sources/classes/Alium.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4AEED3BF1FC4D997AF077D8615B1361D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9AFA6C8990D988ACE2DB3259FE9726E5 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		90B557818883C2D873ED4727EF6A57EA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -124,9 +132,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FB4FAAF5061777381A858D5F297625DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				597813E027F17C1A899E6F7C848F3DC9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0963D09FDAD632B9CA4228C96B20A8D9 /* SurveyModels */ = {
+			isa = PBXGroup;
+			children = (
+				990FFCC760888C2C343B886161D6EA29 /* SurveyInfo.swift */,
+				B8ADEF2E280E47FCBB7C57CB6D024908 /* ThemeColors.swift */,
+			);
+			name = SurveyModels;
+			path = SurveyModels;
+			sourceTree = "<group>";
+		};
 		101A7BBD49AF4D78BF88C1486511967B /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,30 +163,12 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		2139ED25850829660E89CCC71876D7F0 /* Support Files */ = {
+		198FBE37FC39D160B00431956C337942 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9D4AAB46B590393E5E79DC2996E8B2A6 /* alium_sdk.modulemap */,
-				F3B753D91A5A92E022E880C2D216C3A6 /* alium_sdk-dummy.m */,
-				739FC82C2115B2114709E9C6F008E55C /* alium_sdk-Info.plist */,
-				63FFB36E2C76DB18CB7BF2427EEC050A /* alium_sdk-prefix.pch */,
-				67F23C0A44F4D60B32FE27B5D9694BF1 /* alium_sdk-umbrella.h */,
-				C34C7CED64A7E9F40C6649EE36655AEB /* alium_sdk.debug.xcconfig */,
-				D4D2A6D387CCE9CA66E72A9251653D9E /* alium_sdk.release.xcconfig */,
+				EF4BFF0B03B877BB0B2D17F3EC3A4600 /* alium_sdk */,
 			);
-			name = "Support Files";
-			path = "AliumUIKitExample/Pods/Target Support Files/alium_sdk";
-			sourceTree = "<group>";
-		};
-		30267CD711C9F816718A72B1F27BD539 /* alium_sdk */ = {
-			isa = PBXGroup;
-			children = (
-				FFCD75017EC5C9EE5C29C95E8B4D4192 /* Alium.swift */,
-				B38B8DB0B41E8CD54B8E2B57F0BA11C2 /* Pod */,
-				2139ED25850829660E89CCC71876D7F0 /* Support Files */,
-			);
-			name = alium_sdk;
-			path = ../..;
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		3408C62B9851FAE671A8537D4F9CE039 /* Pods-AliumUIKitExample */ = {
@@ -224,19 +232,21 @@
 			path = "Target Support Files/Pods-AliumUIKitExampleTests";
 			sourceTree = "<group>";
 		};
-		892904D2B8D95D02CD0BEA05EA86EB32 /* Development Pods */ = {
+		88023D15FFCFC03CDC19F4C721D83C00 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				30267CD711C9F816718A72B1F27BD539 /* alium_sdk */,
+				F8AEB5596304F4BE3CF92907313875C2 /* SurveyConfig */,
+				0963D09FDAD632B9CA4228C96B20A8D9 /* SurveyModels */,
 			);
-			name = "Development Pods";
+			name = Models;
+			path = alium_sdk/Sources/classes/Models;
 			sourceTree = "<group>";
 		};
-		B38B8DB0B41E8CD54B8E2B57F0BA11C2 /* Pod */ = {
+		922DC570784F31D35178872685AE5E6D /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				891ABB9115A756B8E5C6DC9E81A1546F /* alium_sdk.podspec */,
-				3A5871D25FFCC9CA34C3E16194E331D8 /* README.md */,
+				745177B2F1ED875C4EECEBF596F60E67 /* alium_sdk.podspec */,
+				5DC27510432F0C28A40E53536609BBA9 /* README.md */,
 			);
 			name = Pod;
 			sourceTree = "<group>";
@@ -245,7 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				892904D2B8D95D02CD0BEA05EA86EB32 /* Development Pods */,
+				198FBE37FC39D160B00431956C337942 /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				4D2437FFFF518E6864830565B022CD6D /* Products */,
 				101A7BBD49AF4D78BF88C1486511967B /* Targets Support Files */,
@@ -268,6 +278,47 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		EF4BFF0B03B877BB0B2D17F3EC3A4600 /* alium_sdk */ = {
+			isa = PBXGroup;
+			children = (
+				75C00F46E19606917CA3F52216911E7F /* Alium.swift */,
+				88023D15FFCFC03CDC19F4C721D83C00 /* Models */,
+				922DC570784F31D35178872685AE5E6D /* Pod */,
+				FE11FAC65FF396A2CBE9A46C14896925 /* Support Files */,
+			);
+			name = alium_sdk;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		F8AEB5596304F4BE3CF92907313875C2 /* SurveyConfig */ = {
+			isa = PBXGroup;
+			children = (
+				022A0F38FFB614CEDDB64FA2BF5F02A7 /* App.swift */,
+				5DE21866515FA3F350C3D041479FE38E /* CustomSurveyDetails.swift */,
+				EA03CECA70D6F22387768D19FB47A399 /* SurInfo.swift */,
+				AA8235E52E597A51FE328A6A8181137A /* SurveyConfig.swift */,
+				6E50B68624DF02549694A20CEAD0BDDE /* TypeOfSur.swift */,
+				B4589313D882334ACCB245157B56FF4D /* UrlMatch.swift */,
+			);
+			name = SurveyConfig;
+			path = SurveyConfig;
+			sourceTree = "<group>";
+		};
+		FE11FAC65FF396A2CBE9A46C14896925 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				87EB48EA3D1E202DACF02E3E791F77C2 /* alium_sdk.modulemap */,
+				F06060E2708B46E9AF5F818C984134ED /* alium_sdk-dummy.m */,
+				6E8509DCFF8613B6A4E8C9E2C80BCB43 /* alium_sdk-Info.plist */,
+				80736FD3665CAEE754465655908D6D60 /* alium_sdk-prefix.pch */,
+				D0285927B373895F86F07F1B6ECFB2EA /* alium_sdk-umbrella.h */,
+				06C22707032741497ABA607BEDE4B9E8 /* alium_sdk.debug.xcconfig */,
+				B91C8D330CD17756E38080D8F958EC0E /* alium_sdk.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "AliumUIKitExample/Pods/Target Support Files/alium_sdk";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -287,11 +338,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EFF1C2D6C36FD18F3615A9EC8EC72BAA /* Headers */ = {
+		8ACFB3EC310E0D7BA1C1C2E837764B16 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6ED3CAABAB2BD023A16FC69A114EAD2A /* alium_sdk-umbrella.h in Headers */,
+				37474880706FECCF1E948F2198B26F46 /* alium_sdk-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,7 +369,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				BA0F3073CE14999CF4E0A01B3175C1D2 /* PBXTargetDependency */,
+				3CE746F6E48460454857F5485E7EF9DA /* PBXTargetDependency */,
 			);
 			name = "Pods-AliumUIKitExampleTests";
 			productName = Pods_AliumUIKitExampleTests;
@@ -337,7 +388,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				E6E2F0F6FE562EEA7B9B485F9E793B4B /* PBXTargetDependency */,
+				F25CCAB0927576250812697DB144B05A /* PBXTargetDependency */,
 			);
 			name = "Pods-AliumUIKitExample-AliumUIKitExampleUITests";
 			productName = Pods_AliumUIKitExample_AliumUIKitExampleUITests;
@@ -346,12 +397,12 @@
 		};
 		5C6035E4D3A6927D1439D89B77222C52 /* alium_sdk */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2F59295B88494D69E9D142A7BAB74B79 /* Build configuration list for PBXNativeTarget "alium_sdk" */;
+			buildConfigurationList = 46FCA2B0A7FB9AB62758F29011A23997 /* Build configuration list for PBXNativeTarget "alium_sdk" */;
 			buildPhases = (
-				EFF1C2D6C36FD18F3615A9EC8EC72BAA /* Headers */,
-				07968E2DFF3D8702F3077D176EC9A110 /* Sources */,
-				4AEED3BF1FC4D997AF077D8615B1361D /* Frameworks */,
-				4DECF84B4572C3DE22B1DA97E8D943E8 /* Resources */,
+				8ACFB3EC310E0D7BA1C1C2E837764B16 /* Headers */,
+				F81B2B1CE81D4449A5C59021CD2B64F2 /* Sources */,
+				FB4FAAF5061777381A858D5F297625DA /* Frameworks */,
+				B394666E251BA26EE3D5222470F42B8C /* Resources */,
 			);
 			buildRules = (
 			);
@@ -374,7 +425,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				4A7316BE2D36C7FEBE30E605D93EDB0B /* PBXTargetDependency */,
+				45390DB4A28DDB7FE738389929DAA469 /* PBXTargetDependency */,
 			);
 			name = "Pods-AliumUIKitExample";
 			productName = Pods_AliumUIKitExample;
@@ -414,13 +465,6 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4DECF84B4572C3DE22B1DA97E8D943E8 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		6654A125036F5432FBBB69E00C4E49B1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -429,6 +473,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		67B3AD09EE1813D744469E3B703F7D55 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B394666E251BA26EE3D5222470F42B8C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -445,15 +496,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		07968E2DFF3D8702F3077D176EC9A110 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A60E1A93BB04EAA929795D1E12F36504 /* Alium.swift in Sources */,
-				BC9F6D6360787FCA8DA4B549F27D060C /* alium_sdk-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2DE03D9DADF04D3D31D4B614C096A0B4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -478,30 +520,86 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F81B2B1CE81D4449A5C59021CD2B64F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68A8F43D3FDBCB2B03BC3CC4A92BD654 /* Alium.swift in Sources */,
+				9257242AF9DCC17886839C2EB3578BCE /* alium_sdk-dummy.m in Sources */,
+				7992A667B7533A0045C476A539566A36 /* App.swift in Sources */,
+				07C61222C3BEBE385658F5CBBE50E8BF /* CustomSurveyDetails.swift in Sources */,
+				AD7812A432DC3C8CA56DA2E8634AD827 /* SurInfo.swift in Sources */,
+				030435FB3F66299E87A0E4C0A5EE4D60 /* SurveyConfig.swift in Sources */,
+				D11EEB65A7629E724547EDC2A8B0A1E3 /* SurveyInfo.swift in Sources */,
+				0C21D1512F233E9DDA122AAE6F66E3D3 /* ThemeColors.swift in Sources */,
+				A7901EEA36EA352EDD21003A7008D85F /* TypeOfSur.swift in Sources */,
+				A86DE05F0C095D0A06583F2F20CD99F1 /* UrlMatch.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4A7316BE2D36C7FEBE30E605D93EDB0B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = alium_sdk;
-			target = 5C6035E4D3A6927D1439D89B77222C52 /* alium_sdk */;
-			targetProxy = 76AA19CC614724D5FBBC834DBADEC78E /* PBXContainerItemProxy */;
-		};
-		BA0F3073CE14999CF4E0A01B3175C1D2 /* PBXTargetDependency */ = {
+		3CE746F6E48460454857F5485E7EF9DA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-AliumUIKitExample";
 			target = BF74BED6A3103B4063BE8C8D06117F14 /* Pods-AliumUIKitExample */;
-			targetProxy = 8785945E588A1E4B96645FB9002AE4B9 /* PBXContainerItemProxy */;
+			targetProxy = 38961D53E319EBB986138DC978E33B69 /* PBXContainerItemProxy */;
 		};
-		E6E2F0F6FE562EEA7B9B485F9E793B4B /* PBXTargetDependency */ = {
+		45390DB4A28DDB7FE738389929DAA469 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = alium_sdk;
 			target = 5C6035E4D3A6927D1439D89B77222C52 /* alium_sdk */;
-			targetProxy = D7E04019632D5D7BCFB296F5D38EEB0B /* PBXContainerItemProxy */;
+			targetProxy = 09148A70B958369D4A444EE34945A33B /* PBXContainerItemProxy */;
+		};
+		F25CCAB0927576250812697DB144B05A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = alium_sdk;
+			target = 5C6035E4D3A6927D1439D89B77222C52 /* alium_sdk */;
+			targetProxy = 23D2F6589146ED272B675B81866924B9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		066835B17A191F4D09AF3080A00B71B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06C22707032741497ABA607BEDE4B9E8 /* alium_sdk.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/alium_sdk/alium_sdk-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/alium_sdk/alium_sdk-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/alium_sdk/alium_sdk.modulemap";
+				PRODUCT_MODULE_NAME = alium_sdk;
+				PRODUCT_NAME = alium_sdk;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		185202A42E8F27088CBDECFFBA596613 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4A2D4218E8DD61DC750CD7B18D5704C8 /* Pods-AliumUIKitExample.release.xcconfig */;
@@ -581,45 +679,6 @@
 			};
 			name = Debug;
 		};
-		4722E5C89F3FDF43844535B3EFFC376B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C34C7CED64A7E9F40C6649EE36655AEB /* alium_sdk.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				GCC_PREFIX_HEADER = "Target Support Files/alium_sdk/alium_sdk-prefix.pch";
-				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = "Target Support Files/alium_sdk/alium_sdk-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/alium_sdk/alium_sdk.modulemap";
-				PRODUCT_MODULE_NAME = alium_sdk;
-				PRODUCT_NAME = alium_sdk;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_INSTALL_OBJC_HEADER = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		60F2B04F4EEA200E2858FD93017399E9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A07ECC70FBB44BE791A56E012BCD40C9 /* Pods-AliumUIKitExample-AliumUIKitExampleUITests.release.xcconfig */;
@@ -653,6 +712,46 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6E8630177C9B66B741B2844617A47BDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B91C8D330CD17756E38080D8F958EC0E /* alium_sdk.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/alium_sdk/alium_sdk-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/alium_sdk/alium_sdk-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/alium_sdk/alium_sdk.modulemap";
+				PRODUCT_MODULE_NAME = alium_sdk;
+				PRODUCT_NAME = alium_sdk;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -844,46 +943,6 @@
 			};
 			name = Release;
 		};
-		D14401A53B103F5262DC0C8C0E08E8FA /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D4D2A6D387CCE9CA66E72A9251653D9E /* alium_sdk.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				GCC_PREFIX_HEADER = "Target Support Files/alium_sdk/alium_sdk-prefix.pch";
-				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = "Target Support Files/alium_sdk/alium_sdk-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/alium_sdk/alium_sdk.modulemap";
-				PRODUCT_MODULE_NAME = alium_sdk;
-				PRODUCT_NAME = alium_sdk;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_INSTALL_OBJC_HEADER = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		E2364721D6682F8B9E80045232309A09 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -949,20 +1008,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2F59295B88494D69E9D142A7BAB74B79 /* Build configuration list for PBXNativeTarget "alium_sdk" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4722E5C89F3FDF43844535B3EFFC376B /* Debug */,
-				D14401A53B103F5262DC0C8C0E08E8FA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		3B04B57731646F3764DCA7ABDF1B7594 /* Build configuration list for PBXNativeTarget "Pods-AliumUIKitExampleTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B3899DD3D0CC71783F804C88EC75CD3E /* Debug */,
 				B973C5A756814E78C463E57ED5AEA827 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46FCA2B0A7FB9AB62758F29011A23997 /* Build configuration list for PBXNativeTarget "alium_sdk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				066835B17A191F4D09AF3080A00B71B5 /* Debug */,
+				6E8630177C9B66B741B2844617A47BDD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
