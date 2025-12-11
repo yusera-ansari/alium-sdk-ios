@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 71;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -72,7 +72,7 @@
 		384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		3A5CF2B5A91E5556F8E4947F9F0581A2 /* Pods-AliumUIKitExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AliumUIKitExample-frameworks.sh"; sourceTree = "<group>"; };
 		3FE042F91C7A8F601ECB3440A5AF98FC /* Pods-AliumUIKitExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AliumUIKitExample.debug.xcconfig"; sourceTree = "<group>"; };
-		47343F8291B492FC129917B6F4059D02 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		47343F8291B492FC129917B6F4059D02 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		48ED19E227D7D291B33A92617F9DD301 /* Pods-AliumUIKitExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AliumUIKitExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		49E9C847BB5344396B3B75561847C57A /* SurveyParameters.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SurveyParameters.swift; sourceTree = "<group>"; };
 		4A2D4218E8DD61DC750CD7B18D5704C8 /* Pods-AliumUIKitExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AliumUIKitExample.release.xcconfig"; sourceTree = "<group>"; };
@@ -85,18 +85,18 @@
 		67EB0B178F6531C8FEA2E577B9D7E623 /* alium_sdk.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = alium_sdk.modulemap; sourceTree = "<group>"; };
 		68984790DF111F1322D3F5EAD240B41C /* SurInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SurInfo.swift; sourceTree = "<group>"; };
 		68C24C00D5D9BB9275F706894AB63945 /* AliumRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AliumRequest.swift; sourceTree = "<group>"; };
-		713BD5827134DE1F100E14C20F3C0DFC /* Pods-AliumUIKitExample */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-AliumUIKitExample"; path = Pods_AliumUIKitExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		713BD5827134DE1F100E14C20F3C0DFC /* Pods_AliumUIKitExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AliumUIKitExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		798112749EC439748C8A823DA6EDB52E /* AliumSurveyLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AliumSurveyLoader.swift; path = alium_sdk/Sources/classes/AliumSurveyLoader.swift; sourceTree = "<group>"; };
 		7D81C0255A9C957636A4A3CFEFFF6705 /* Pods-AliumUIKitExample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AliumUIKitExample-umbrella.h"; sourceTree = "<group>"; };
-		821E3D0C4A2C61767DF5918CE00D99EB /* Pods-AliumUIKitExample-AliumUIKitExampleUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-AliumUIKitExample-AliumUIKitExampleUITests"; path = Pods_AliumUIKitExample_AliumUIKitExampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		86D9EACEDB35E8DC3D0F93DCB327C47F /* Pods-AliumUIKitExampleTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-AliumUIKitExampleTests"; path = Pods_AliumUIKitExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		821E3D0C4A2C61767DF5918CE00D99EB /* Pods_AliumUIKitExample_AliumUIKitExampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AliumUIKitExample_AliumUIKitExampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		86D9EACEDB35E8DC3D0F93DCB327C47F /* Pods_AliumUIKitExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AliumUIKitExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C028976F7A9F93B305610A75C11CB22 /* AliumRequestManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AliumRequestManager.swift; sourceTree = "<group>"; };
-		8FDCF31363F44B6DC28D3FD39C424820 /* alium_sdk */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = alium_sdk; path = alium_sdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FDCF31363F44B6DC28D3FD39C424820 /* alium_sdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = alium_sdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		907D8AF5D7673B1349C3AC4EA025FBB2 /* SurveyParameters+Builder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "SurveyParameters+Builder.swift"; sourceTree = "<group>"; };
 		91C0BBE98BED57280EF7EF47C7FF6F60 /* TypeOfSur.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TypeOfSur.swift; sourceTree = "<group>"; };
 		9750B007F9956ADC32CD98FD5931D1AE /* Pods-AliumUIKitExample-AliumUIKitExampleUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AliumUIKitExample-AliumUIKitExampleUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		9AB7CFFE56736658E79A8F8734D950BE /* alium_sdk-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "alium_sdk-umbrella.h"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A07ECC70FBB44BE791A56E012BCD40C9 /* Pods-AliumUIKitExample-AliumUIKitExampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AliumUIKitExample-AliumUIKitExampleUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A1AF268993C94E5B42C75643C0B0C40D /* Pods-AliumUIKitExample-AliumUIKitExampleUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AliumUIKitExample-AliumUIKitExampleUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		A29C07F04591515836AD976AEB793FA8 /* Pods-AliumUIKitExample-AliumUIKitExampleUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AliumUIKitExample-AliumUIKitExampleUITests-dummy.m"; sourceTree = "<group>"; };
@@ -113,9 +113,13 @@
 		ED9AF1B6594DC1617FC81B3372328A69 /* Pods-AliumUIKitExampleTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AliumUIKitExampleTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		F4258409424E89BFECF849B71C2776E6 /* Pods-AliumUIKitExampleTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AliumUIKitExampleTests.modulemap"; sourceTree = "<group>"; };
 		FB02EB8AA3AD371958272BF18170B919 /* UrlMatch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UrlMatch.swift; sourceTree = "<group>"; };
-		FC7055F61EB85D6B2BEB4F4DCF26F479 /* alium_sdk.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = alium_sdk.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		FC7055F61EB85D6B2BEB4F4DCF26F479 /* alium_sdk.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = alium_sdk.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		FD3495AF5FB47387084539C01271E245 /* alium_sdk-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "alium_sdk-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		EFC72ED42EEAFC760056A228 /* Extensions */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Extensions; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		469F579B25D746C1CE971CCDF7667CB7 /* Frameworks */ = {
@@ -183,13 +187,13 @@
 				91C0BBE98BED57280EF7EF47C7FF6F60 /* TypeOfSur.swift */,
 				FB02EB8AA3AD371958272BF18170B919 /* UrlMatch.swift */,
 			);
-			name = SurveyConfig;
 			path = SurveyConfig;
 			sourceTree = "<group>";
 		};
 		227849BF12551FCCBEE9CA166BF1F84F /* alium_sdk */ = {
 			isa = PBXGroup;
 			children = (
+				EFC72ED42EEAFC760056A228 /* Extensions */,
 				1F4D4D54E31F90D98109725309CB2714 /* Alium.swift */,
 				798112749EC439748C8A823DA6EDB52E /* AliumSurveyLoader.swift */,
 				D0B95A18E675C8B0B62539F6FBA1465A /* AliumModels */,
@@ -230,10 +234,10 @@
 		4D2437FFFF518E6864830565B022CD6D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8FDCF31363F44B6DC28D3FD39C424820 /* alium_sdk */,
-				713BD5827134DE1F100E14C20F3C0DFC /* Pods-AliumUIKitExample */,
-				821E3D0C4A2C61767DF5918CE00D99EB /* Pods-AliumUIKitExample-AliumUIKitExampleUITests */,
-				86D9EACEDB35E8DC3D0F93DCB327C47F /* Pods-AliumUIKitExampleTests */,
+				8FDCF31363F44B6DC28D3FD39C424820 /* alium_sdk.framework */,
+				713BD5827134DE1F100E14C20F3C0DFC /* Pods_AliumUIKitExample.framework */,
+				821E3D0C4A2C61767DF5918CE00D99EB /* Pods_AliumUIKitExample_AliumUIKitExampleUITests.framework */,
+				86D9EACEDB35E8DC3D0F93DCB327C47F /* Pods_AliumUIKitExampleTests.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -277,7 +281,6 @@
 				4D3A4408D6F587034D9043E6D9BA720F /* SurveyInfo.swift */,
 				1922C41BF9BA4CB818F6E7B2D467F333 /* ThemeColors.swift */,
 			);
-			name = SurveyModels;
 			path = SurveyModels;
 			sourceTree = "<group>";
 		};
@@ -406,7 +409,7 @@
 			);
 			name = "Pods-AliumUIKitExampleTests";
 			productName = Pods_AliumUIKitExampleTests;
-			productReference = 86D9EACEDB35E8DC3D0F93DCB327C47F /* Pods-AliumUIKitExampleTests */;
+			productReference = 86D9EACEDB35E8DC3D0F93DCB327C47F /* Pods_AliumUIKitExampleTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		5760A6A07384E777D44E3190BC59BD1E /* Pods-AliumUIKitExample-AliumUIKitExampleUITests */ = {
@@ -425,7 +428,7 @@
 			);
 			name = "Pods-AliumUIKitExample-AliumUIKitExampleUITests";
 			productName = Pods_AliumUIKitExample_AliumUIKitExampleUITests;
-			productReference = 821E3D0C4A2C61767DF5918CE00D99EB /* Pods-AliumUIKitExample-AliumUIKitExampleUITests */;
+			productReference = 821E3D0C4A2C61767DF5918CE00D99EB /* Pods_AliumUIKitExample_AliumUIKitExampleUITests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		5C6035E4D3A6927D1439D89B77222C52 /* alium_sdk */ = {
@@ -441,9 +444,12 @@
 			);
 			dependencies = (
 			);
+			fileSystemSynchronizedGroups = (
+				EFC72ED42EEAFC760056A228 /* Extensions */,
+			);
 			name = alium_sdk;
 			productName = alium_sdk;
-			productReference = 8FDCF31363F44B6DC28D3FD39C424820 /* alium_sdk */;
+			productReference = 8FDCF31363F44B6DC28D3FD39C424820 /* alium_sdk.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		BF74BED6A3103B4063BE8C8D06117F14 /* Pods-AliumUIKitExample */ = {
@@ -462,7 +468,7 @@
 			);
 			name = "Pods-AliumUIKitExample";
 			productName = Pods_AliumUIKitExample;
-			productReference = 713BD5827134DE1F100E14C20F3C0DFC /* Pods-AliumUIKitExample */;
+			productReference = 713BD5827134DE1F100E14C20F3C0DFC /* Pods_AliumUIKitExample.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -483,8 +489,6 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			minimizedProjectReferenceProxies = 0;
-			preferredProjectObjectVersion = 77;
 			productRefGroup = 4D2437FFFF518E6864830565B022CD6D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";

@@ -20,20 +20,26 @@ public final class Alium{
         }
         shared.configUrl = key;
         shared.fetchConfigJson()
-     }
+    }
     
     public static func trigger(on screen:String, parameters:SurveyParameters){
-        guard let configUrl = shared.configUrl else{return}
+        guard shared.configUrl != nil else{return}
+        NSLog("appending trigger request...")
         shared.requestQueue.append(AliumRequest(type: .trigger( parameters: parameters)))
-        
+        NSLog("Queue after appending request: \(shared.requestQueue.first)")
+        if(shared.surveyConfig != nil && !shared.isConfigFetching){
+            NSLog("Queue request: \(shared.requestQueue.first)")
+           
+            AliumRequestManager.execNextRequest(&shared.requestQueue);
+        }
     }
     func fetchConfigJson() {
         guard let urlStr = configUrl, let url = URL(string: urlStr) else { return }
-
-        self.isConfigFetching = true
-               print("Fetching config…")
         
-         
+        self.isConfigFetching = true
+        print("Fetching config…")
+        
+        
         var session = URLSession.shared.dataTask(with: URLRequest(url: url))
         {data, response, err in
             
@@ -56,9 +62,12 @@ public final class Alium{
                 let surveyData = try JSONDecoder().decode(SurveyConfig.self, from: data);
                 print(surveyData);
                 DispatchQueue.main.async {
-                                   self.surveyConfig = surveyData
-                                   self.isConfigFetching = false
-                                   
+                    self.surveyConfig = surveyData
+                    self.isConfigFetching = false
+                    NSLog("Queue after request: \(Alium.shared.requestQueue.first)")
+                   
+                    AliumRequestManager.execNextRequest(&Alium.shared.requestQueue);
+                    
                 }
             }catch{
                 print(error)
@@ -66,11 +75,19 @@ public final class Alium{
                     self.isConfigFetching = false
                 }
             }
-                        
+            
         }
         session.resume()
         
-            
-     }
+        
+    }
+    
+    public static func stop(on screen:String){
+        guard let configUrl = shared.configUrl else{return}
+        shared.requestQueue.append(.init(type: .stop(screen: screen)))
+        if(shared.surveyConfig != nil && !shared.isConfigFetching){
+            AliumRequestManager.execNextRequest(&shared.requestQueue)
+        }
+    }
     
 }
