@@ -5,7 +5,7 @@
 //  Created by yusera-ansari on 09/12/25.
 //
 
-struct SurveyInfo : Codable{
+public struct SurveyInfo : Codable{
     //          "orgId": "128",
 //                  "orgName": "ASDF",
 //                  "customerId": null,
@@ -20,24 +20,29 @@ struct SurveyInfo : Codable{
 //                  "type": 1,
 //                  "thanksMessage": "",
 //                  "vf": "overandover"
-       var orgId: Int?
-       var orgName: String?
-       var customerId: String?
-       var surveyId: String?
-       var language: String?
-       var position: String?
-       var background: String?
-       var uniqueidentifier: String?
-       var theme: String?
-       var branding: String?
-       var type: String?
-       var themeColors: ThemeColors?
-    
-    enum CodingKeys:String, CodingKey{
-        case orgId, orgName, customerId, surveyId, language, position, background
-        case uniqueidentifier, theme, branding, type, themeColors
+    public var orgId: Int?
+ 
+    public var customerId: Int?
+    public var surveyId: String?
+    public var language: String?
+    public var position: String?
+ 
+    public var theme: String?
+    public var viewFrequency:String?
+    public var type: Int?
+    public var themeColors: ThemeColors?
+     public enum CodingKeys:String, CodingKey{
+       
         
-        
+        case orgId = "oid"
+            case customerId = "cid"
+            case surveyId = "sid"
+            case language = "lng"
+            case position = "pos"
+            case type = "stp"
+            case viewFrequency = "vf"
+            case theme = "th"
+            case themeColors = "thc"
     }
 }
 

@@ -4,9 +4,9 @@ import Foundation
 
 @MainActor
 public final class Alium{
-    public static let shared = Alium()
+    static let shared = Alium()
     private var configUrl:String?
-    private  var surveyConfig:SurveyConfig?=nil;
+    var surveyConfig:SurveyConfig?=nil;
     private var requestQueue:[AliumRequest] = [];
     private var isConfigFetching = false
     public static func testAlium(){
@@ -22,7 +22,7 @@ public final class Alium{
         shared.fetchConfigJson()
     }
     
-    public static func trigger(on screen:String, parameters:SurveyParameters){
+    public static func trigger( parameters:SurveyParameters){
         guard shared.configUrl != nil else{return}
         NSLog("appending trigger request...")
         shared.requestQueue.append(AliumRequest(type: .trigger( parameters: parameters)))
@@ -57,7 +57,7 @@ public final class Alium{
                 }
                 return;
             }
-            
+            print("survey config:  \(data)")
             do{
                 let surveyData = try JSONDecoder().decode(SurveyConfig.self, from: data);
                 print(surveyData);

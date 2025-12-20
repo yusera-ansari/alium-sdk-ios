@@ -7,8 +7,13 @@
 
 import Foundation
 
-struct App: Codable {
-    var um: UrlMatch?
-    var vf: String?
-    var customSurveyDetails: CustomSurveyDetails?
+public struct App: Codable {
+   public var um: UrlMatch?
+    public var vf: String?
+    var spath: String?
+    public var customSurveyDetails: CustomSurveyDetails?
+    public enum CodingKeys : String, CodingKey{
+        case um, vf
+        case spath = "spt"
+    }
 }

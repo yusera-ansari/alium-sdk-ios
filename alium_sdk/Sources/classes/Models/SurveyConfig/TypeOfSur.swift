@@ -7,6 +7,9 @@
 
 import Foundation
 
-struct TypeOfSur: Codable {
-    var app: App?
+public struct TypeOfSur: Codable {
+    public var app: App?
+    public enum CodingKeys : String, CodingKey{
+        case app = "ap"
+    }
 }

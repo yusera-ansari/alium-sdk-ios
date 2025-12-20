@@ -12,7 +12,8 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("view did loaddddd")
-        Alium.trigger(on: "home", parameters: SurveyParameters(screenName: "home"))
+        
+        Alium.trigger( parameters: SurveyParameters(screenName: "home"))
         // Do any additional setup after loading the view.
     }
     

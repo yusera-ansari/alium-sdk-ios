@@ -10,6 +10,9 @@ import Foundation
 struct SurInfo: Codable {
     var id: Int?
     var nm: String?
-    var spath: String?
+    
     var tps: TypeOfSur?
+    public enum CodingKeys : String, CodingKey{
+        case id, nm, tps
+     }
 }

@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct CustomSurveyDetails:Codable{
-    var freq:String?;
-    var startOn:String?;
-    var endOn:String?;
+public struct CustomSurveyDetails:Codable{
+    public var freq:String?;
+    public var startOn:String?;
+    public var endOn:String?;
 }

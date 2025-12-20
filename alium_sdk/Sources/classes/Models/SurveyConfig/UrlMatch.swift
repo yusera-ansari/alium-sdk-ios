@@ -5,7 +5,7 @@
 //  Created by yusera-ansari on 09/12/25.
 //
 
-struct UrlMatch:Codable{
-    var u:String?;
+public struct UrlMatch:Codable{
+    public var u:String?;
 }
 
