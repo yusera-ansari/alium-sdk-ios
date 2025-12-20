@@ -74,4 +74,35 @@ extension OverlayViewController{
                responseContainer.addSubview(checkboxGroup)
         checkboxGroup.pin(to: responseContainer)
     }
+    
+    func addNPSTypeInput(){
+        guard let questions = survey.questions else{return }
+        let currQuest = questions[index]
+        let npsGroup = NPSGroupView(options: currQuest.responseOptions)
+
+        npsGroup.translatesAutoresizingMaskIntoConstraints = false
+               responseContainer.addSubview(npsGroup)
+        npsGroup.pin(to: responseContainer)
+//        npsGroup.widthAnchor.constraint(lessThanOrEqualToConstant: UIScreen.main.bounds.width - 20).isActive = true
+        
+//        NSLayoutConstraint.activate([
+//            npsGroup.topAnchor.constraint(equalTo: responseContainer.topAnchor),
+//            npsGroup.bottomAnchor.constraint(equalTo: responseContainer.bottomAnchor),
+//            npsGroup.centerXAnchor.constraint(equalTo: responseContainer.centerXAnchor),
+//
+//            // screen width - 20
+//            npsGroup.leadingAnchor.constraint(
+//                greaterThanOrEqualTo: responseContainer.leadingAnchor,
+//                constant: 10
+//            ),
+//            npsGroup.trailingAnchor.constraint(
+//                lessThanOrEqualTo: responseContainer.trailingAnchor,
+//                constant: -10
+//            ),
+//
+//            // max width = 600
+//            npsGroup.widthAnchor.constraint(lessThanOrEqualToConstant: 600)
+//        ])
+        
+    }
 }

@@ -49,6 +49,8 @@
 		EF4BF7D82EF6B047000D549D /* RadioButtonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4BF7D72EF6B042000D549D /* RadioButtonGroup.swift */; };
 		EF4BF7DA2EF6C7F7000D549D /* CheckboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4BF7D92EF6C7F2000D549D /* CheckboxView.swift */; };
 		EF4BF7DC2EF6C80A000D549D /* CheckboxGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4BF7DB2EF6C805000D549D /* CheckboxGroup.swift */; };
+		EF4BF7E02EF6CA73000D549D /* NPSItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4BF7DF2EF6CA6F000D549D /* NPSItemView.swift */; };
+		EF4BF7E22EF6CA8E000D549D /* NPSGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4BF7E12EF6CA89000D549D /* NPSGroupView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,6 +148,8 @@
 		EF4BF7D72EF6B042000D549D /* RadioButtonGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonGroup.swift; sourceTree = "<group>"; };
 		EF4BF7D92EF6C7F2000D549D /* CheckboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxView.swift; sourceTree = "<group>"; };
 		EF4BF7DB2EF6C805000D549D /* CheckboxGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxGroup.swift; sourceTree = "<group>"; };
+		EF4BF7DF2EF6CA6F000D549D /* NPSItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NPSItemView.swift; sourceTree = "<group>"; };
+		EF4BF7E12EF6CA89000D549D /* NPSGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NPSGroupView.swift; sourceTree = "<group>"; };
 		F4258409424E89BFECF849B71C2776E6 /* Pods-AliumUIKitExampleTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AliumUIKitExampleTests.modulemap"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -188,6 +192,8 @@
 		062B2932E72746712E5A91883E4D91E7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				EF4BF7E12EF6CA89000D549D /* NPSGroupView.swift */,
+				EF4BF7DF2EF6CA6F000D549D /* NPSItemView.swift */,
 				EF4BF7DB2EF6C805000D549D /* CheckboxGroup.swift */,
 				EF4BF7D92EF6C7F2000D549D /* CheckboxView.swift */,
 				EF4BF7D72EF6B042000D549D /* RadioButtonGroup.swift */,
@@ -622,11 +628,13 @@
 			files = (
 				492E159731D065D33F52A42F7CA20CDB /* AiSettings.swift in Sources */,
 				EF2283472EF3CF430049E685 /* ViewControllerFinder.swift in Sources */,
+				EF4BF7E22EF6CA8E000D549D /* NPSGroupView.swift in Sources */,
 				EF4BF7D62EF6B02E000D549D /* RadioButtonView.swift in Sources */,
 				EF4BF7DA2EF6C7F7000D549D /* CheckboxView.swift in Sources */,
 				C7565C5CB55DB87A16C2C89ABC28EBC0 /* Alium.swift in Sources */,
 				EF22834D2EF412FA0049E685 /* OverlayViewController+Types.swift in Sources */,
 				9B6DE51BC6CC57F3750CD9310670D570 /* alium_sdk-dummy.m in Sources */,
+				EF4BF7E02EF6CA73000D549D /* NPSItemView.swift in Sources */,
 				EEF13761287F37F35D0E1D51B9DDB3BA /* AliumRequest.swift in Sources */,
 				D7C3E3DDCA1A1B6EBB3CECA99D7B0075 /* AliumRequestManager.swift in Sources */,
 				51483B3F4155249660DAECEB9E8B73E4 /* AliumSurveyLoader.swift in Sources */,

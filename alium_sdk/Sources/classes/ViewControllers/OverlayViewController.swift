@@ -211,6 +211,7 @@ class OverlayViewController: UIViewController {
             addCheckBoxTypeInput()
         case .nps:
             nextBtn.setTitle("nps", for: .normal);
+            addNPSTypeInput()
         case .rating:
             nextBtn.setTitle("rating", for: .normal);
         case .opinion:
