@@ -12,8 +12,8 @@ import SwiftUI
 
 class OverlayViewController: UIViewController {
 
-    private let survey: Survey
-    private var index:Int = 0;
+    let survey: Survey
+    var index:Int = 0;
     lazy var container : UIView = {
         var v : UIView = UIView()
         v.backgroundColor = .lightGray
@@ -143,8 +143,9 @@ class OverlayViewController: UIViewController {
 
         nextBtn.activateConstraints([
             nextBtn.bottomAnchor.constraint(equalTo: container.bottomAnchor, constant: -12),
-            nextBtn.topAnchor.constraint(equalTo: responseContainer.bottomAnchor, constant: 5),
+            nextBtn.topAnchor.constraint(equalTo: responseContainer.bottomAnchor, constant: 10),
         ])
+        
         nextBtn.addTarget(self, action: #selector(onNextPress), for: .touchUpInside)
         nextBtnWidth.isActive = true
     }
@@ -204,6 +205,7 @@ class OverlayViewController: UIViewController {
              addMultilineTextInput()
         case .radio:
             nextBtn.setTitle("radio", for: .normal);
+            addRadioTypeInput()
         case .checkbox:
             nextBtn.setTitle("checkbox", for: .normal);
         case .nps:
@@ -239,11 +241,12 @@ class OverlayViewController: UIViewController {
         switch respType{
         case .start, .thankYou :
             nextBtn.setTitle(respType == ResponseType.start ? "Start" : "Close", for: .normal)
-            nextBtnTrailing.isActive = true
+            nextBtnCenterX.isActive = true
        
         default:
             nextBtn.setTitle("Next", for: .normal)
-            nextBtnCenterX.isActive = true
+            nextBtnTrailing.isActive = true
+           
         }
        
         

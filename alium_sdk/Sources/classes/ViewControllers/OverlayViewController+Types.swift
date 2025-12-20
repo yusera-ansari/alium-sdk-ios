@@ -52,4 +52,16 @@ extension OverlayViewController{
     
        
     }
+    
+    func addRadioTypeInput(){
+        guard let questions = survey.questions else{return }
+        let currQuest = questions[index]
+        
+        let radioGroup = RadioButtonGroup(options: currQuest.responseOptions)
+
+              radioGroup.translatesAutoresizingMaskIntoConstraints = false
+              responseContainer.addSubview(radioGroup)
+
+        radioGroup.pin(to: responseContainer)
+    }
 }

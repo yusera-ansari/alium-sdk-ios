@@ -45,6 +45,8 @@
 		EF22834B2EF3DEDA0049E685 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF22834A2EF3DED70049E685 /* UIColor.swift */; };
 		EF22834D2EF412FA0049E685 /* OverlayViewController+Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF22834C2EF412E20049E685 /* OverlayViewController+Types.swift */; };
 		EF22834F2EF418AF0049E685 /* MultilineTextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF22834E2EF418A40049E685 /* MultilineTextInput.swift */; };
+		EF4BF7D62EF6B02E000D549D /* RadioButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4BF7D52EF6B02A000D549D /* RadioButtonView.swift */; };
+		EF4BF7D82EF6B047000D549D /* RadioButtonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4BF7D72EF6B042000D549D /* RadioButtonGroup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,6 +140,8 @@
 		EF22834A2EF3DED70049E685 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		EF22834C2EF412E20049E685 /* OverlayViewController+Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OverlayViewController+Types.swift"; sourceTree = "<group>"; };
 		EF22834E2EF418A40049E685 /* MultilineTextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultilineTextInput.swift; sourceTree = "<group>"; };
+		EF4BF7D52EF6B02A000D549D /* RadioButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonView.swift; sourceTree = "<group>"; };
+		EF4BF7D72EF6B042000D549D /* RadioButtonGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonGroup.swift; sourceTree = "<group>"; };
 		F4258409424E89BFECF849B71C2776E6 /* Pods-AliumUIKitExampleTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AliumUIKitExampleTests.modulemap"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -180,6 +184,8 @@
 		062B2932E72746712E5A91883E4D91E7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				EF4BF7D72EF6B042000D549D /* RadioButtonGroup.swift */,
+				EF4BF7D52EF6B02A000D549D /* RadioButtonView.swift */,
 				EF22834E2EF418A40049E685 /* MultilineTextInput.swift */,
 				EF22834C2EF412E20049E685 /* OverlayViewController+Types.swift */,
 				B4016F2BB65A5218917C56F762BD87FC /* OverlayViewController.swift */,
@@ -610,6 +616,7 @@
 			files = (
 				492E159731D065D33F52A42F7CA20CDB /* AiSettings.swift in Sources */,
 				EF2283472EF3CF430049E685 /* ViewControllerFinder.swift in Sources */,
+				EF4BF7D62EF6B02E000D549D /* RadioButtonView.swift in Sources */,
 				C7565C5CB55DB87A16C2C89ABC28EBC0 /* Alium.swift in Sources */,
 				EF22834D2EF412FA0049E685 /* OverlayViewController+Types.swift in Sources */,
 				9B6DE51BC6CC57F3750CD9310670D570 /* alium_sdk-dummy.m in Sources */,
@@ -635,6 +642,7 @@
 				4F2EC10E3F40253417C61E8FA87ACFA2 /* TypeOfSur.swift in Sources */,
 				95CC40059CC9C57CC97097FCD6E150B9 /* UIApplication.swift in Sources */,
 				E0D86DC83DA82627BF5C22799AEE0425 /* UrlMatch.swift in Sources */,
+				EF4BF7D82EF6B047000D549D /* RadioButtonGroup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
