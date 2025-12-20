@@ -64,4 +64,14 @@ extension OverlayViewController{
 
         radioGroup.pin(to: responseContainer)
     }
+    
+    func addCheckBoxTypeInput(){
+        guard let questions = survey.questions else{return }
+        let currQuest = questions[index]
+        let checkboxGroup = CheckboxGroup(options: currQuest.responseOptions)
+
+               checkboxGroup.translatesAutoresizingMaskIntoConstraints = false
+               responseContainer.addSubview(checkboxGroup)
+        checkboxGroup.pin(to: responseContainer)
+    }
 }

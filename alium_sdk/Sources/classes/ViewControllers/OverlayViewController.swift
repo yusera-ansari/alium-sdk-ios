@@ -102,7 +102,7 @@ class OverlayViewController: UIViewController {
           trailing.priority = .defaultHigh
             container.activateConstraints([
             container.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
-            container.heightAnchor.constraint(greaterThanOrEqualToConstant: 200),
+//            container.heightAnchor.constraint(greaterThanOrEqualToConstant: 200),
             container.widthAnchor.constraint(lessThanOrEqualToConstant: 600),
             container.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             leading,trailing
@@ -208,6 +208,7 @@ class OverlayViewController: UIViewController {
             addRadioTypeInput()
         case .checkbox:
             nextBtn.setTitle("checkbox", for: .normal);
+            addCheckBoxTypeInput()
         case .nps:
             nextBtn.setTitle("nps", for: .normal);
         case .rating:

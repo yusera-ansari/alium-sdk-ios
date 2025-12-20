@@ -47,6 +47,8 @@
 		EF22834F2EF418AF0049E685 /* MultilineTextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF22834E2EF418A40049E685 /* MultilineTextInput.swift */; };
 		EF4BF7D62EF6B02E000D549D /* RadioButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4BF7D52EF6B02A000D549D /* RadioButtonView.swift */; };
 		EF4BF7D82EF6B047000D549D /* RadioButtonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4BF7D72EF6B042000D549D /* RadioButtonGroup.swift */; };
+		EF4BF7DA2EF6C7F7000D549D /* CheckboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4BF7D92EF6C7F2000D549D /* CheckboxView.swift */; };
+		EF4BF7DC2EF6C80A000D549D /* CheckboxGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4BF7DB2EF6C805000D549D /* CheckboxGroup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +144,8 @@
 		EF22834E2EF418A40049E685 /* MultilineTextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultilineTextInput.swift; sourceTree = "<group>"; };
 		EF4BF7D52EF6B02A000D549D /* RadioButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonView.swift; sourceTree = "<group>"; };
 		EF4BF7D72EF6B042000D549D /* RadioButtonGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonGroup.swift; sourceTree = "<group>"; };
+		EF4BF7D92EF6C7F2000D549D /* CheckboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxView.swift; sourceTree = "<group>"; };
+		EF4BF7DB2EF6C805000D549D /* CheckboxGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxGroup.swift; sourceTree = "<group>"; };
 		F4258409424E89BFECF849B71C2776E6 /* Pods-AliumUIKitExampleTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AliumUIKitExampleTests.modulemap"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -184,6 +188,8 @@
 		062B2932E72746712E5A91883E4D91E7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				EF4BF7DB2EF6C805000D549D /* CheckboxGroup.swift */,
+				EF4BF7D92EF6C7F2000D549D /* CheckboxView.swift */,
 				EF4BF7D72EF6B042000D549D /* RadioButtonGroup.swift */,
 				EF4BF7D52EF6B02A000D549D /* RadioButtonView.swift */,
 				EF22834E2EF418A40049E685 /* MultilineTextInput.swift */,
@@ -617,6 +623,7 @@
 				492E159731D065D33F52A42F7CA20CDB /* AiSettings.swift in Sources */,
 				EF2283472EF3CF430049E685 /* ViewControllerFinder.swift in Sources */,
 				EF4BF7D62EF6B02E000D549D /* RadioButtonView.swift in Sources */,
+				EF4BF7DA2EF6C7F7000D549D /* CheckboxView.swift in Sources */,
 				C7565C5CB55DB87A16C2C89ABC28EBC0 /* Alium.swift in Sources */,
 				EF22834D2EF412FA0049E685 /* OverlayViewController+Types.swift in Sources */,
 				9B6DE51BC6CC57F3750CD9310670D570 /* alium_sdk-dummy.m in Sources */,
@@ -632,6 +639,7 @@
 				EF22834F2EF418AF0049E685 /* MultilineTextInput.swift in Sources */,
 				EE478D7969A652C6D02B92CDD8D5FDDD /* Question.swift in Sources */,
 				451BE49C329700ED1350D7594304929F /* QuestionSettings.swift in Sources */,
+				EF4BF7DC2EF6C80A000D549D /* CheckboxGroup.swift in Sources */,
 				4DED9C637D2F393C6D88813B4E845633 /* SurInfo.swift in Sources */,
 				77DAF0B2553FA2358B28FFCDD994CB1B /* Survey.swift in Sources */,
 				05E44093DD6B93A7F2DE5F7BBE44B351 /* SurveyConfig.swift in Sources */,
