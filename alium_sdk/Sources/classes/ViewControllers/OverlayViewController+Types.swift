@@ -105,4 +105,26 @@ extension OverlayViewController{
 //        ])
         
     }
+    func addOpinionTypeInput(){
+        guard let questions = survey.questions else{return }
+        let currQuest = questions[index]
+        let npsGroup = NPSGroupView(options: currQuest.responseOptions)
+        
+        npsGroup.translatesAutoresizingMaskIntoConstraints = false
+        responseContainer.addSubview(npsGroup)
+        npsGroup.pin(to: responseContainer)}
+    
+    func addRatingTypeInput(){
+        guard let questions = survey.questions else{return }
+        let currQuest = questions[index]
+        guard let type = currQuest.questionSetting?.ratingType else{return}
+        
+        let responseType = RatingStyle(rawValue: type) ?? RatingStyle.star
+        let ratingGroup = RatingGroupView(responseOptions: currQuest.responseOptions, style: responseType)
+        ratingGroup.tintColor = .magenta
+        
+        ratingGroup.translatesAutoresizingMaskIntoConstraints = false
+        responseContainer.addSubview(ratingGroup)
+        ratingGroup.pin(to: responseContainer)}
+
 }

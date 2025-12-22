@@ -204,18 +204,20 @@ class OverlayViewController: UIViewController {
         case .longText:
              addMultilineTextInput()
         case .radio:
-            nextBtn.setTitle("radio", for: .normal);
+            
             addRadioTypeInput()
         case .checkbox:
-            nextBtn.setTitle("checkbox", for: .normal);
+             
             addCheckBoxTypeInput()
         case .nps:
-            nextBtn.setTitle("nps", for: .normal);
+             
             addNPSTypeInput()
         case .rating:
-            nextBtn.setTitle("rating", for: .normal);
+           
+            addRatingTypeInput()
         case .opinion:
-            nextBtn.setTitle("opinion", for: .normal);
+            
+            addOpinionTypeInput()
         case .thankYou:
             nextBtn.setTitle("thankYou", for: .normal);
              

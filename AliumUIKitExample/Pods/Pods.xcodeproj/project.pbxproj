@@ -51,6 +51,8 @@
 		EF4BF7DC2EF6C80A000D549D /* CheckboxGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4BF7DB2EF6C805000D549D /* CheckboxGroup.swift */; };
 		EF4BF7E02EF6CA73000D549D /* NPSItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4BF7DF2EF6CA6F000D549D /* NPSItemView.swift */; };
 		EF4BF7E22EF6CA8E000D549D /* NPSGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4BF7E12EF6CA89000D549D /* NPSGroupView.swift */; };
+		EF8132072EF9666F00ADC18D /* RatingItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8132062EF9666B00ADC18D /* RatingItemView.swift */; };
+		EF8132092EF9669C00ADC18D /* RatingGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8132082EF9669400ADC18D /* RatingGroupView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,6 +152,8 @@
 		EF4BF7DB2EF6C805000D549D /* CheckboxGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxGroup.swift; sourceTree = "<group>"; };
 		EF4BF7DF2EF6CA6F000D549D /* NPSItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NPSItemView.swift; sourceTree = "<group>"; };
 		EF4BF7E12EF6CA89000D549D /* NPSGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NPSGroupView.swift; sourceTree = "<group>"; };
+		EF8132062EF9666B00ADC18D /* RatingItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingItemView.swift; sourceTree = "<group>"; };
+		EF8132082EF9669400ADC18D /* RatingGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingGroupView.swift; sourceTree = "<group>"; };
 		F4258409424E89BFECF849B71C2776E6 /* Pods-AliumUIKitExampleTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AliumUIKitExampleTests.modulemap"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -192,6 +196,8 @@
 		062B2932E72746712E5A91883E4D91E7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				EF8132082EF9669400ADC18D /* RatingGroupView.swift */,
+				EF8132062EF9666B00ADC18D /* RatingItemView.swift */,
 				EF4BF7E12EF6CA89000D549D /* NPSGroupView.swift */,
 				EF4BF7DF2EF6CA6F000D549D /* NPSItemView.swift */,
 				EF4BF7DB2EF6C805000D549D /* CheckboxGroup.swift */,
@@ -635,6 +641,7 @@
 				EF22834D2EF412FA0049E685 /* OverlayViewController+Types.swift in Sources */,
 				9B6DE51BC6CC57F3750CD9310670D570 /* alium_sdk-dummy.m in Sources */,
 				EF4BF7E02EF6CA73000D549D /* NPSItemView.swift in Sources */,
+				EF8132092EF9669C00ADC18D /* RatingGroupView.swift in Sources */,
 				EEF13761287F37F35D0E1D51B9DDB3BA /* AliumRequest.swift in Sources */,
 				D7C3E3DDCA1A1B6EBB3CECA99D7B0075 /* AliumRequestManager.swift in Sources */,
 				51483B3F4155249660DAECEB9E8B73E4 /* AliumSurveyLoader.swift in Sources */,
@@ -650,6 +657,7 @@
 				EF4BF7DC2EF6C80A000D549D /* CheckboxGroup.swift in Sources */,
 				4DED9C637D2F393C6D88813B4E845633 /* SurInfo.swift in Sources */,
 				77DAF0B2553FA2358B28FFCDD994CB1B /* Survey.swift in Sources */,
+				EF8132072EF9666F00ADC18D /* RatingItemView.swift in Sources */,
 				05E44093DD6B93A7F2DE5F7BBE44B351 /* SurveyConfig.swift in Sources */,
 				1BD58D7F5804230333F62C1B5A1C6CCC /* SurveyInfo.swift in Sources */,
 				9746F3ABB1980BC8CC10B669A1FCB394 /* SurveyParameters.swift in Sources */,
