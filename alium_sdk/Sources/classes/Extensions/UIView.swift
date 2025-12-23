@@ -4,7 +4,8 @@
 //
 //  Created by yusera-ansari on 18/12/25.
 //
-
+import UIKit
+import Foundation
 extension UIView{
     func removeAutoResizingMask(){
         self.translatesAutoresizingMaskIntoConstraints = false

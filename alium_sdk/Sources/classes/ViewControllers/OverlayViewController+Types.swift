@@ -17,10 +17,11 @@ enum ResponseType: String {
 extension OverlayViewController{
     func addMultilineTextInput(){
         let input = MultilineTextInput()
+        input.delegate = self
         responseContainer.addSubview(input)
         input.pin(toMarginOf: responseContainer)
         input.setPlaceholder("Enter you response here")
-        
+    
 //        var v = UIView()
 //        responseContainer.addSubview(v)
 //        v.pin(to: responseContainer)
@@ -58,7 +59,7 @@ extension OverlayViewController{
         let currQuest = questions[index]
         
         let radioGroup = RadioButtonGroup(options: currQuest.responseOptions)
-
+        radioGroup.delegate = self
               radioGroup.translatesAutoresizingMaskIntoConstraints = false
               responseContainer.addSubview(radioGroup)
 
@@ -69,7 +70,7 @@ extension OverlayViewController{
         guard let questions = survey.questions else{return }
         let currQuest = questions[index]
         let checkboxGroup = CheckboxGroup(options: currQuest.responseOptions)
-
+        checkboxGroup.delegate = self
                checkboxGroup.translatesAutoresizingMaskIntoConstraints = false
                responseContainer.addSubview(checkboxGroup)
         checkboxGroup.pin(to: responseContainer)
@@ -79,7 +80,7 @@ extension OverlayViewController{
         guard let questions = survey.questions else{return }
         let currQuest = questions[index]
         let npsGroup = NPSGroupView(options: currQuest.responseOptions)
-
+        npsGroup.delegate = self
         npsGroup.translatesAutoresizingMaskIntoConstraints = false
                responseContainer.addSubview(npsGroup)
         npsGroup.pin(to: responseContainer)
@@ -109,7 +110,7 @@ extension OverlayViewController{
         guard let questions = survey.questions else{return }
         let currQuest = questions[index]
         let npsGroup = NPSGroupView(options: currQuest.responseOptions)
-        
+        npsGroup.delegate = self
         npsGroup.translatesAutoresizingMaskIntoConstraints = false
         responseContainer.addSubview(npsGroup)
         npsGroup.pin(to: responseContainer)}
@@ -121,10 +122,19 @@ extension OverlayViewController{
         
         let responseType = RatingStyle(rawValue: type) ?? RatingStyle.star
         let ratingGroup = RatingGroupView(responseOptions: currQuest.responseOptions, style: responseType)
+        ratingGroup.delegate = self
         ratingGroup.tintColor = .magenta
         
         ratingGroup.translatesAutoresizingMaskIntoConstraints = false
         responseContainer.addSubview(ratingGroup)
-        ratingGroup.pin(to: responseContainer)}
+        //        ratingGroup.pin(to: responseContainer)}
+        ratingGroup.activateConstraints([
+            ratingGroup.widthAnchor.constraint(equalTo: responseContainer.widthAnchor, multiplier: 0.7),
+            ratingGroup.topAnchor.constraint(equalTo: responseContainer.topAnchor),
+            ratingGroup.bottomAnchor.constraint(equalTo: responseContainer.bottomAnchor),
+            ratingGroup.centerXAnchor.constraint(equalTo: responseContainer.centerXAnchor)
+        ]
+        )
+    }
 
 }

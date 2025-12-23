@@ -4,9 +4,10 @@
 //
 //  Created by yusera-ansari on 20/12/25.
 //
-
+import UIKit
+import Foundation
 final class CheckboxGroup: UIView {
-
+    weak var delegate: ALiumInputDelegate?
     private var checkboxes: [CheckboxView] = []
     private let stackView = UIStackView()
 
@@ -50,5 +51,6 @@ final class CheckboxGroup: UIView {
 
     @objc private func valueChanged(_ sender: CheckboxView) {
         print("Selected options:", selectedOptions)
+        delegate?.onResponse(resp: selectedOptions.joined(separator: ","))
     }
 }

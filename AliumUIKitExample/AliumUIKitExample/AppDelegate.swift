@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        Alium.config(key: "https://assets.aliumsurvey.com/app/cstjn/cstjn_16.json");
+        Alium.config(key: "");
 
         
         return true

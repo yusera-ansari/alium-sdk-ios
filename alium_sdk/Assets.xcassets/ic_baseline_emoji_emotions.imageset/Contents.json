@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "ic_baseline_emoji_emotions.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "ic_baseline_emoji_emotions 1.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "ic_baseline_emoji_emotions 2.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

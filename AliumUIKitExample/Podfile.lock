@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  alium_sdk: bc5e01d7d21d2cfa51259e7f8fa67f5f6e74395f
+  alium_sdk: ae3357967e0fccdeb08375662a922e17ce417699
 
 PODFILE CHECKSUM: 9feff3d4c57002baddf81df1a961a449a6af5525
 

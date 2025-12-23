@@ -8,7 +8,7 @@
 import UIKit
 
 final class RadioButtonView: UIControl {
-
+    let title:String
     private let outerCircle = UIView()
     private let innerCircle = UIView()
     private let titleLabel = UILabel()
@@ -20,6 +20,7 @@ final class RadioButtonView: UIControl {
     }
 
     init(title: String) {
+        self.title = title
         super.init(frame: .zero)
         setupUI(title: title)
     }

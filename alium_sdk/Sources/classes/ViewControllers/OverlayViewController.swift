@@ -9,10 +9,14 @@ import UIKit
 import SwiftUI
 
 
-
+import UIKit
+import Foundation
 class OverlayViewController: UIViewController {
-
+    let uuid = UUID().uuidString
+    var response:String=""
+    var currQuest:Question?
     let survey: Survey
+    let parameters:SurveyParameters
     var index:Int = 0;
     lazy var container : UIView = {
         var v : UIView = UIView()
@@ -59,7 +63,7 @@ class OverlayViewController: UIViewController {
                 
                b.setImage(image, for: .normal)
                b.imageView?.tintColor = .gray
-//               b.addTarget(self, action: #selector(onClose), for: .touchUpInside)
+               b.addTarget(self, action: #selector(onClose), for: .touchUpInside)
         b.backgroundColor = .clear
         if let color = survey.surveyInfo.themeColors?.color23 {
             b.imageView?.tintColor = .init(hexString: color)
@@ -67,9 +71,18 @@ class OverlayViewController: UIViewController {
         
         return b
     }()
-    init(survey: Survey) {
+    init(survey: Survey, parameters:SurveyParameters) {
         self.survey = survey
+        self.parameters = parameters
+        
+        currQuest = survey.questions?.first
+        
         super.init(nibName: nil, bundle: nil)
+        guard currQuest != nil else{
+            print("Curre Question is nil")
+            dismiss(animated: false)
+            return
+        }
         modalPresentationStyle = .overFullScreen
         modalTransitionStyle = .crossDissolve
         
@@ -91,6 +104,7 @@ class OverlayViewController: UIViewController {
         setupResponseContainer()
         setupNextBtn()
         showCurrentQuestion()
+        
     }
     
     func setupContainer(){
@@ -143,7 +157,7 @@ class OverlayViewController: UIViewController {
 
         nextBtn.activateConstraints([
             nextBtn.bottomAnchor.constraint(equalTo: container.bottomAnchor, constant: -12),
-            nextBtn.topAnchor.constraint(equalTo: responseContainer.bottomAnchor, constant: 10),
+            nextBtn.topAnchor.constraint(equalTo: responseContainer.bottomAnchor, constant: 15),
         ])
         
         nextBtn.addTarget(self, action: #selector(onNextPress), for: .touchUpInside)
@@ -192,8 +206,8 @@ class OverlayViewController: UIViewController {
         guard let questions else{
             return
         }
-        var currQuestion = questions[index]
-        guard let respType = currQuestion.responseType, let responseType = ResponseType(rawValue: respType) else {
+        currQuest = questions[index]
+        guard let respType = currQuest?.responseType, let responseType = ResponseType(rawValue: respType) else {
             
             return
         }
@@ -201,23 +215,25 @@ class OverlayViewController: UIViewController {
             
         case .start:
             nextBtn.setTitle("start", for: .normal);
+            track()
         case .longText:
              addMultilineTextInput()
+            
         case .radio:
-            
             addRadioTypeInput()
-        case .checkbox:
-             
-            addCheckBoxTypeInput()
-        case .nps:
-             
-            addNPSTypeInput()
-        case .rating:
-           
-            addRatingTypeInput()
-        case .opinion:
             
+        case .checkbox:
+            addCheckBoxTypeInput()
+            
+        case .nps:
+            addNPSTypeInput()
+            
+        case .rating:
+            addRatingTypeInput()
+            
+        case .opinion:
             addOpinionTypeInput()
+            
         case .thankYou:
             nextBtn.setTitle("thankYou", for: .normal);
              
@@ -237,8 +253,11 @@ class OverlayViewController: UIViewController {
     }
     func updatedNextButton(_ respType:ResponseType){
         guard let questions = survey.questions else{return}
-        let currQuest = questions[index]
-        
+          currQuest = questions[index]
+        guard currQuest != nil else{
+            dismiss(animated: false)
+            return
+        }
         nextBtnCenterX.isActive = false
         nextBtnTrailing.isActive = false
          
@@ -255,14 +274,85 @@ class OverlayViewController: UIViewController {
        
         
     }
+    
+    func track(){
+        let trackingParams = generateTrackingParameters()
+        print(trackingParams)
+        AliumTracker.track(parameters: trackingParams)
+        
+    }
+    
 
     @objc
     func onNextPress(_ sender:UIButton){
         index += 1;
-//        update button
+        if currQuest?.responseType != "0" && currQuest?.responseType != "-1" && !response.trimmingCharacters(in: .whitespaces).isEmpty {
+            track()
+        }
         showCurrentQuestion()
     }
     
+    @objc
+    func onClose(_ sender:UIButton){
+        dismiss(animated: true)
+    }
+    func generateTrackingParameters()->[String:Any]{
+        guard let currQuest else{
+            return [:]
+        }
+       
+        var params: [String: Any] = parameters.customerVariables
+        // Base params
+        params["questionId"] = currQuest.id
+        params["surveyLoadId"] = uuid
+        params["surveyPath"] = parameters.screenName
+        params["userId"] = ""
+//        params["custId"] = aliumPreferences.customerId
+//        params["userAgent"] = getUserAgent()
+        params["eventType"] = ResponseType(rawValue: currQuest.responseType ?? "1") == .start ? "load" : "resp"
+        params["language"] = "1"
+        params["surveyType"] = 7
+        params["respType"] = currQuest.responseType
+        params["response"] = response
+
+        // Survey info
+        let surveyInfo = survey.surveyInfo
+//        if let surveyInfo = survey.surveyInfo {
+            params["surveyId"] = surveyInfo.surveyId
+            params["orgId"] = surveyInfo.orgId
+//        }
+
+//        // AI follow-up override
+//        if let questions = survey.questions,
+//           index < questions.count,
+//           questions[index].aiSettings?.enabled == true,
+//           manager.followUpIndex > -1,
+//           let aiFollowup = manager.aiFollowup {
+//
+//            params["aiQuestionId"] = manager.followUpIndex + 1
+//            params["aiQuestionText"] = aiFollowup.followupQuestion
+//            params["respType"] = "15"
+//            params["response"] = aiFollowup.response
+//        }
+
+        // Remove empty / null values (Android equivalent logic)
+        params = params.filter { _, value in
+            switch value {
+            case let string as String:
+                return !string.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+            case let array as [Any]:
+                return !array.isEmpty
+            case let dict as [String: Any]:
+                return !dict.isEmpty
+            case Optional<Any>.none:
+                return false
+            default:
+                return true
+            }
+        }
+
+        return params
+    }
 }
 
 

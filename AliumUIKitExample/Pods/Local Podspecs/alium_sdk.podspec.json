@@ -4,10 +4,7 @@
   "summary": "iOS support for alium survey",
   "description": "This is Alium sdk, an ios support for alium survey",
   "homepage": "http://alium/alium_sdk",
-  "license": {
-    "type": "MIT",
-    "file": "FILE_LICENSE"
-  },
+  "license": "MIT",
   "authors": {
     "yusera-ansari": "yuserabanoansari@dwao.in"
   },
@@ -18,5 +15,10 @@
     "git": "https://github.com/yusera-ansari/alium_sdk-ios",
     "tag": "0.0.1"
   },
-  "source_files": "alium_sdk/Sources/**/*"
+  "source_files": "alium_sdk/Sources/**/*",
+  "resource_bundles": {
+    "alium_sdk": [
+      "alium_sdk/Assets.xcassets"
+    ]
+  }
 }

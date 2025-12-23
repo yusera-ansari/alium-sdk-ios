@@ -4,16 +4,18 @@
 //
 //  Created by yusera-ansari on 22/12/25.
 //
-
+import UIKit
+import Foundation
 final class RatingGroupView: UIView {
-    private let stackView = UIStackView()
+     weak var delegate: ALiumInputDelegate?
+     private let stackView = UIStackView()
      private var items: [RatingItemView] = []
 
      private let responseOptions: [String]
      private let style: RatingStyle
 
      var selectedIndex: Int? {
-         items.first(where: { $0.isSelected })?.index
+         items.last(where: { $0.isSelected })?.index
      }
 
      var selectedOption: String? {
@@ -54,7 +56,10 @@ final class RatingGroupView: UIView {
      }
 
      @objc private func itemSelected(_ sender: RatingItemView) {
-         items.forEach { $0.isSelected = ($0 == sender) }
+         items.forEach { $0.isSelected = ($0.index <= sender.index)
+              
+         }
          print("Selected:", selectedOption ?? "")
+         delegate?.onResponse(resp: responseOptions[sender.index])
      }
 }

@@ -9,7 +9,7 @@ import UIKit
 import Foundation
 
 @MainActor
-class ViewControllerFinder {
+public class ViewControllerFinder {
     static func currentWindow() -> UIWindow? {
         if #available(iOS 13.0, *) {
             return UIApplication.shared.connectedScenes

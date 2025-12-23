@@ -20,9 +20,11 @@ final class RatingItemView: UIControl {
      private let imageView = UIImageView()
      private let label = UILabel()
      private let style: RatingStyle
-
+        private let emojiTypes = ["line_md_emoji_cry","line_md_emoji_frown","mingcute_emoji_smile","ic_baseline_emoji_emotions","fluent_emoji_laugh"]
      override var isSelected: Bool {
-         didSet { updateUI() }
+         didSet {
+             configureSymbol()
+             updateUI() }
      }
 
      init(index: Int, style: RatingStyle) {
@@ -38,8 +40,7 @@ final class RatingItemView: UIControl {
 
      private func setupUI() {
          heightAnchor.constraint(equalToConstant: 44).isActive = true
-         layer.cornerRadius = 8
-         layer.borderWidth = 1
+        
 
          imageView.translatesAutoresizingMaskIntoConstraints = false
          imageView.contentMode = .scaleAspectFit
@@ -55,19 +56,21 @@ final class RatingItemView: UIControl {
          container.addSubview(imageView)
          container.addSubview(label)
          addSubview(container)
+         container.pin(to: self)
 
          NSLayoutConstraint.activate([
              container.centerXAnchor.constraint(equalTo: centerXAnchor),
              container.centerYAnchor.constraint(equalTo: centerYAnchor),
 
-             imageView.widthAnchor.constraint(equalToConstant: 22),
-             imageView.heightAnchor.constraint(equalToConstant: 22),
+//             imageView.widthAnchor.constraint(equalToConstant: 22),
+//             imageView.heightAnchor.constraint(equalToConstant: 22),
              imageView.centerXAnchor.constraint(equalTo: container.centerXAnchor),
              imageView.centerYAnchor.constraint(equalTo: container.centerYAnchor),
 
              label.centerXAnchor.constraint(equalTo: container.centerXAnchor),
              label.centerYAnchor.constraint(equalTo: container.centerYAnchor)
          ])
+         imageView.pin(to: container)
 
          configureSymbol()
          addTarget(self, action: #selector(tapped), for: .touchUpInside)
@@ -76,28 +79,30 @@ final class RatingItemView: UIControl {
 
      private func configureSymbol() {
          switch style {
+             
          case .star:
-             imageView.image = UIImage(systemName: "star")
+             imageView.image = UIImage(systemName: isSelected ? "star.fill" : "star")
              label.isHidden = true
 
          case .heart:
-             imageView.image = UIImage(systemName: "heart")
+             imageView.image = UIImage(systemName:isSelected ? "heart.fill" : "heart")
              label.isHidden = true
 
          case .tick:
-             imageView.image = UIImage(systemName: "checkmark")
+             guard
+                let bundle = AliumBundle.getBundle() else{return}
+             imageView.image = UIImage(named: "hugeicons_tick_double", in : bundle, compatibleWith: nil)?.withRenderingMode(.alwaysTemplate)
              label.isHidden = true
 
          case .emoji:
-             let faces = [
-                 "face.smiling",
-                 "face.smiling.inverse",
-                 "face.dashed"
-             ]
-             imageView.image = UIImage(systemName: faces[min(index, faces.count - 1)])
+             guard let bundle = AliumBundle.getBundle() else{return}
+             imageView.image = UIImage(named:isSelected ? emojiTypes[min(index, emojiTypes.count - 1)] : "line_md_emoji_smile", in:bundle , compatibleWith: nil)?.withRenderingMode(.alwaysTemplate)
+             imageView.tintColor = .black
              label.isHidden = true
 
          case .buttons:
+             layer.cornerRadius = 8
+             layer.borderWidth = 1
              label.text = "\(index + 1)"
              imageView.isHidden = true
          }
@@ -106,9 +111,9 @@ final class RatingItemView: UIControl {
      private func updateUI() {
          let tint = isSelected ? tintColor : .systemGray3
          imageView.tintColor = tint
-         label.textColor = tint
-         layer.borderColor = tint?.cgColor
-         backgroundColor = isSelected ? tint?.withAlphaComponent(0.1) : .clear
+//         label.textColor = tint
+//         layer.borderColor = tint?.cgColor
+//         backgroundColor = isSelected ? tint?.withAlphaComponent(0.1) : .clear
      }
 
      @objc private func tapped() {

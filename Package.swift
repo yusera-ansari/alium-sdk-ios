@@ -19,10 +19,16 @@ let package = Package(
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
             name: "alium_sdk",
-        path: "alium_sdk"),
+            path: "alium_sdk",
+            resources: [
+                .process("alium_sdk/Assets.xcassets")
+            ]
+        
+        ),
         .testTarget(
             name: "alium-sdk-iosTests",
             dependencies: ["alium_sdk"]
         ),
+        
     ]
 )

@@ -4,9 +4,11 @@
 //
 //  Created by yusera-ansari on 18/12/25.
 //
+import UIKit
+import Foundation
 
 final class MultilineTextInput: UIView {
-
+    weak var delegate: ALiumInputDelegate?
     let textView = UITextView()
     private let placeholderLabel = UILabel()
 
@@ -64,6 +66,7 @@ final class MultilineTextInput: UIView {
 extension MultilineTextInput: UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
         placeholderLabel.isHidden = !textView.text.isEmpty
+        delegate?.onResponse(resp: textView.text)
     }
     func textViewDidBeginEditing(_ textView: UITextView) {
         placeholderLabel.isHidden = true

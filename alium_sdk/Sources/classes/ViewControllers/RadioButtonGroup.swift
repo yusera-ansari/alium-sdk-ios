@@ -4,9 +4,10 @@
 //
 //  Created by yusera-ansari on 20/12/25.
 //
-
+import UIKit
+import Foundation
 final class RadioButtonGroup: UIView {
-
+    weak var delegate: ALiumInputDelegate?
     private var buttons: [RadioButtonView] = []
     private let stackView = UIStackView()
 
@@ -47,7 +48,11 @@ final class RadioButtonGroup: UIView {
     }
 
     @objc private func optionSelected(_ sender: RadioButtonView) {
-        buttons.forEach { $0.isSelected = ($0 == sender) }
+        buttons.forEach { $0.isSelected = ($0 == sender)
+           if($0 == sender) {
+                delegate?.onResponse(resp:sender.title )
+            }
+        }
     }
 }
 

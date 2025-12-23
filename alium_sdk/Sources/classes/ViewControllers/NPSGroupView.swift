@@ -5,9 +5,10 @@
 //  Created by yusera-ansari on 20/12/25.
 //
 
-
+import UIKit
+import Foundation
 final class NPSGroupView: UIView {
-
+    weak var delegate: ALiumInputDelegate?
     private let scrollView = UIScrollView()
     private let stackView = UIStackView()
     private var items: [NPSItemView] = []
@@ -62,7 +63,11 @@ final class NPSGroupView: UIView {
     }
 
     @objc private func itemSelected(_ sender: NPSItemView) {
-        items.forEach { $0.isSelected = ($0 == sender) }
+        items.forEach { $0.isSelected = ($0 == sender)
+            if($0 == sender){
+                delegate?.onResponse(resp:  sender.title)
+            }
+        }
         scrollToItem(sender)
     }
 

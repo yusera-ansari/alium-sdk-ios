@@ -1,0 +1,10 @@
+//
+//  ResponseHandler.swift
+//  Pods
+//
+//  Created by Abcom on 23/12/25.
+//
+
+protocol ALiumInputDelegate:AnyObject{
+    func onResponse(resp:String)
+}

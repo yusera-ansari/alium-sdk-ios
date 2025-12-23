@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		25EF337512BDB7727B06BC59 /* Pods_AliumUIKitExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0456C296710AC9458E062A3 /* Pods_AliumUIKitExampleTests.framework */; };
-		57E12AFB91AA056DFB75C121 /* Pods_AliumUIKitExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D37F96B97F562956DF599AFF /* Pods_AliumUIKitExample.framework */; };
-		7A379CDE24C7CE50511E0CBA /* Pods_AliumUIKitExample_AliumUIKitExampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95C8D3875A26B844F7C37C8E /* Pods_AliumUIKitExample_AliumUIKitExampleUITests.framework */; };
+		0C5474C092D167B81275A929 /* Pods_AliumUIKitExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBCFF4C8339D72D25CFEBF37 /* Pods_AliumUIKitExample.framework */; };
+		610598F96EC082D47F9CE2A9 /* Pods_AliumUIKitExample_AliumUIKitExampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A416F5B1F924A7B76BAC0E6 /* Pods_AliumUIKitExample_AliumUIKitExampleUITests.framework */; };
+		69E04E8DC74CFEF1D60C8793 /* Pods_AliumUIKitExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDBF3277D03656E1A6038B97 /* Pods_AliumUIKitExampleTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,18 +30,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0E1D4461392312EF46101774 /* Pods-AliumUIKitExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AliumUIKitExample.release.xcconfig"; path = "Target Support Files/Pods-AliumUIKitExample/Pods-AliumUIKitExample.release.xcconfig"; sourceTree = "<group>"; };
-		1FBD4D5CFBC27A1F2B05F300 /* Pods-AliumUIKitExample-AliumUIKitExampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AliumUIKitExample-AliumUIKitExampleUITests.release.xcconfig"; path = "Target Support Files/Pods-AliumUIKitExample-AliumUIKitExampleUITests/Pods-AliumUIKitExample-AliumUIKitExampleUITests.release.xcconfig"; sourceTree = "<group>"; };
-		29AC2C21A978A9960AA345B4 /* Pods-AliumUIKitExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AliumUIKitExampleTests.release.xcconfig"; path = "Target Support Files/Pods-AliumUIKitExampleTests/Pods-AliumUIKitExampleTests.release.xcconfig"; sourceTree = "<group>"; };
-		5367E9D7281B22D4C1433D56 /* Pods-AliumUIKitExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AliumUIKitExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-AliumUIKitExampleTests/Pods-AliumUIKitExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
-		61E1CF19D6BB8AA67E349A4D /* Pods-AliumUIKitExample-AliumUIKitExampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AliumUIKitExample-AliumUIKitExampleUITests.debug.xcconfig"; path = "Target Support Files/Pods-AliumUIKitExample-AliumUIKitExampleUITests/Pods-AliumUIKitExample-AliumUIKitExampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		9350D5ED28AFF73BC47B91A3 /* Pods-AliumUIKitExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AliumUIKitExample.debug.xcconfig"; path = "Target Support Files/Pods-AliumUIKitExample/Pods-AliumUIKitExample.debug.xcconfig"; sourceTree = "<group>"; };
-		95C8D3875A26B844F7C37C8E /* Pods_AliumUIKitExample_AliumUIKitExampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AliumUIKitExample_AliumUIKitExampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D37F96B97F562956DF599AFF /* Pods_AliumUIKitExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AliumUIKitExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E0456C296710AC9458E062A3 /* Pods_AliumUIKitExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AliumUIKitExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EFDD2B4396BE8204570C74C /* Pods-AliumUIKitExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AliumUIKitExampleTests.release.xcconfig"; path = "Target Support Files/Pods-AliumUIKitExampleTests/Pods-AliumUIKitExampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		4AA3B24FEF3E6B1D207F3161 /* Pods-AliumUIKitExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AliumUIKitExample.release.xcconfig"; path = "Target Support Files/Pods-AliumUIKitExample/Pods-AliumUIKitExample.release.xcconfig"; sourceTree = "<group>"; };
+		5F522B78F74605348497F153 /* Pods-AliumUIKitExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AliumUIKitExample.debug.xcconfig"; path = "Target Support Files/Pods-AliumUIKitExample/Pods-AliumUIKitExample.debug.xcconfig"; sourceTree = "<group>"; };
+		7A416F5B1F924A7B76BAC0E6 /* Pods_AliumUIKitExample_AliumUIKitExampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AliumUIKitExample_AliumUIKitExampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB6686DF19949C357616A376 /* Pods-AliumUIKitExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AliumUIKitExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-AliumUIKitExampleTests/Pods-AliumUIKitExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B7F1D76BE6AA412B4F14F4D6 /* Pods-AliumUIKitExample-AliumUIKitExampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AliumUIKitExample-AliumUIKitExampleUITests.debug.xcconfig"; path = "Target Support Files/Pods-AliumUIKitExample-AliumUIKitExampleUITests/Pods-AliumUIKitExample-AliumUIKitExampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BDBF3277D03656E1A6038B97 /* Pods_AliumUIKitExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AliumUIKitExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBCFF4C8339D72D25CFEBF37 /* Pods_AliumUIKitExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AliumUIKitExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF63243F2EE6A31200130691 /* AliumUIKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AliumUIKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF6324552EE6A31800130691 /* AliumUIKitExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AliumUIKitExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF63245F2EE6A31800130691 /* AliumUIKitExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AliumUIKitExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F46CA0126E2BF64B4D1F8483 /* Pods-AliumUIKitExample-AliumUIKitExampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AliumUIKitExample-AliumUIKitExampleUITests.release.xcconfig"; path = "Target Support Files/Pods-AliumUIKitExample-AliumUIKitExampleUITests/Pods-AliumUIKitExample-AliumUIKitExampleUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -65,11 +65,15 @@
 		};
 		EF6324582EE6A31800130691 /* AliumUIKitExampleTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = AliumUIKitExampleTests;
 			sourceTree = "<group>";
 		};
 		EF6324622EE6A31800130691 /* AliumUIKitExampleUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = AliumUIKitExampleUITests;
 			sourceTree = "<group>";
 		};
@@ -80,7 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57E12AFB91AA056DFB75C121 /* Pods_AliumUIKitExample.framework in Frameworks */,
+				0C5474C092D167B81275A929 /* Pods_AliumUIKitExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25EF337512BDB7727B06BC59 /* Pods_AliumUIKitExampleTests.framework in Frameworks */,
+				69E04E8DC74CFEF1D60C8793 /* Pods_AliumUIKitExampleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,7 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A379CDE24C7CE50511E0CBA /* Pods_AliumUIKitExample_AliumUIKitExampleUITests.framework in Frameworks */,
+				610598F96EC082D47F9CE2A9 /* Pods_AliumUIKitExample_AliumUIKitExampleUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,24 +110,14 @@
 		D9A090100E0BD27366ECFEE1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9350D5ED28AFF73BC47B91A3 /* Pods-AliumUIKitExample.debug.xcconfig */,
-				0E1D4461392312EF46101774 /* Pods-AliumUIKitExample.release.xcconfig */,
-				61E1CF19D6BB8AA67E349A4D /* Pods-AliumUIKitExample-AliumUIKitExampleUITests.debug.xcconfig */,
-				1FBD4D5CFBC27A1F2B05F300 /* Pods-AliumUIKitExample-AliumUIKitExampleUITests.release.xcconfig */,
-				5367E9D7281B22D4C1433D56 /* Pods-AliumUIKitExampleTests.debug.xcconfig */,
-				29AC2C21A978A9960AA345B4 /* Pods-AliumUIKitExampleTests.release.xcconfig */,
+				5F522B78F74605348497F153 /* Pods-AliumUIKitExample.debug.xcconfig */,
+				4AA3B24FEF3E6B1D207F3161 /* Pods-AliumUIKitExample.release.xcconfig */,
+				B7F1D76BE6AA412B4F14F4D6 /* Pods-AliumUIKitExample-AliumUIKitExampleUITests.debug.xcconfig */,
+				F46CA0126E2BF64B4D1F8483 /* Pods-AliumUIKitExample-AliumUIKitExampleUITests.release.xcconfig */,
+				AB6686DF19949C357616A376 /* Pods-AliumUIKitExampleTests.debug.xcconfig */,
+				2EFDD2B4396BE8204570C74C /* Pods-AliumUIKitExampleTests.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		E4E776542F47850E8A39E3C8 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D37F96B97F562956DF599AFF /* Pods_AliumUIKitExample.framework */,
-				95C8D3875A26B844F7C37C8E /* Pods_AliumUIKitExample_AliumUIKitExampleUITests.framework */,
-				E0456C296710AC9458E062A3 /* Pods_AliumUIKitExampleTests.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		EF6324362EE6A31200130691 = {
@@ -134,7 +128,7 @@
 				EF6324622EE6A31800130691 /* AliumUIKitExampleUITests */,
 				EF6324402EE6A31200130691 /* Products */,
 				D9A090100E0BD27366ECFEE1 /* Pods */,
-				E4E776542F47850E8A39E3C8 /* Frameworks */,
+				F947E3D83156BE130AC07AAA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -148,6 +142,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		F947E3D83156BE130AC07AAA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EBCFF4C8339D72D25CFEBF37 /* Pods_AliumUIKitExample.framework */,
+				7A416F5B1F924A7B76BAC0E6 /* Pods_AliumUIKitExample_AliumUIKitExampleUITests.framework */,
+				BDBF3277D03656E1A6038B97 /* Pods_AliumUIKitExampleTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -155,11 +159,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF6324682EE6A31800130691 /* Build configuration list for PBXNativeTarget "AliumUIKitExample" */;
 			buildPhases = (
-				F378438E189C36821AEAADF4 /* [CP] Check Pods Manifest.lock */,
+				22A90675D2C2A771AF9F9771 /* [CP] Check Pods Manifest.lock */,
 				EF63243B2EE6A31200130691 /* Sources */,
 				EF63243C2EE6A31200130691 /* Frameworks */,
 				EF63243D2EE6A31200130691 /* Resources */,
-				6C58048AC498F2963C2EF6EC /* [CP] Embed Pods Frameworks */,
+				B46A031E8DA34E63F7B824DE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -177,7 +181,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF63246D2EE6A31800130691 /* Build configuration list for PBXNativeTarget "AliumUIKitExampleTests" */;
 			buildPhases = (
-				B36F49AB51D2870CE0518FC1 /* [CP] Check Pods Manifest.lock */,
+				96B93749F32CBF0C55472CA9 /* [CP] Check Pods Manifest.lock */,
 				EF6324512EE6A31800130691 /* Sources */,
 				EF6324522EE6A31800130691 /* Frameworks */,
 				EF6324532EE6A31800130691 /* Resources */,
@@ -199,11 +203,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF6324702EE6A31800130691 /* Build configuration list for PBXNativeTarget "AliumUIKitExampleUITests" */;
 			buildPhases = (
-				4D5160C300B4D7E2CA3C981C /* [CP] Check Pods Manifest.lock */,
+				AFFAC749C7E686CFAAD78F78 /* [CP] Check Pods Manifest.lock */,
 				EF63245B2EE6A31800130691 /* Sources */,
 				EF63245C2EE6A31800130691 /* Frameworks */,
 				EF63245D2EE6A31800130691 /* Resources */,
-				5D721810E79BFD535B55CCBF /* [CP] Embed Pods Frameworks */,
+				CDA05F9C306F2739B894620D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -287,7 +291,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4D5160C300B4D7E2CA3C981C /* [CP] Check Pods Manifest.lock */ = {
+		22A90675D2C2A771AF9F9771 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -302,56 +306,14 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AliumUIKitExample-AliumUIKitExampleUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-AliumUIKitExample-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5D721810E79BFD535B55CCBF /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AliumUIKitExample-AliumUIKitExampleUITests/Pods-AliumUIKitExample-AliumUIKitExampleUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AliumUIKitExample-AliumUIKitExampleUITests/Pods-AliumUIKitExample-AliumUIKitExampleUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AliumUIKitExample-AliumUIKitExampleUITests/Pods-AliumUIKitExample-AliumUIKitExampleUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6C58048AC498F2963C2EF6EC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AliumUIKitExample/Pods-AliumUIKitExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AliumUIKitExample/Pods-AliumUIKitExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AliumUIKitExample/Pods-AliumUIKitExample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B36F49AB51D2870CE0518FC1 /* [CP] Check Pods Manifest.lock */ = {
+		96B93749F32CBF0C55472CA9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -373,7 +335,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F378438E189C36821AEAADF4 /* [CP] Check Pods Manifest.lock */ = {
+		AFFAC749C7E686CFAAD78F78 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -388,11 +350,45 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AliumUIKitExample-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-AliumUIKitExample-AliumUIKitExampleUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B46A031E8DA34E63F7B824DE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AliumUIKitExample/Pods-AliumUIKitExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AliumUIKitExample/Pods-AliumUIKitExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AliumUIKitExample/Pods-AliumUIKitExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDA05F9C306F2739B894620D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AliumUIKitExample-AliumUIKitExampleUITests/Pods-AliumUIKitExample-AliumUIKitExampleUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AliumUIKitExample-AliumUIKitExampleUITests/Pods-AliumUIKitExample-AliumUIKitExampleUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AliumUIKitExample-AliumUIKitExampleUITests/Pods-AliumUIKitExample-AliumUIKitExampleUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -437,7 +433,7 @@
 /* Begin XCBuildConfiguration section */
 		EF6324692EE6A31800130691 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9350D5ED28AFF73BC47B91A3 /* Pods-AliumUIKitExample.debug.xcconfig */;
+			baseConfigurationReference = 5F522B78F74605348497F153 /* Pods-AliumUIKitExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -468,7 +464,7 @@
 		};
 		EF63246A2EE6A31800130691 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0E1D4461392312EF46101774 /* Pods-AliumUIKitExample.release.xcconfig */;
+			baseConfigurationReference = 4AA3B24FEF3E6B1D207F3161 /* Pods-AliumUIKitExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -620,7 +616,7 @@
 		};
 		EF63246E2EE6A31800130691 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5367E9D7281B22D4C1433D56 /* Pods-AliumUIKitExampleTests.debug.xcconfig */;
+			baseConfigurationReference = AB6686DF19949C357616A376 /* Pods-AliumUIKitExampleTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -640,7 +636,7 @@
 		};
 		EF63246F2EE6A31800130691 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 29AC2C21A978A9960AA345B4 /* Pods-AliumUIKitExampleTests.release.xcconfig */;
+			baseConfigurationReference = 2EFDD2B4396BE8204570C74C /* Pods-AliumUIKitExampleTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -660,7 +656,7 @@
 		};
 		EF6324712EE6A31800130691 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 61E1CF19D6BB8AA67E349A4D /* Pods-AliumUIKitExample-AliumUIKitExampleUITests.debug.xcconfig */;
+			baseConfigurationReference = B7F1D76BE6AA412B4F14F4D6 /* Pods-AliumUIKitExample-AliumUIKitExampleUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -678,7 +674,7 @@
 		};
 		EF6324722EE6A31800130691 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1FBD4D5CFBC27A1F2B05F300 /* Pods-AliumUIKitExample-AliumUIKitExampleUITests.release.xcconfig */;
+			baseConfigurationReference = F46CA0126E2BF64B4D1F8483 /* Pods-AliumUIKitExample-AliumUIKitExampleUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

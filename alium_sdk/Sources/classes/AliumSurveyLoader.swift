@@ -77,10 +77,12 @@ class AliumSurveyLoader{
     func showSurveyOnScreen(_ survey:Survey){
         NSLog("Show Survey is running....")
 //        if(isUIKitApp()){
+        
             if let topVC = ViewControllerFinder.topViewController() {
-                let overlay = OverlayViewController(survey: survey)
+                let overlay = OverlayViewController(survey: survey, parameters: parameters)
                 topVC.present(overlay, animated: true, completion: nil)
             }
+        
 //        }else{
             
 //        }

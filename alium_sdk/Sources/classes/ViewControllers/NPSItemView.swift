@@ -8,7 +8,7 @@
 import UIKit
 
 final class NPSItemView: UIControl {
-
+    let title :String
     private let label = UILabel()
 
     override var isSelected: Bool {
@@ -22,6 +22,7 @@ final class NPSItemView: UIControl {
     }
 
     init(title: String) {
+        self.title = title
         super.init(frame: .zero)
         setupUI(title: title)
     }
