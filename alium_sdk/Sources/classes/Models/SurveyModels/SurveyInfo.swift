@@ -30,7 +30,7 @@ public struct SurveyInfo : Codable{
     public var theme: String?
     public var viewFrequency:String?
     public var type: Int?
-    public var themeColors: ThemeColors?
+    public var themeColors: ThemeColors = ThemeColors()
      public enum CodingKeys:String, CodingKey{
        
         

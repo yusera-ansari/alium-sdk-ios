@@ -11,26 +11,38 @@ final class MultilineTextInput: UIView {
     weak var delegate: ALiumInputDelegate?
     let textView = UITextView()
     private let placeholderLabel = UILabel()
-
+    private var heightAnch:NSLayoutConstraint!
+    var maxHeight:CGFloat = 120 {
+        didSet{
+            self.removeConstraint(heightAnch)
+            self.heightAnch = heightAnchor.constraint(greaterThanOrEqualToConstant: maxHeight)
+            self.heightAnch.isActive = true
+        }
+    }
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.heightAnch = heightAnchor.constraint(greaterThanOrEqualToConstant: maxHeight)
+        self.heightAnch.isActive = true
         setup()
     }
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        self.heightAnch = heightAnchor.constraint(greaterThanOrEqualToConstant: maxHeight)
+        self.heightAnch.isActive = true
         setup()
     }
 
     private func setup() {
+       
+        print("maxHeight: \(maxHeight)")
         backgroundColor = .white
         layer.cornerRadius = 8
         layer.masksToBounds = true
-        heightAnchor.constraint(greaterThanOrEqualToConstant: 140).isActive = true
+        
         // TextView
         textView.backgroundColor = .clear
         textView.font = .systemFont(ofSize: 16)
-        
 //        textView.isScrollEnabled = true
         textView.textContainerInset = UIEdgeInsets(top: 5, left: 6, bottom: 10, right: 6)
         textView.delegate = self

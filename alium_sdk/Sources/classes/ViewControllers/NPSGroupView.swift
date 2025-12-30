@@ -14,11 +14,11 @@ final class NPSGroupView: UIView {
     private var items: [NPSItemView] = []
 
    
-    init(options: [String]) {
+    init(options: [String],backgroundColor:UIColor, textColor:UIColor, selectedBgColor:UIColor, selectedTextColor:UIColor) {
         super.init(frame: .zero)
         setupScrollView()
         setupStackView()
-        createItems(options)
+        createItems(options,backgroundColor, textColor,selectedBgColor,selectedTextColor)
     }
 
     required init?(coder: NSCoder) {
@@ -27,15 +27,16 @@ final class NPSGroupView: UIView {
 
     private func setupScrollView() {
 //        scrollView.showsHorizontalScrollIndicator = false
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
-
         addSubview(scrollView)
         scrollView.pin(to: self)
+//        self.backgroundColor = .blue
+//        scrollView.backgroundColor = .systemPink
+        scrollView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
     }
 
     private func setupStackView() {
         stackView.axis = .horizontal
-        stackView.spacing = 6
+        stackView.spacing = 2
         stackView.alignment = .fill
         stackView.distribution = .fillEqually
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -47,15 +48,16 @@ final class NPSGroupView: UIView {
             stackView.bottomAnchor.constraint(equalTo: scrollView.contentLayoutGuide.bottomAnchor),
             stackView.leadingAnchor.constraint(equalTo: scrollView.contentLayoutGuide.leadingAnchor),
             stackView.trailingAnchor.constraint(equalTo: scrollView.contentLayoutGuide.trailingAnchor),
-
+            stackView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
             // Important: fixes height
             stackView.heightAnchor.constraint(equalTo: scrollView.frameLayoutGuide.heightAnchor)
         ])
+        
     }
 
-    private func createItems(_ options: [String]) {
+    private func createItems(_ options: [String],_ backgroundColor:UIColor, _ textColor:UIColor,_ selectedBgColor:UIColor, _ selectedTextColor:UIColor) {
         options.forEach { option in
-            let item = NPSItemView(title: option)
+            let item = NPSItemView(title: option, backgroundColor, textColor, selectedBgColor, selectedTextColor)
             item.addTarget(self, action: #selector(itemSelected(_:)), for: .valueChanged)
             items.append(item)
             stackView.addArrangedSubview(item)

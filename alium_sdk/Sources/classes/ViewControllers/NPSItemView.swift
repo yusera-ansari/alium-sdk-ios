@@ -10,19 +10,27 @@ import UIKit
 final class NPSItemView: UIControl {
     let title :String
     private let label = UILabel()
-
+    private let bgColor:UIColor
+    private let textColor:UIColor
+    private let selectedBgColor:UIColor
+    private let selectedTextColor:UIColor
+    
     override var isSelected: Bool {
         didSet {
-            backgroundColor = isSelected ? .systemBlue : .clear
-            label.textColor = isSelected ? .white : .systemBlue
-            layer.borderColor = isSelected
-                ? UIColor.systemBlue.cgColor
-                : UIColor.systemBlue.cgColor
+            backgroundColor = isSelected ? selectedBgColor : bgColor
+            label.textColor = isSelected ? selectedTextColor : textColor
+//            layer.borderColor = isSelected
+//            ? activeColor.cgColor
+//            : inactiveColor.cgColor
         }
     }
 
-    init(title: String) {
+    init(title: String,_ backgroundColor:UIColor, _ textColor:UIColor, _ selectedBgColor:UIColor, _ selectedTextColor:UIColor ) {
         self.title = title
+        self.bgColor = backgroundColor
+        self.textColor = textColor
+        self.selectedBgColor = selectedBgColor
+        self.selectedTextColor = selectedTextColor
         super.init(frame: .zero)
         setupUI(title: title)
     }
@@ -32,10 +40,11 @@ final class NPSItemView: UIControl {
     }
 
     private func setupUI(title: String) {
-        layer.cornerRadius = 6
-        layer.borderWidth = 1
-        layer.borderColor = UIColor.systemBlue.cgColor
-
+        layer.cornerRadius = 4
+//        layer.borderWidth = 1
+//        layer.borderColor = UIColor.systemBlue.cgColor
+        backgroundColor = isSelected ? selectedBgColor : bgColor
+        label.textColor = isSelected ? selectedTextColor : textColor
         label.text = title
         label.font = .systemFont(ofSize: 14, weight: .medium)
         label.textAlignment = .center

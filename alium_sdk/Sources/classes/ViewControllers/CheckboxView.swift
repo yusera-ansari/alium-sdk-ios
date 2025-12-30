@@ -12,15 +12,22 @@ final class CheckboxView: UIControl {
     private let boxView = UIView()
     private let checkmarkView = UIImageView()
     private let titleLabel = UILabel()
-
+    private let iconColor:UIColor
+    private let textColor:UIColor
+    private let bgColor:UIColor
+    let title:String
     override var isSelected: Bool {
         didSet {
             checkmarkView.isHidden = !isSelected
-            boxView.backgroundColor = isSelected ? .systemBlue : .clear
+            boxView.backgroundColor = isSelected ? iconColor : .clear
         }
     }
 
-    init(title: String) {
+    init(title: String,_ backgroundColor:UIColor,_ textColor:UIColor,_ iconColor:UIColor) {
+        self.title = title
+        self.iconColor = iconColor
+        self.bgColor = backgroundColor
+        self.textColor = textColor
         super.init(frame: .zero)
         setupUI(title: title)
     }
@@ -30,12 +37,12 @@ final class CheckboxView: UIControl {
     }
 
     private func setupUI(title: String) {
-        backgroundColor = .white
+        backgroundColor = bgColor
         layer.cornerRadius = 5
         // Box
         boxView.layer.cornerRadius = 4
         boxView.layer.borderWidth = 2
-        boxView.layer.borderColor = UIColor.systemBlue.cgColor
+        boxView.layer.borderColor = iconColor.cgColor
         boxView.translatesAutoresizingMaskIntoConstraints = false
 
         // Checkmark

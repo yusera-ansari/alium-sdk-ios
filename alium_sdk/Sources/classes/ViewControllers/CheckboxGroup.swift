@@ -6,11 +6,35 @@
 //
 import UIKit
 import Foundation
-final class CheckboxGroup: UIView {
+final class CheckboxGroup: UIView, ALiumInputDelegate {
+    func onResponse(resp: String) {
+        print("input response: \(resp)")
+        guard let button = checkboxes.last else{ return}
+        updateReposne(button, resp)
+    }
+    private let isOtherOptionsEnabled:Bool
+    let input = MultilineTextInput()
     weak var delegate: ALiumInputDelegate?
+    private var toggleInput  = true {
+        didSet{
+            input.isHidden = toggleInput
+           if toggleInput{ input.textView.text = ""}
+        }
+    }
+    
+    
+    private func setupInput(){
+        input.maxHeight = 60
+        input.delegate = self
+        stackView.addArrangedSubview(input)
+//        input.pin(toMarginOf: responseContainer)
+        input.setPlaceholder("Enter you response here")
+        input.isHidden = true
+    }
+    
     private var checkboxes: [CheckboxView] = []
     private let stackView = UIStackView()
-
+    
     var selectedOptions: [String] {
         checkboxes
             .filter { $0.isSelected }
@@ -21,10 +45,12 @@ final class CheckboxGroup: UIView {
             }
     }
 
-    init(options: [String]) {
+    init(options: [String], backgroundColor:UIColor, textColor:UIColor, iconColor:UIColor, isOtherOptionsEnabled:Bool) {
+        self.isOtherOptionsEnabled=isOtherOptionsEnabled
         super.init(frame: .zero)
         setupStack()
-        createCheckboxes(options)
+        createCheckboxes(options,backgroundColor,textColor,iconColor)
+        setupInput()
     }
 
     required init?(coder: NSCoder) {
@@ -40,9 +66,9 @@ final class CheckboxGroup: UIView {
         stackView.pin(to: self)
     }
 
-    private func createCheckboxes(_ options: [String]) {
+    private func createCheckboxes(_ options: [String],_ backgroundColor:UIColor, _ textColor:UIColor,_  iconColor:UIColor) {
         options.forEach { option in
-            let checkbox = CheckboxView(title: option)
+            let checkbox = CheckboxView(title: option, backgroundColor,textColor,iconColor)
             checkbox.addTarget(self, action: #selector(valueChanged(_:)), for: .valueChanged)
             checkboxes.append(checkbox)
             stackView.addArrangedSubview(checkbox)
@@ -51,6 +77,52 @@ final class CheckboxGroup: UIView {
 
     @objc private func valueChanged(_ sender: CheckboxView) {
         print("Selected options:", selectedOptions)
-        delegate?.onResponse(resp: selectedOptions.joined(separator: ","))
+        updateReposne(sender, nil)
+        guard let indexOfSender = checkboxes.firstIndex(of: sender) else{
+            return
+        }
+        if indexOfSender == checkboxes.count - 1 {
+            self.toggleInput = checkboxes[indexOfSender].isSelected ? false : true
+        }
+    }
+    
+    private func updateReposne(_ sender:CheckboxView,_ resp:String?){
+        if isOtherOptionsEnabled   {
+            var response = ""
+          
+            let selectedCheckBox = checkboxes.filter{ $0.isSelected }
+            for i in selectedCheckBox.indices {
+             
+                print("current index: ",i, selectedCheckBox[i].title ,response)
+                
+                if(i == selectedCheckBox.count - 1){
+                    if(selectedCheckBox[i] == checkboxes[checkboxes.count - 1]){ //other options checkbox
+                        self.toggleInput = selectedCheckBox[i].isSelected ? false : true
+                         let resp = resp ?? ""
+                        response += "\(selectedCheckBox[i].title)|\(resp)"
+                        print(i, response)
+                        break;
+                    }
+                    response += "\(selectedCheckBox[i].title)"
+                    break;
+                }
+                if(selectedCheckBox[i] == checkboxes[checkboxes.count - 1]){ //other options checkbox
+                    self.toggleInput = selectedCheckBox[i].isSelected ? false : true
+                     let resp = resp ?? ""
+    //                delegate?.onResponse(resp: selectedOptions.joined(separator: ","))
+                    response += "\(selectedCheckBox[i].title)|\(resp),"
+                    print(i, response)
+                }else{
+                        response += "\(selectedCheckBox[i].title),"
+                    }
+                   
+                
+            }
+            print("delegate: \(response)")
+            delegate?.onResponse(resp: response)
+        }else {
+            self.toggleInput = true
+            delegate?.onResponse(resp: selectedOptions.joined(separator: ","))
+        }
     }
 }

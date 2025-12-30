@@ -12,15 +12,21 @@ final class RadioButtonView: UIControl {
     private let outerCircle = UIView()
     private let innerCircle = UIView()
     private let titleLabel = UILabel()
-
+    private let bgColor:UIColor
+    private let textColor:UIColor
+    private let iconColor:UIColor
     override var isSelected: Bool {
         didSet {
             innerCircle.isHidden = !isSelected
         }
     }
 
-    init(title: String) {
+    init(title: String, backgroundColor:UIColor, textColor:UIColor, iconColor:UIColor) {
+        
         self.title = title
+        self.bgColor = backgroundColor
+        self.textColor = textColor
+        self.iconColor = iconColor
         super.init(frame: .zero)
         setupUI(title: title)
     }
@@ -30,17 +36,18 @@ final class RadioButtonView: UIControl {
     }
 
     private func setupUI(title: String) {
-        backgroundColor = .white
+        backgroundColor = bgColor
         layer.cornerRadius = 5
+        
         // Outer circle
         outerCircle.layer.cornerRadius = 10
         outerCircle.layer.borderWidth = 2
-        outerCircle.layer.borderColor = UIColor.systemBlue.cgColor
+        outerCircle.layer.borderColor = iconColor.cgColor
         outerCircle.translatesAutoresizingMaskIntoConstraints = false
 
         // Inner circle
         innerCircle.layer.cornerRadius = 6
-        innerCircle.backgroundColor = .systemBlue
+        innerCircle.backgroundColor = iconColor
         innerCircle.translatesAutoresizingMaskIntoConstraints = false
         innerCircle.isHidden = true
 
@@ -56,6 +63,7 @@ final class RadioButtonView: UIControl {
         // Label
         titleLabel.text = title
         titleLabel.font = .systemFont(ofSize: 16)
+        titleLabel.textColor = textColor
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
 
         // Stack

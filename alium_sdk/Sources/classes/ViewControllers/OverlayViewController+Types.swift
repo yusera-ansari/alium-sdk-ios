@@ -57,8 +57,15 @@ extension OverlayViewController{
     func addRadioTypeInput(){
         guard let questions = survey.questions else{return }
         let currQuest = questions[index]
+        //        --color8 -  #ffffff Single Choice Background Color
+        //        --color9 -  #00C764 Single Choice Icon Color
+        //        --color10 - #333 Single Choice Text Color
+        let backgroundColor : UIColor = .init(hexString: survey.surveyInfo.themeColors.color8)
+        let iconColor:UIColor = .init(hexString: survey.surveyInfo.themeColors.color9)
+        let textColor:UIColor = .init(hexString: survey.surveyInfo.themeColors.color10 )
         
-        let radioGroup = RadioButtonGroup(options: currQuest.responseOptions)
+        
+        let radioGroup = RadioButtonGroup(options: currQuest.responseOptions, backgroundColor: backgroundColor, textColor: textColor,iconColor: iconColor, isOtherOptionsEnabled: currQuest.questionSetting?.otherOption ?? false )
         radioGroup.delegate = self
               radioGroup.translatesAutoresizingMaskIntoConstraints = false
               responseContainer.addSubview(radioGroup)
@@ -69,7 +76,15 @@ extension OverlayViewController{
     func addCheckBoxTypeInput(){
         guard let questions = survey.questions else{return }
         let currQuest = questions[index]
-        let checkboxGroup = CheckboxGroup(options: currQuest.responseOptions)
+        
+        //        --color5 - #ffffff  Multiple Choice Background Color
+        //        --color6 - #00C764  Multiple Choice Icon Color
+        //        --color7 - #333 Multiple Choice Text Color
+        let backgroundColor : UIColor = .init(hexString: survey.surveyInfo.themeColors.color5)
+        let iconColor:UIColor = .init(hexString: survey.surveyInfo.themeColors.color6)
+        let textColor:UIColor = .init(hexString: survey.surveyInfo.themeColors.color7 )
+        
+        let checkboxGroup = CheckboxGroup(options: currQuest.responseOptions, backgroundColor: backgroundColor, textColor: textColor,iconColor: iconColor,isOtherOptionsEnabled: currQuest.questionSetting?.otherOption ?? false )
         checkboxGroup.delegate = self
                checkboxGroup.translatesAutoresizingMaskIntoConstraints = false
                responseContainer.addSubview(checkboxGroup)
@@ -79,10 +94,18 @@ extension OverlayViewController{
     func addNPSTypeInput(){
         guard let questions = survey.questions else{return }
         let currQuest = questions[index]
-        let npsGroup = NPSGroupView(options: currQuest.responseOptions)
+        //        --color11 - #fff NPS Button Background Color
+        //        --color12 - #333 NPS Button Text Color
+        //        --color13 - #ffc100 NPS Button selected bg
+        //        --color14 - #333 NPS Button selected Text Color
+        let backgroundColor : UIColor = .init(hexString: survey.surveyInfo.themeColors.color11)
+        let textColor:UIColor = .init(hexString: survey.surveyInfo.themeColors.color12 )
+        let selectedBg:UIColor = .init(hexString: survey.surveyInfo.themeColors.color13 )
+        let selectedText:UIColor = .init(hexString: survey.surveyInfo.themeColors.color14 )
+        
+        let npsGroup = NPSGroupView(options: currQuest.responseOptions, backgroundColor:backgroundColor, textColor:textColor, selectedBgColor:selectedBg, selectedTextColor:selectedText )
         npsGroup.delegate = self
-        npsGroup.translatesAutoresizingMaskIntoConstraints = false
-               responseContainer.addSubview(npsGroup)
+        responseContainer.addSubview(npsGroup)
         npsGroup.pin(to: responseContainer)
 //        npsGroup.widthAnchor.constraint(lessThanOrEqualToConstant: UIScreen.main.bounds.width - 20).isActive = true
         
@@ -104,16 +127,26 @@ extension OverlayViewController{
 //            // max width = 600
 //            npsGroup.widthAnchor.constraint(lessThanOrEqualToConstant: 600)
 //        ])
-        
+     
     }
     func addOpinionTypeInput(){
-        guard let questions = survey.questions else{return }
-        let currQuest = questions[index]
-        let npsGroup = NPSGroupView(options: currQuest.responseOptions)
+        guard var currQuest else{return }
+        
+        //        --color15 - #fff Opinion Button Background Color
+        //        --color16 - #333 Opinion Button Text Color
+        //        --color17 - #ffc100 Opinion Button selected bg
+        //        --color18 - #333 Opinion Button selected text color
+        
+        let backgroundColor : UIColor = .init(hexString: survey.surveyInfo.themeColors.color11)
+        let textColor:UIColor = .init(hexString: survey.surveyInfo.themeColors.color12 )
+        let selectedBg:UIColor = .init(hexString: survey.surveyInfo.themeColors.color13 )
+        let selectedText:UIColor = .init(hexString: survey.surveyInfo.themeColors.color14 )
+        currQuest.responseOptions.insert("11", at: 0)
+        let npsGroup = NPSGroupView(options: currQuest.responseOptions, backgroundColor: backgroundColor, textColor: textColor, selectedBgColor: selectedBg, selectedTextColor: selectedText)
         npsGroup.delegate = self
-        npsGroup.translatesAutoresizingMaskIntoConstraints = false
         responseContainer.addSubview(npsGroup)
-        npsGroup.pin(to: responseContainer)}
+        npsGroup.pin(to: responseContainer)
+    }
     
     func addRatingTypeInput(){
         guard let questions = survey.questions else{return }
@@ -129,7 +162,7 @@ extension OverlayViewController{
         responseContainer.addSubview(ratingGroup)
         //        ratingGroup.pin(to: responseContainer)}
         ratingGroup.activateConstraints([
-            ratingGroup.widthAnchor.constraint(equalTo: responseContainer.widthAnchor, multiplier: 0.7),
+            ratingGroup.widthAnchor.constraint(equalTo: responseContainer.widthAnchor, multiplier: 0.85),
             ratingGroup.topAnchor.constraint(equalTo: responseContainer.topAnchor),
             ratingGroup.bottomAnchor.constraint(equalTo: responseContainer.bottomAnchor),
             ratingGroup.centerXAnchor.constraint(equalTo: responseContainer.centerXAnchor)

@@ -21,9 +21,9 @@ class OverlayViewController: UIViewController {
     lazy var container : UIView = {
         var v : UIView = UIView()
         v.backgroundColor = .lightGray
-        if let color = survey.surveyInfo.themeColors?.color1 {
+       let color = survey.surveyInfo.themeColors.color1
             v.backgroundColor = .init(hexString: color )
-        }
+        
         v.layer.cornerRadius = 10
         return v;
     }()
@@ -34,9 +34,9 @@ class OverlayViewController: UIViewController {
     }()
     lazy var question:UILabel = {
         let l = UILabel()
-       if let color = survey.surveyInfo.themeColors?.color2 {
+        let color = survey.surveyInfo.themeColors.color2
             l.textColor = .init(hexString:color )
-        }
+        
         l.textAlignment = .center
         l.numberOfLines = 0
         l.lineBreakMode = .byWordWrapping
@@ -49,10 +49,11 @@ class OverlayViewController: UIViewController {
     private var nextBtnWidth: NSLayoutConstraint!
     lazy var nextBtn:UIButton = {
        var b = UIButton()
-        if let backgroundColor = survey.surveyInfo.themeColors?.color3, let textColor = survey.surveyInfo.themeColors?.color4 {
+         let backgroundColor = survey.surveyInfo.themeColors.color3
+        let textColor = survey.surveyInfo.themeColors.color4
             b.backgroundColor = .init(hexString: backgroundColor)
             b.titleLabel?.textColor = .init(hexString: textColor)
-        }
+        
         b.layer.cornerRadius = 5
         return b
     }()
@@ -65,9 +66,9 @@ class OverlayViewController: UIViewController {
                b.imageView?.tintColor = .gray
                b.addTarget(self, action: #selector(onClose), for: .touchUpInside)
         b.backgroundColor = .clear
-        if let color = survey.surveyInfo.themeColors?.color23 {
+        let color = survey.surveyInfo.themeColors.color23
             b.imageView?.tintColor = .init(hexString: color)
-        }
+        
         
         return b
     }()
@@ -111,13 +112,13 @@ class OverlayViewController: UIViewController {
         view.addSubview(container);
         let leading = container.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 10)
            let trailing = container.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -10)
-        
+        let maxWidth:CGFloat = 600
         leading.priority = .defaultHigh
           trailing.priority = .defaultHigh
             container.activateConstraints([
             container.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
 //            container.heightAnchor.constraint(greaterThanOrEqualToConstant: 200),
-            container.widthAnchor.constraint(lessThanOrEqualToConstant: 600),
+            container.widthAnchor.constraint(lessThanOrEqualToConstant: maxWidth > UIScreen.main.bounds.width ? UIScreen.main.bounds.width - 20 : maxWidth),
             container.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             leading,trailing
         ])
@@ -202,6 +203,7 @@ class OverlayViewController: UIViewController {
     }
     func updateResponseContainer(){
         responseContainer.emptyView()
+       
         let questions = survey.questions
         guard let questions else{
             return
