@@ -15,7 +15,7 @@ public struct Question: Codable, CustomStringConvertible {
     public var responseOptions: [String] = []
 
     public var questionSetting: QuestionSetting?
-    public var aiSettings: AiSettings?
+    public var aiSettings: AiSettings = AiSettings()
     public var conditionMapping: [String]?
     enum CodingKeys: String, CodingKey {
         case id
@@ -27,7 +27,7 @@ public struct Question: Codable, CustomStringConvertible {
         case aiSettings = "ai"
     }
     
-    // 👇 Custom decoding
+    // Custom decoding
         public init(from decoder: Decoder) throws {
             let container = try decoder.container(keyedBy: CodingKeys.self)
 
@@ -35,10 +35,10 @@ public struct Question: Codable, CustomStringConvertible {
             question = try container.decodeIfPresent(String.self, forKey: .question)
             responseType = try container.decodeIfPresent(String.self, forKey: .responseType)
             questionSetting = try container.decodeIfPresent(QuestionSetting.self, forKey: .questionSetting)
-            aiSettings = try container.decodeIfPresent(AiSettings.self, forKey: .aiSettings)
+            aiSettings = try container.decodeIfPresent(AiSettings.self, forKey: .aiSettings) ?? AiSettings()
             conditionMapping = try container.decodeIfPresent([String].self, forKey: .conditionMapping)
 
-            // ✅ Handle [String] OR [Int]
+            // Handle [String] OR [Int]
             if let stringOptions = try? container.decode([String].self, forKey: .responseOptions) {
                 responseOptions = stringOptions
             } else if let intOptions = try? container.decode([Int].self, forKey: .responseOptions) {
@@ -69,7 +69,7 @@ public struct Question: Codable, CustomStringConvertible {
             responseType: "\(responseType ?? "")",
             responseOptions: \(responseOptions),
             questionSetting: \(questionSetting?.description ?? "nil"),
-            aiSettings: \(aiSettings?.description ?? "nil"),
+            aiSettings: \(aiSettings.description ),
             conditionMapping: \(conditionMapping ?? [])
         )
         """

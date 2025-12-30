@@ -169,5 +169,9 @@ extension OverlayViewController{
         ]
         )
     }
+    
+    func showAiFollowup(){
+        print("process ai followup")
+    }
 
 }

@@ -18,6 +18,14 @@ class OverlayViewController: UIViewController {
     let survey: Survey
     let parameters:SurveyParameters
     var index:Int = 0;
+    private var aiFollowup: AiFollowup? = nil {
+        didSet{
+            guard let aiFollowup else {
+                return
+            }
+            showAiFollowup()
+        }
+    }
     lazy var container : UIView = {
         var v : UIView = UIView()
         v.backgroundColor = .lightGray
@@ -287,10 +295,38 @@ class OverlayViewController: UIViewController {
 
     @objc
     func onNextPress(_ sender:UIButton){
-        index += 1;
-        if currQuest?.responseType != "0" && currQuest?.responseType != "-1" && !response.trimmingCharacters(in: .whitespaces).isEmpty {
+        print("index: \(index)")
+        guard let currQuest else {
+            dismiss(animated: true)
+            return}
+        if currQuest.responseType != "0" && currQuest.responseType != "-1" && !response.trimmingCharacters(in: .whitespaces).isEmpty {
             track()
         }
+        if currQuest.responseType == "1" &&  currQuest.aiSettings.enabled  {
+            print("show ai followup")
+            let followupManager = AliumAiFollowupManager(survey: survey)
+            followupManager.storePreviousFollowUp()
+            let shouldStop = followupManager.shouldStop(freq: currQuest.aiSettings.maxFrequency)
+            if(shouldStop){
+                self.index += 1;
+                self.showCurrentQuestion()
+                return
+            }
+            followupManager.getFollowupQuestion(maxFollowups: currQuest.aiSettings.maxFrequency, currentIndex: index, originalResponse: response) { result in
+                switch result{
+                case .success(let aiFollowup):
+                    self.aiFollowup = aiFollowup
+                    
+                case .failure(let error):
+                    print(error)
+                    self.aiFollowup = nil
+                    self.index += 1;
+                    self.showCurrentQuestion()
+                }
+            }
+            return;
+        }
+        index += 1;
         showCurrentQuestion()
     }
     

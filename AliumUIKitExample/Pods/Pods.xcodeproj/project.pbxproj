@@ -56,6 +56,10 @@
 		EFC9CDB92EFA9E5800ED853B /* AliumBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC9CDB82EFA9E5400ED853B /* AliumBundle.swift */; };
 		EFC9CDBB2EFA9FFC00ED853B /* AliumInputDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC9CDBA2EFA9FF600ED853B /* AliumInputDelegate.swift */; };
 		EFC9CDBD2EFAA0CB00ED853B /* OverlayViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC9CDBC2EFAA0BD00ED853B /* OverlayViewController+Delegate.swift */; };
+		EFD8AC7D2F03D5B1009071C6 /* AliumAiFollowupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD8AC7C2F03D5A7009071C6 /* AliumAiFollowupManager.swift */; };
+		EFD8AC7F2F03D698009071C6 /* FollowupHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD8AC7E2F03D68E009071C6 /* FollowupHistory.swift */; };
+		EFD8AC812F03D789009071C6 /* AiFollowup.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD8AC802F03D785009071C6 /* AiFollowup.swift */; };
+		EFD8AC832F03DCD0009071C6 /* AliumFollowupRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD8AC822F03DCC6009071C6 /* AliumFollowupRepository.swift */; };
 		EFFDD7C22EFABBFA00063A1D /* AliumTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFDD7C12EFABBF300063A1D /* AliumTracker.swift */; };
 		F033F34EA322ACB9651AB60F116A9AAE /* TypeOfSur.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAA156D48453ECBF225DF64F21DAAF5 /* TypeOfSur.swift */; };
 		F63F90CBA50F84263A6A379BDDA37525 /* MultilineTextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6672BEF3A55830124ACF09A2FD1344 /* MultilineTextInput.swift */; };
@@ -171,6 +175,10 @@
 		EFC9CDB82EFA9E5400ED853B /* AliumBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliumBundle.swift; sourceTree = "<group>"; };
 		EFC9CDBA2EFA9FF600ED853B /* AliumInputDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliumInputDelegate.swift; sourceTree = "<group>"; };
 		EFC9CDBC2EFAA0BD00ED853B /* OverlayViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OverlayViewController+Delegate.swift"; sourceTree = "<group>"; };
+		EFD8AC7C2F03D5A7009071C6 /* AliumAiFollowupManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliumAiFollowupManager.swift; sourceTree = "<group>"; };
+		EFD8AC7E2F03D68E009071C6 /* FollowupHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowupHistory.swift; sourceTree = "<group>"; };
+		EFD8AC802F03D785009071C6 /* AiFollowup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AiFollowup.swift; sourceTree = "<group>"; };
+		EFD8AC822F03DCC6009071C6 /* AliumFollowupRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliumFollowupRepository.swift; sourceTree = "<group>"; };
 		EFFDD7C12EFABBF300063A1D /* AliumTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliumTracker.swift; sourceTree = "<group>"; };
 		F0ABA3A9D162D54055989D74A6286BD5 /* alium_sdk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = alium_sdk.release.xcconfig; sourceTree = "<group>"; };
 		F4258409424E89BFECF849B71C2776E6 /* Pods-AliumUIKitExampleTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AliumUIKitExampleTests.modulemap"; sourceTree = "<group>"; };
@@ -353,6 +361,8 @@
 		98C0B944561761AC74B2CE08670EB212 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EFD8AC802F03D785009071C6 /* AiFollowup.swift */,
+				EFD8AC7E2F03D68E009071C6 /* FollowupHistory.swift */,
 				CAED976BF1E71712EC074CA8AFA787CD /* SurveyConfig */,
 				C5C21AD9C4BDC3842E7975725A8357EA /* SurveyModels */,
 			);
@@ -372,6 +382,8 @@
 		B5315AD02F92DB39F368260BA84E910A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				EFD8AC822F03DCC6009071C6 /* AliumFollowupRepository.swift */,
+				EFD8AC7C2F03D5A7009071C6 /* AliumAiFollowupManager.swift */,
 				EFFDD7C12EFABBF300063A1D /* AliumTracker.swift */,
 				EFC9CDBC2EFAA0BD00ED853B /* OverlayViewController+Delegate.swift */,
 				EFC9CDBA2EFA9FF600ED853B /* AliumInputDelegate.swift */,
@@ -697,6 +709,7 @@
 				CDD1634BD6C03F7910EE6716D28E7096 /* alium_sdk-dummy.m in Sources */,
 				D1483374DBCE3C90CF497E49CE6A3A75 /* AliumRequest.swift in Sources */,
 				2721049B9ADAC42CB5C93A499546E375 /* AliumRequestManager.swift in Sources */,
+				EFD8AC7F2F03D698009071C6 /* FollowupHistory.swift in Sources */,
 				7F86C30572CEA696AF25E4E0F42834D3 /* AliumSurveyLoader.swift in Sources */,
 				B2F77645F8B2F0FA76C9D0A5A2747B0F /* App.swift in Sources */,
 				269D9FBBD2068C0571BB65611ABDECB6 /* CheckboxGroup.swift in Sources */,
@@ -722,8 +735,10 @@
 				B2E50E41AEA8CB3A782D866D80EABE7A /* SurveyConfig.swift in Sources */,
 				EFC9CDBD2EFAA0CB00ED853B /* OverlayViewController+Delegate.swift in Sources */,
 				CF8BBE99869EF94783BA12E05FC30796 /* SurveyInfo.swift in Sources */,
+				EFD8AC832F03DCD0009071C6 /* AliumFollowupRepository.swift in Sources */,
 				E8ADF1438A037FE9C590A882688639B5 /* SurveyParameters.swift in Sources */,
 				1035449068E51CCC134057FB4D08500C /* SurveyParameters+Builder.swift in Sources */,
+				EFD8AC7D2F03D5B1009071C6 /* AliumAiFollowupManager.swift in Sources */,
 				1EFA3A62B9ECB6255B491348A6259416 /* ThemeColors.swift in Sources */,
 				F033F34EA322ACB9651AB60F116A9AAE /* TypeOfSur.swift in Sources */,
 				2439A4BFD609A9A6A9993CE38DB1F80B /* UIApplication.swift in Sources */,
@@ -731,6 +746,7 @@
 				A8923D960842AB5E2F7B37C4FA36E661 /* UIView.swift in Sources */,
 				5AB3DC46DBDB2FD5C565082A90E0A87F /* UrlMatch.swift in Sources */,
 				F8BFB2842A023808CD73AFD3338A38B9 /* ViewControllerFinder.swift in Sources */,
+				EFD8AC812F03D789009071C6 /* AiFollowup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
