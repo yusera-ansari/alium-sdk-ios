@@ -1,16 +1,17 @@
 //
-//  MultilineTextInput.swift
+//  FollowUpTextInput.swift
 //  Pods
 //
-//  Created by yusera-ansari on 18/12/25.
+//  Created by yusera-ansari on 31/12/25.
 //
+
 import UIKit
 import Foundation
 
-final class MultilineTextInput: UIView {
-    weak var delegate: ALiumInputDelegate?
+final class FollowUpTextInput: UIView {
+    weak var delegate: FollowupInputDelegate?
     let textView = UITextView()
-    let placeholderLabel = UILabel()
+    private let placeholderLabel = UILabel()
     private var heightAnch:NSLayoutConstraint!
     var maxHeight:CGFloat = 120 {
         didSet{
@@ -54,7 +55,7 @@ final class MultilineTextInput: UIView {
 
         addSubview(textView)
         addSubview(placeholderLabel)
-//        textView.returnKeyType = .done
+
         textView.translatesAutoresizingMaskIntoConstraints = false
         placeholderLabel.translatesAutoresizingMaskIntoConstraints = false
 
@@ -75,11 +76,10 @@ final class MultilineTextInput: UIView {
     }
 }
 
-extension MultilineTextInput: UITextViewDelegate {
+extension FollowUpTextInput: UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
-        print("text view did change with \(textView.text)")
         placeholderLabel.isHidden = !textView.text.isEmpty
-        delegate?.onResponse(resp: textView.text)
+        delegate?.onFollowupResponse(resp: textView.text)
     }
     func textViewDidBeginEditing(_ textView: UITextView) {
         placeholderLabel.isHidden = true

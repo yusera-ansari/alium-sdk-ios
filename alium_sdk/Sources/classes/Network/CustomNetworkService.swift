@@ -140,7 +140,7 @@ enum CustomNetworkService {
 
             if let data = data {
                 let body = String(data: data, encoding: .utf8) ?? ""
-                print("Response body:", body)
+//                print("Response body:", body)
             }
         }
 

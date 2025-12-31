@@ -16,7 +16,7 @@ enum ResponseType: String {
 }
 extension OverlayViewController{
     func addMultilineTextInput(){
-        let input = MultilineTextInput()
+//        let input = MultilineTextInput()
         input.delegate = self
         responseContainer.addSubview(input)
         input.pin(toMarginOf: responseContainer)
@@ -170,8 +170,7 @@ extension OverlayViewController{
         )
     }
     
-    func showAiFollowup(){
-        print("process ai followup")
-    }
+    
+    
 
 }

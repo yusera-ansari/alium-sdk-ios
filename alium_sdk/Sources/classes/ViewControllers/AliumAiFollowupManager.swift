@@ -8,26 +8,49 @@
 import Foundation
 
 final class AliumAiFollowupManager{
-    private var followupIndex:Int = -1;
+    private(set) var followupIndex:Int = -1;
     private let url = "https://api.aliumsurvey.com/api/v1/public/surveys/ai-followup"
     private var followupHistoryList : [FollowupHistory] = []
-    private var aiFollowup : AiFollowup? = nil
-    
+    private var currentQuestion:Question? = nil
+    var delegate:FollowupDelegate? = nil
+    private(set) var aiFollowup: AiFollowup? = nil {
+        didSet{
+         
+        }
+    }
+    func updateAiFollowup(resp:String){
+        print("update ai followup func called: \(resp)")
+        aiFollowup?.response = resp
+    }
+    var isAiFollowupEnabled : Bool {
+        guard let currQuest = currentQuestion else{return false}
+        if currQuest.aiSettings.enabled && aiFollowup != nil {
+            return true
+        }
+        return false
+    }
     private let repository = ""
     private let survey : Survey
-    init(survey: Survey) {
-       
+    init(survey: Survey ) {
+//        self.showAiFollowup = showAiFollowup
         self.survey = survey
     }
     
     func storePreviousFollowUp(){
-        guard self.followupIndex > -1 , let aiFollowup else {return}
+        print("store previous followup history...\(self.followupIndex)")
+        guard self.followupIndex > -1 , let aiFollowup else {
+            self.aiFollowup?.response = ""
+            print("updated value...\(self.aiFollowup?.response)")
+            return}
         let history = FollowupHistory(aiQuestion: aiFollowup.followupQuestion, userAnswer: aiFollowup.response)
         followupHistoryList.append(history)
+        self.aiFollowup?.response = ""
+        print("updated value...\(self.aiFollowup?.response)")
     }
     
     func incrementFollowupIndex(){
         self.followupIndex += 1
+        print("increased index: \(followupIndex)")
     }
     func shouldStop(freq:Int)->Bool{
         incrementFollowupIndex()
@@ -47,10 +70,11 @@ final class AliumAiFollowupManager{
               originalResponse: String,
               completion: @escaping (Result<AiFollowup, Error>)->Void
     ){
-        
-        guard let currentQuestion = survey.questions?[currentIndex] else{
+        currentQuestion = survey.questions?[currentIndex]
+        guard let currentQuestion  else{
             return
         }
+        
         
         var data:[String : Any] = [
             "survey_id":survey.surveyInfo.surveyId,
@@ -58,7 +82,7 @@ final class AliumAiFollowupManager{
             "question_id": currentQuestion.id,
             "question_text":currentQuestion.question,
             "original_response":originalResponse,
-            "conversation_histort": followupHistoryList.map({ FollowupHistory
+            "conversation_history": followupHistoryList.map({ FollowupHistory
                 in
                 FollowupHistory.toDictionary()
             })
@@ -66,18 +90,25 @@ final class AliumAiFollowupManager{
             "survey_context":[],
             "current_followup_count": followupIndex,
             "max_followups": maxFollowups,
-            
         ]
-        
+        print(data)
+        self.aiFollowup = nil //for resetting
         CustomNetworkService.getFollowUpQuestion(url: url, params: data) { result in
             switch result{
             case .success(let response):
                 print(response)
-                self.aiFollowup = response
-                completion(.success(response))
+               
+                DispatchQueue.main.async {
+                    self.aiFollowup = response
+                    print("calling show followup...")
+                    self.delegate?.showFollowup(response)
+                    completion(.success(response))
+                }
             case .failure(let error):
                 print(error)
-                completion(.failure(error))
+                DispatchQueue.main.async{
+                    completion(.failure(error))
+                }
             }
         }
         

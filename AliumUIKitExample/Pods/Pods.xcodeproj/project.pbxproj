@@ -53,6 +53,9 @@
 		E3C4D02042AA0F2B55D0B29C54737722 /* alium_sdk-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 99A8DA0E7BA6D1BF9B1D58AB04CD5CBE /* alium_sdk-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E8ADF1438A037FE9C590A882688639B5 /* SurveyParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B18AFA843B3981400CD3A70860C5E3 /* SurveyParameters.swift */; };
 		EA19D425472AE0771AD46DB5AD628A82 /* Alium.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65664CB42F3A5F5EB6FE14F3C0073A /* Alium.swift */; };
+		EF6783412F053D2B00DA6080 /* FollowupDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6783402F053D2400DA6080 /* FollowupDelegate.swift */; };
+		EF6783432F054CCE00DA6080 /* FollowUpTextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6783422F054CC300DA6080 /* FollowUpTextInput.swift */; };
+		EF6783452F054CF500DA6080 /* FollowupInputDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6783442F054CED00DA6080 /* FollowupInputDelegate.swift */; };
 		EFC9CDB92EFA9E5800ED853B /* AliumBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC9CDB82EFA9E5400ED853B /* AliumBundle.swift */; };
 		EFC9CDBB2EFA9FFC00ED853B /* AliumInputDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC9CDBA2EFA9FF600ED853B /* AliumInputDelegate.swift */; };
 		EFC9CDBD2EFAA0CB00ED853B /* OverlayViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC9CDBC2EFAA0BD00ED853B /* OverlayViewController+Delegate.swift */; };
@@ -172,6 +175,9 @@
 		ECCDC10499576072872634111B9CA8CE /* Pods-AliumUIKitExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AliumUIKitExample-acknowledgements.markdown"; sourceTree = "<group>"; };
 		ED18A1C1B020BB827474B6151213FD2D /* alium_sdk.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = alium_sdk.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		ED9AF1B6594DC1617FC81B3372328A69 /* Pods-AliumUIKitExampleTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AliumUIKitExampleTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		EF6783402F053D2400DA6080 /* FollowupDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowupDelegate.swift; sourceTree = "<group>"; };
+		EF6783422F054CC300DA6080 /* FollowUpTextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowUpTextInput.swift; sourceTree = "<group>"; };
+		EF6783442F054CED00DA6080 /* FollowupInputDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowupInputDelegate.swift; sourceTree = "<group>"; };
 		EFC9CDB82EFA9E5400ED853B /* AliumBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliumBundle.swift; sourceTree = "<group>"; };
 		EFC9CDBA2EFA9FF600ED853B /* AliumInputDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliumInputDelegate.swift; sourceTree = "<group>"; };
 		EFC9CDBC2EFAA0BD00ED853B /* OverlayViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OverlayViewController+Delegate.swift"; sourceTree = "<group>"; };
@@ -382,6 +388,9 @@
 		B5315AD02F92DB39F368260BA84E910A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				EF6783442F054CED00DA6080 /* FollowupInputDelegate.swift */,
+				EF6783422F054CC300DA6080 /* FollowUpTextInput.swift */,
+				EF6783402F053D2400DA6080 /* FollowupDelegate.swift */,
 				EFD8AC822F03DCC6009071C6 /* AliumFollowupRepository.swift */,
 				EFD8AC7C2F03D5A7009071C6 /* AliumAiFollowupManager.swift */,
 				EFFDD7C12EFABBF300063A1D /* AliumTracker.swift */,
@@ -710,6 +719,7 @@
 				D1483374DBCE3C90CF497E49CE6A3A75 /* AliumRequest.swift in Sources */,
 				2721049B9ADAC42CB5C93A499546E375 /* AliumRequestManager.swift in Sources */,
 				EFD8AC7F2F03D698009071C6 /* FollowupHistory.swift in Sources */,
+				EF6783412F053D2B00DA6080 /* FollowupDelegate.swift in Sources */,
 				7F86C30572CEA696AF25E4E0F42834D3 /* AliumSurveyLoader.swift in Sources */,
 				B2F77645F8B2F0FA76C9D0A5A2747B0F /* App.swift in Sources */,
 				269D9FBBD2068C0571BB65611ABDECB6 /* CheckboxGroup.swift in Sources */,
@@ -717,6 +727,7 @@
 				D284EE1952A57F75B4C7213B19476F54 /* CustomNetworkService.swift in Sources */,
 				0DF9CF0559CBB4F9804DAEFAAB76B6CF /* CustomSurveyDetails.swift in Sources */,
 				F63F90CBA50F84263A6A379BDDA37525 /* MultilineTextInput.swift in Sources */,
+				EF6783432F054CCE00DA6080 /* FollowUpTextInput.swift in Sources */,
 				4670ADF47B2E1A5E9FC932DE9AF2D548 /* NPSGroupView.swift in Sources */,
 				708F12486CCE1FB8A4A1B71CA81CBA19 /* NPSItemView.swift in Sources */,
 				5C5CC7D020FF8BB4E08FD3E8A4FC87AC /* OverlayViewController.swift in Sources */,
@@ -746,6 +757,7 @@
 				A8923D960842AB5E2F7B37C4FA36E661 /* UIView.swift in Sources */,
 				5AB3DC46DBDB2FD5C565082A90E0A87F /* UrlMatch.swift in Sources */,
 				F8BFB2842A023808CD73AFD3338A38B9 /* ViewControllerFinder.swift in Sources */,
+				EF6783452F054CF500DA6080 /* FollowupInputDelegate.swift in Sources */,
 				EFD8AC812F03D789009071C6 /* AiFollowup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,19 +13,15 @@ import UIKit
 import Foundation
 class OverlayViewController: UIViewController {
     let uuid = UUID().uuidString
+    let input = MultilineTextInput()
+    let followupManager:AliumAiFollowupManager!
     var response:String=""
     var currQuest:Question?
     let survey: Survey
     let parameters:SurveyParameters
     var index:Int = 0;
-    private var aiFollowup: AiFollowup? = nil {
-        didSet{
-            guard let aiFollowup else {
-                return
-            }
-            showAiFollowup()
-        }
-    }
+   
+    
     lazy var container : UIView = {
         var v : UIView = UIView()
         v.backgroundColor = .lightGray
@@ -80,13 +76,14 @@ class OverlayViewController: UIViewController {
         
         return b
     }()
+    
     init(survey: Survey, parameters:SurveyParameters) {
         self.survey = survey
         self.parameters = parameters
-        
+        self.followupManager=AliumAiFollowupManager(survey: survey)
         currQuest = survey.questions?.first
-        
         super.init(nibName: nil, bundle: nil)
+        self.followupManager.delegate = self
         guard currQuest != nil else{
             print("Curre Question is nil")
             dismiss(animated: false)
@@ -188,8 +185,9 @@ class OverlayViewController: UIViewController {
     }
     
     func showCurrentQuestion(){
-       
+        response = ""
         guard let questions = survey.questions, index <= questions.count else{
+            dismiss(animated: true)
             return
         }
         
@@ -206,12 +204,14 @@ class OverlayViewController: UIViewController {
         }
         question.text = text + "**"
         updateResponseContainer()
-        
+        enableBtn(nextBtn, flag: true)
         
     }
     func updateResponseContainer(){
+        input.delegate = nil
+        input.textView.text = ""
         responseContainer.emptyView()
-       
+        
         let questions = survey.questions
         guard let questions else{
             return
@@ -286,40 +286,48 @@ class OverlayViewController: UIViewController {
     }
     
     func track(){
-        let trackingParams = generateTrackingParameters()
+        print("tracking calledd....")
+        guard let trackingParams = generateTrackingParameters() else{
+            print("couldn't trackk....")
+            return
+        }
         print(trackingParams)
-        AliumTracker.track(parameters: trackingParams)
-        
+        AliumTracker.track(parameters: trackingParams )
     }
     
 
     @objc
     func onNextPress(_ sender:UIButton){
         print("index: \(index)")
+        enableBtn(sender, flag: false)
         guard let currQuest else {
             dismiss(animated: true)
             return}
-        if currQuest.responseType != "0" && currQuest.responseType != "-1" && !response.trimmingCharacters(in: .whitespaces).isEmpty {
+        if currQuest.responseType != "0" && currQuest.responseType != "-1" {
             track()
         }
         if currQuest.responseType == "1" &&  currQuest.aiSettings.enabled  {
             print("show ai followup")
-            let followupManager = AliumAiFollowupManager(survey: survey)
+            input.delegate = nil
+            input.textView.text = ""
             followupManager.storePreviousFollowUp()
             let shouldStop = followupManager.shouldStop(freq: currQuest.aiSettings.maxFrequency)
             if(shouldStop){
                 self.index += 1;
                 self.showCurrentQuestion()
+                
                 return
             }
             followupManager.getFollowupQuestion(maxFollowups: currQuest.aiSettings.maxFrequency, currentIndex: index, originalResponse: response) { result in
+                
+                
                 switch result{
-                case .success(let aiFollowup):
-                    self.aiFollowup = aiFollowup
-                    
+                case .success(_):
+//                    self.followupManager.aiFollowup = aiFollowup
+                    self.enableBtn(sender, flag: true)
                 case .failure(let error):
                     print(error)
-                    self.aiFollowup = nil
+                   
                     self.index += 1;
                     self.showCurrentQuestion()
                 }
@@ -329,14 +337,17 @@ class OverlayViewController: UIViewController {
         index += 1;
         showCurrentQuestion()
     }
-    
+    func enableBtn(_ sender:UIButton, flag:Bool){
+        sender.isEnabled = flag
+        sender.alpha = flag ? 1.0 : 0.8
+    }
     @objc
     func onClose(_ sender:UIButton){
         dismiss(animated: true)
     }
-    func generateTrackingParameters()->[String:Any]{
+    func generateTrackingParameters()->[String:Any]?{
         guard let currQuest else{
-            return [:]
+            return nil
         }
        
         var params: [String: Any] = parameters.customerVariables
@@ -360,18 +371,18 @@ class OverlayViewController: UIViewController {
             params["orgId"] = surveyInfo.orgId
 //        }
 
-//        // AI follow-up override
-//        if let questions = survey.questions,
-//           index < questions.count,
-//           questions[index].aiSettings?.enabled == true,
-//           manager.followUpIndex > -1,
-//           let aiFollowup = manager.aiFollowup {
-//
-//            params["aiQuestionId"] = manager.followUpIndex + 1
-//            params["aiQuestionText"] = aiFollowup.followupQuestion
-//            params["respType"] = "15"
-//            params["response"] = aiFollowup.response
-//        }
+        // AI follow-up override
+        if let questions = survey.questions,
+           index < questions.count,
+           questions[index].aiSettings.enabled == true,
+           followupManager.followupIndex > -1,
+           let aiFollowup = self.followupManager.aiFollowup {
+            print("ai followup trackingparamares: \(aiFollowup.response) original resp; \(response)")
+            params["aiQuestionId"] = followupManager.followupIndex + 1
+            params["aiQuestionText"] = aiFollowup.followupQuestion
+            params["respType"] = "15"
+            params["response"] = aiFollowup.response
+        }
 
         // Remove empty / null values (Android equivalent logic)
         params = params.filter { _, value in
@@ -388,7 +399,15 @@ class OverlayViewController: UIViewController {
                 return true
             }
         }
-
+       print("final tracking response: \(params["response"])")
+        if currQuest.responseType != "0"{
+            guard let response = params["response"] as? String else {
+                return nil
+            }
+            if response.isEmpty, response.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+                return nil
+            }
+        }
         return params
     }
 }

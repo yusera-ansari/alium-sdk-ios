@@ -13,7 +13,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         print("view did loaddddd")
         
-        Alium.trigger( parameters: SurveyParameters(screenName: "AI"))
+        Alium.trigger( parameters: SurveyParameters(screenName: "home"))
         // Do any additional setup after loading the view.
     }
     

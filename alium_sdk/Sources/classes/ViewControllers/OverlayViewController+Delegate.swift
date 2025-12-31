@@ -2,12 +2,43 @@
 //  OverlayViewController+Delegate.swift
 //  Pods
 //
-//  Created by Abcom on 23/12/25.
+//  Created by yusera-ansari on 23/12/25.
 //
 
-extension OverlayViewController : ALiumInputDelegate{
+extension OverlayViewController : ALiumInputDelegate, FollowupDelegate, FollowupInputDelegate{
+    
+    func onFollowupResponse(resp: String) {
+        print("followup response: ", resp)
+        if self.followupManager.isAiFollowupEnabled && self.followupManager.aiFollowup != nil{
+            print("update ai followup response...")
+            self.followupManager.updateAiFollowup(resp: resp)
+            return;
+        }
+    }
+    
+    func showFollowup(_ aiFollowup: AiFollowup) {
+        print("process ai followup")
+        question.text = aiFollowup.followupQuestion
+        responseContainer.emptyView()
+        
+        input.maxHeight = 120
+        input.textView.text = ""
+        input.placeholderLabel.isHidden = false
+        print("i updated the test::: \(input.textView.text)")
+        responseContainer.addSubview(input)
+        input.pin(toMarginOf: responseContainer)
+        input.setPlaceholder("Enter you response here")
+        input.delegate = self
+    }
+    
     func onResponse(resp: String) {
         print("response: ", resp)
+        if self.followupManager.isAiFollowupEnabled && self.followupManager.aiFollowup != nil{
+            print("update ai followup response...")
+            self.followupManager.updateAiFollowup(resp: resp)
+            return;
+        }
         response = resp
     }
+    
 }
