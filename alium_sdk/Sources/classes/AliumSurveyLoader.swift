@@ -10,6 +10,7 @@ import SwiftUI
  
 
 @MainActor func isUIKitApp() -> Bool {
+    
     if #available(iOS 13.0, *) {
         guard let rootVC = UIApplication.shared.connectedScenes
             .compactMap({ $0 as? UIWindowScene })
@@ -22,13 +23,11 @@ import SwiftUI
         return false
     }
     
-   
 }
 
 @MainActor
 class AliumSurveyLoader{
     let surveyConfig = Alium.shared.surveyConfig;
-    
     let parameters:SurveyParameters
     init(parameters: SurveyParameters) {
         self.parameters = parameters
@@ -42,6 +41,7 @@ class AliumSurveyLoader{
     private func findAndLoadSurvey(){
         guard let surveyConfig else{return }
         let svs = surveyConfig.svs;
+        
         for surveyInfo in svs {
             print("survey matching...\(surveyInfo.tps?.app?.um?.u) \(parameters.screenName.lowercased())")
             guard let screenName =  surveyInfo.tps?.app?.um?.u, screenName.lowercased() == parameters.screenName.lowercased() else{
@@ -50,8 +50,6 @@ class AliumSurveyLoader{
             print("will load survey matching...")
             loadSurveyIfShouldBeLoaded(surveyInfo);
             return;
-            
-        
         }
         
     }
@@ -60,26 +58,32 @@ class AliumSurveyLoader{
         guard let path = info.tps?.app?.spath, let surPath = URL(string:path ) else{
             return ;
         }
+        guard let  vf = info.tps?.app?.vf else {return}
 //        should survey load / implementation pending
-        
-        if true {
-            loadSurvey(surPath);
+        do{
+            let freqManager = try FrequencyManagerFactory.getFrequencyManager(key: parameters.screenName, srvShowFreq: vf, customFreqSurveyData: nil)
+            
+            if try freqManager.shouldSurveyLoad() {
+                loadSurvey(surPath, vf);
+            }
+        }catch{
+            print(error)
         }
     }
     
-    func loadSurvey(_ url:URL){
+    func loadSurvey(_ url:URL, _ vf:String){
         print("loading survey...")
         makeNetworkRequest(url: url) {[self] survey in
             print("found the survey: \(survey)")
-            showSurveyOnScreen(survey)
+            showSurveyOnScreen(survey, vf)
         }
     }
-    func showSurveyOnScreen(_ survey:Survey){
+    func showSurveyOnScreen(_ survey:Survey,_ vf:String){
         NSLog("Show Survey is running....")
 //        if(isUIKitApp()){
         
             if let topVC = ViewControllerFinder.topViewController() {
-                let overlay = OverlayViewController(survey: survey, parameters: parameters)
+                let overlay = OverlayViewController(survey: survey, parameters: parameters, viewFrequency:vf)
                 topVC.present(overlay, animated: true, completion: nil)
             }
         
@@ -90,7 +94,11 @@ class AliumSurveyLoader{
        
     }
     func makeNetworkRequest(url:URL, _ completion : @escaping (_ survey:Survey)->Void){
-        URLSession.shared.dataTask(with: url){
+        var configuration = URLSessionConfiguration.default
+        configuration.requestCachePolicy = .reloadIgnoringCacheData
+        var session = URLSession(configuration: configuration)
+        
+        session.dataTask(with: url){
                        data, response, error in
                        if let error = error {
                            print("Network error: \(String(describing: error))")

@@ -39,8 +39,12 @@ public final class Alium{
         self.isConfigFetching = true
         print("Fetching config…")
         
+        var confiuration = URLSessionConfiguration.default
+        confiuration.requestCachePolicy = .reloadIgnoringLocalCacheData
         
-        var session = URLSession.shared.dataTask(with: URLRequest(url: url))
+        var session = URLSession(configuration: confiuration)
+            
+        var task = session.dataTask(with: URLRequest(url: url))
         {data, response, err in
             
             if err != nil{
@@ -77,7 +81,7 @@ public final class Alium{
             }
             
         }
-        session.resume()
+        task.resume()
         
         
     }

@@ -56,10 +56,12 @@ final class RatingGroupView: UIView {
      }
 
      @objc private func itemSelected(_ sender: RatingItemView) {
-         items.forEach { $0.isSelected = ($0.index <= sender.index)
+         items.forEach {
+             $0.isSelected = ($0.index <= sender.index)
               
          }
          print("Selected:", selectedOption ?? "")
          delegate?.onResponse(resp: responseOptions[sender.index])
+         delegate?.enableNext(flag: sender.isSelected)
      }
 }

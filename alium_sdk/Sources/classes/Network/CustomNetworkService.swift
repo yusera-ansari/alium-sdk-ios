@@ -6,6 +6,8 @@
 //
 
 enum CustomNetworkService {
+    
+    
 
     // MARK: - Follow-up Request
 
@@ -38,10 +40,12 @@ enum CustomNetworkService {
              print(" JSON serialization failed:", error)
              return
          }
-
+         var configuration = URLSessionConfiguration.default
+         configuration.requestCachePolicy = .reloadIgnoringCacheData
+         let session = URLSession(configuration: configuration)
          
          // Execute
-         let task = URLSession.shared.dataTask(with: request) { data, response, error in
+         let task = session.dataTask(with: request) { data, response, error in
 
              if let error = error {
                  print(" Network error:", error)
@@ -123,8 +127,11 @@ enum CustomNetworkService {
             return
         }
 
+        var configuration = URLSessionConfiguration.default
+        configuration.requestCachePolicy = .reloadIgnoringCacheData
+        let session = URLSession(configuration: configuration)
         // Execute
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+        let task = session.dataTask(with: request) { data, response, error in
 
             if let error = error {
                 print(" Network error:", error)

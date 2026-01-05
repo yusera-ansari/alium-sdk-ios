@@ -7,4 +7,5 @@
 
 protocol ALiumInputDelegate:AnyObject{
     func onResponse(resp:String)
+    func enableNext(flag:Bool)
 }

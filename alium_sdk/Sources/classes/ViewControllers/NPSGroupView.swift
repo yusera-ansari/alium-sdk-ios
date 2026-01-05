@@ -68,6 +68,7 @@ final class NPSGroupView: UIView {
         items.forEach { $0.isSelected = ($0 == sender)
             if($0 == sender){
                 delegate?.onResponse(resp:  sender.title)
+                delegate?.enableNext(flag: true)
             }
         }
         scrollToItem(sender)

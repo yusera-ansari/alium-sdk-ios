@@ -65,7 +65,7 @@ extension OverlayViewController{
         let textColor:UIColor = .init(hexString: survey.surveyInfo.themeColors.color10 )
         
         
-        let radioGroup = RadioButtonGroup(options: currQuest.responseOptions, backgroundColor: backgroundColor, textColor: textColor,iconColor: iconColor, isOtherOptionsEnabled: currQuest.questionSetting?.otherOption ?? false )
+        let radioGroup = RadioButtonGroup(options: currQuest.responseOptions, backgroundColor: backgroundColor, textColor: textColor,iconColor: iconColor, isOtherOptionsEnabled: currQuest.questionSetting.otherOption )
         radioGroup.delegate = self
               radioGroup.translatesAutoresizingMaskIntoConstraints = false
               responseContainer.addSubview(radioGroup)
@@ -84,7 +84,7 @@ extension OverlayViewController{
         let iconColor:UIColor = .init(hexString: survey.surveyInfo.themeColors.color6)
         let textColor:UIColor = .init(hexString: survey.surveyInfo.themeColors.color7 )
         
-        let checkboxGroup = CheckboxGroup(options: currQuest.responseOptions, backgroundColor: backgroundColor, textColor: textColor,iconColor: iconColor,isOtherOptionsEnabled: currQuest.questionSetting?.otherOption ?? false )
+        let checkboxGroup = CheckboxGroup(options: currQuest.responseOptions, backgroundColor: backgroundColor, textColor: textColor,iconColor: iconColor,isOtherOptionsEnabled: currQuest.questionSetting.otherOption)
         checkboxGroup.delegate = self
                checkboxGroup.translatesAutoresizingMaskIntoConstraints = false
                responseContainer.addSubview(checkboxGroup)
@@ -151,8 +151,7 @@ extension OverlayViewController{
     func addRatingTypeInput(){
         guard let questions = survey.questions else{return }
         let currQuest = questions[index]
-        guard let type = currQuest.questionSetting?.ratingType else{return}
-        
+         let type = currQuest.questionSetting.ratingType
         let responseType = RatingStyle(rawValue: type) ?? RatingStyle.star
         let ratingGroup = RatingGroupView(responseOptions: currQuest.responseOptions, style: responseType)
         ratingGroup.delegate = self

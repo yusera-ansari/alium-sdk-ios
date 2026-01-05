@@ -7,6 +7,11 @@
 import UIKit
 import Foundation
 final class CheckboxGroup: UIView, ALiumInputDelegate {
+    func enableNext(flag: Bool) {
+        
+    }
+    
+    
     func onResponse(resp: String) {
         print("input response: \(resp)")
         guard let button = checkboxes.last else{ return}
@@ -78,32 +83,39 @@ final class CheckboxGroup: UIView, ALiumInputDelegate {
     @objc private func valueChanged(_ sender: CheckboxView) {
         print("Selected options:", selectedOptions)
         updateReposne(sender, nil)
-        guard let indexOfSender = checkboxes.firstIndex(of: sender) else{
-            return
-        }
-        if indexOfSender == checkboxes.count - 1 {
-            self.toggleInput = checkboxes[indexOfSender].isSelected ? false : true
-        }
+//        guard let indexOfSender = checkboxes.firstIndex(of: sender) else{
+//            return
+//        }
+//        if indexOfSender == checkboxes.count - 1 {
+//            self.toggleInput = checkboxes[indexOfSender].isSelected ? false : true
+//        }
     }
     
     private func updateReposne(_ sender:CheckboxView,_ resp:String?){
+        delegate?.enableNext(flag: false)
         if isOtherOptionsEnabled   {
             var response = ""
           
             let selectedCheckBox = checkboxes.filter{ $0.isSelected }
             for i in selectedCheckBox.indices {
-             
+               
                 print("current index: ",i, selectedCheckBox[i].title ,response)
                 
                 if(i == selectedCheckBox.count - 1){
+//                    if last option is enabled, then we remove
                     if(selectedCheckBox[i] == checkboxes[checkboxes.count - 1]){ //other options checkbox
                         self.toggleInput = selectedCheckBox[i].isSelected ? false : true
-                         let resp = resp ?? ""
+                        
+                        let resp = resp ?? ""
                         response += "\(selectedCheckBox[i].title)|\(resp)"
                         print(i, response)
+                        if(selectedCheckBox.count == 1){
+                            delegate?.enableNext(flag: !resp.isEmpty) //for required
+                        }
                         break;
                     }
                     response += "\(selectedCheckBox[i].title)"
+                    delegate?.enableNext(flag: true)
                     break;
                 }
                 if(selectedCheckBox[i] == checkboxes[checkboxes.count - 1]){ //other options checkbox
@@ -112,17 +124,19 @@ final class CheckboxGroup: UIView, ALiumInputDelegate {
     //                delegate?.onResponse(resp: selectedOptions.joined(separator: ","))
                     response += "\(selectedCheckBox[i].title)|\(resp),"
                     print(i, response)
+                   
                 }else{
                         response += "\(selectedCheckBox[i].title),"
                     }
                    
-                
+                delegate?.enableNext(flag: true)
             }
             print("delegate: \(response)")
             delegate?.onResponse(resp: response)
         }else {
-            self.toggleInput = true
+            self.toggleInput = true //hide input
             delegate?.onResponse(resp: selectedOptions.joined(separator: ","))
+            delegate?.enableNext(flag: !selectedOptions.joined(separator: ",").isEmpty )
         }
     }
 }

@@ -80,6 +80,7 @@ extension MultilineTextInput: UITextViewDelegate {
         print("text view did change with \(textView.text)")
         placeholderLabel.isHidden = !textView.text.isEmpty
         delegate?.onResponse(resp: textView.text)
+        delegate?.enableNext(flag: !textView.text.isEmpty)
     }
     func textViewDidBeginEditing(_ textView: UITextView) {
         placeholderLabel.isHidden = true

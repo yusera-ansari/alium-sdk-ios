@@ -56,6 +56,13 @@
 		EF6783412F053D2B00DA6080 /* FollowupDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6783402F053D2400DA6080 /* FollowupDelegate.swift */; };
 		EF6783432F054CCE00DA6080 /* FollowUpTextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6783422F054CC300DA6080 /* FollowUpTextInput.swift */; };
 		EF6783452F054CF500DA6080 /* FollowupInputDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6783442F054CED00DA6080 /* FollowupInputDelegate.swift */; };
+		EF9D93032F079E0400251FEC /* SurveyFrequencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9D93022F079DF800251FEC /* SurveyFrequencyManager.swift */; };
+		EF9D93052F079E9900251FEC /* AliumUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9D93042F079E8F00251FEC /* AliumUserDefaults.swift */; };
+		EF9D93072F07A6F500251FEC /* FrequencyManagerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9D93062F07A6EF00251FEC /* FrequencyManagerFactory.swift */; };
+		EF9D93092F07A7A300251FEC /* CustomFreqSurveyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9D93082F07A79700251FEC /* CustomFreqSurveyData.swift */; };
+		EF9D930B2F07A91F00251FEC /* BasicFrequencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9D930A2F07A91900251FEC /* BasicFrequencyManager.swift */; };
+		EF9D930D2F07AA1E00251FEC /* IntegerFrequencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9D930C2F07AA1600251FEC /* IntegerFrequencyManager.swift */; };
+		EF9D930F2F07B64A00251FEC /* CustomFrequencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9D930E2F07B64400251FEC /* CustomFrequencyManager.swift */; };
 		EFC9CDB92EFA9E5800ED853B /* AliumBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC9CDB82EFA9E5400ED853B /* AliumBundle.swift */; };
 		EFC9CDBB2EFA9FFC00ED853B /* AliumInputDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC9CDBA2EFA9FF600ED853B /* AliumInputDelegate.swift */; };
 		EFC9CDBD2EFAA0CB00ED853B /* OverlayViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC9CDBC2EFAA0BD00ED853B /* OverlayViewController+Delegate.swift */; };
@@ -178,6 +185,13 @@
 		EF6783402F053D2400DA6080 /* FollowupDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowupDelegate.swift; sourceTree = "<group>"; };
 		EF6783422F054CC300DA6080 /* FollowUpTextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowUpTextInput.swift; sourceTree = "<group>"; };
 		EF6783442F054CED00DA6080 /* FollowupInputDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowupInputDelegate.swift; sourceTree = "<group>"; };
+		EF9D93022F079DF800251FEC /* SurveyFrequencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyFrequencyManager.swift; sourceTree = "<group>"; };
+		EF9D93042F079E8F00251FEC /* AliumUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliumUserDefaults.swift; sourceTree = "<group>"; };
+		EF9D93062F07A6EF00251FEC /* FrequencyManagerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrequencyManagerFactory.swift; sourceTree = "<group>"; };
+		EF9D93082F07A79700251FEC /* CustomFreqSurveyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFreqSurveyData.swift; sourceTree = "<group>"; };
+		EF9D930A2F07A91900251FEC /* BasicFrequencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicFrequencyManager.swift; sourceTree = "<group>"; };
+		EF9D930C2F07AA1600251FEC /* IntegerFrequencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegerFrequencyManager.swift; sourceTree = "<group>"; };
+		EF9D930E2F07B64400251FEC /* CustomFrequencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFrequencyManager.swift; sourceTree = "<group>"; };
 		EFC9CDB82EFA9E5400ED853B /* AliumBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliumBundle.swift; sourceTree = "<group>"; };
 		EFC9CDBA2EFA9FF600ED853B /* AliumInputDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliumInputDelegate.swift; sourceTree = "<group>"; };
 		EFC9CDBC2EFAA0BD00ED853B /* OverlayViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OverlayViewController+Delegate.swift"; sourceTree = "<group>"; };
@@ -358,6 +372,12 @@
 		9606418019697E8649DA3083CE2ACDC7 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				EF9D930E2F07B64400251FEC /* CustomFrequencyManager.swift */,
+				EF9D930C2F07AA1600251FEC /* IntegerFrequencyManager.swift */,
+				EF9D930A2F07A91900251FEC /* BasicFrequencyManager.swift */,
+				EF9D93062F07A6EF00251FEC /* FrequencyManagerFactory.swift */,
+				EF9D93042F079E8F00251FEC /* AliumUserDefaults.swift */,
+				EF9D93022F079DF800251FEC /* SurveyFrequencyManager.swift */,
 				84A00C898B4C63A40DB29D3615044174 /* AliumRequestManager.swift */,
 			);
 			name = Managers;
@@ -425,6 +445,7 @@
 		C5C21AD9C4BDC3842E7975725A8357EA /* SurveyModels */ = {
 			isa = PBXGroup;
 			children = (
+				EF9D93082F07A79700251FEC /* CustomFreqSurveyData.swift */,
 				6F4EEC1B3C68DD00D36F2265A532DD81 /* AiSettings.swift */,
 				6FAFE337148F916F21E96802859D086D /* Question.swift */,
 				211BAFF73DAC1E55C442C6C26E073C93 /* QuestionSettings.swift */,
@@ -712,10 +733,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF9D930D2F07AA1E00251FEC /* IntegerFrequencyManager.swift in Sources */,
 				4448CECB4696804EA8FD05BB577C47C9 /* AiSettings.swift in Sources */,
 				EFC9CDBB2EFA9FFC00ED853B /* AliumInputDelegate.swift in Sources */,
 				EA19D425472AE0771AD46DB5AD628A82 /* Alium.swift in Sources */,
 				CDD1634BD6C03F7910EE6716D28E7096 /* alium_sdk-dummy.m in Sources */,
+				EF9D93092F07A7A300251FEC /* CustomFreqSurveyData.swift in Sources */,
 				D1483374DBCE3C90CF497E49CE6A3A75 /* AliumRequest.swift in Sources */,
 				2721049B9ADAC42CB5C93A499546E375 /* AliumRequestManager.swift in Sources */,
 				EFD8AC7F2F03D698009071C6 /* FollowupHistory.swift in Sources */,
@@ -723,6 +746,9 @@
 				7F86C30572CEA696AF25E4E0F42834D3 /* AliumSurveyLoader.swift in Sources */,
 				B2F77645F8B2F0FA76C9D0A5A2747B0F /* App.swift in Sources */,
 				269D9FBBD2068C0571BB65611ABDECB6 /* CheckboxGroup.swift in Sources */,
+				EF9D930F2F07B64A00251FEC /* CustomFrequencyManager.swift in Sources */,
+				EF9D93072F07A6F500251FEC /* FrequencyManagerFactory.swift in Sources */,
+				EF9D93032F079E0400251FEC /* SurveyFrequencyManager.swift in Sources */,
 				CAC41E89513C13B98581F4E60E13A883 /* CheckboxView.swift in Sources */,
 				D284EE1952A57F75B4C7213B19476F54 /* CustomNetworkService.swift in Sources */,
 				0DF9CF0559CBB4F9804DAEFAAB76B6CF /* CustomSurveyDetails.swift in Sources */,
@@ -734,6 +760,7 @@
 				EFC9CDB92EFA9E5800ED853B /* AliumBundle.swift in Sources */,
 				EFFDD7C22EFABBFA00063A1D /* AliumTracker.swift in Sources */,
 				BF9F87EB3FD91D03400B992CA13A9F67 /* OverlayViewController+Types.swift in Sources */,
+				EF9D93052F079E9900251FEC /* AliumUserDefaults.swift in Sources */,
 				A2C45DFC8437B3B176191F2BB262081C /* Question.swift in Sources */,
 				9CCCC2C9D1AFFBDECA52F17D3FD7A4AD /* QuestionSettings.swift in Sources */,
 				46AC881104D8B7EFEF1E5670DFC24870 /* QuestionTypes.swift in Sources */,
@@ -749,6 +776,7 @@
 				EFD8AC832F03DCD0009071C6 /* AliumFollowupRepository.swift in Sources */,
 				E8ADF1438A037FE9C590A882688639B5 /* SurveyParameters.swift in Sources */,
 				1035449068E51CCC134057FB4D08500C /* SurveyParameters+Builder.swift in Sources */,
+				EF9D930B2F07A91F00251FEC /* BasicFrequencyManager.swift in Sources */,
 				EFD8AC7D2F03D5B1009071C6 /* AliumAiFollowupManager.swift in Sources */,
 				1EFA3A62B9ECB6255B491348A6259416 /* ThemeColors.swift in Sources */,
 				F033F34EA322ACB9651AB60F116A9AAE /* TypeOfSur.swift in Sources */,

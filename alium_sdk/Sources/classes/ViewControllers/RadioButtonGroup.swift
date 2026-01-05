@@ -7,6 +7,10 @@
 import UIKit
 import Foundation
 final class RadioButtonGroup: UIView, ALiumInputDelegate {
+    func enableNext(flag: Bool) {
+        
+    }
+    
     func onResponse(resp: String) {
         print("input response: \(resp)")
         guard let button = buttons.last else{ return}
@@ -90,13 +94,16 @@ final class RadioButtonGroup: UIView, ALiumInputDelegate {
                 self.toggleInput = false
                  let resp = resp ?? ""
                 delegate?.onResponse(resp:"\(sender.title)|\(resp)")
+                delegate?.enableNext(flag: !resp.isEmpty)
             }else{
                 self.toggleInput = true
                 delegate?.onResponse(resp:sender.title )
+                delegate?.enableNext(flag: sender.isSelected)
             }
            
         }else {
             delegate?.onResponse(resp:sender.title )
+            delegate?.enableNext(flag: sender.isSelected)
         }
     }
 }

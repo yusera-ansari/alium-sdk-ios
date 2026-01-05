@@ -6,6 +6,8 @@
 //
 
 extension OverlayViewController : ALiumInputDelegate, FollowupDelegate, FollowupInputDelegate{
+   
+    
     
     func onFollowupResponse(resp: String) {
         print("followup response: ", resp)
@@ -38,7 +40,16 @@ extension OverlayViewController : ALiumInputDelegate, FollowupDelegate, Followup
             self.followupManager.updateAiFollowup(resp: resp)
             return;
         }
+        
         response = resp
+       
+        
+        
     }
+    func enableNext(flag: Bool) {
+        enableBtn(nextBtn, flag: (currQuest!.questionSetting.required && flag) ? true : false )
+//        enableBtn(nextBtn, flag: (currQuest!.questionSetting.required  &&  !resp.isEmpty) ? true : false )
+    }
+    
     
 }

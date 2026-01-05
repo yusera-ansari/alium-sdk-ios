@@ -14,7 +14,7 @@ public struct Question: Codable, CustomStringConvertible {
     public var responseType: String?
     public var responseOptions: [String] = []
 
-    public var questionSetting: QuestionSetting?
+    public var questionSetting: QuestionSetting = QuestionSetting()
     public var aiSettings: AiSettings = AiSettings()
     public var conditionMapping: [String]?
     enum CodingKeys: String, CodingKey {
@@ -34,7 +34,7 @@ public struct Question: Codable, CustomStringConvertible {
             id = try container.decodeIfPresent(Int.self, forKey: .id)
             question = try container.decodeIfPresent(String.self, forKey: .question)
             responseType = try container.decodeIfPresent(String.self, forKey: .responseType)
-            questionSetting = try container.decodeIfPresent(QuestionSetting.self, forKey: .questionSetting)
+            questionSetting = try container.decodeIfPresent(QuestionSetting.self, forKey: .questionSetting) ?? QuestionSetting()
             aiSettings = try container.decodeIfPresent(AiSettings.self, forKey: .aiSettings) ?? AiSettings()
             conditionMapping = try container.decodeIfPresent([String].self, forKey: .conditionMapping)
 
@@ -68,7 +68,7 @@ public struct Question: Codable, CustomStringConvertible {
             question: "\(question ?? "")",
             responseType: "\(responseType ?? "")",
             responseOptions: \(responseOptions),
-            questionSetting: \(questionSetting?.description ?? "nil"),
+            questionSetting: \(questionSetting.description),
             aiSettings: \(aiSettings.description ),
             conditionMapping: \(conditionMapping ?? [])
         )

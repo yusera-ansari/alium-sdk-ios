@@ -19,9 +19,14 @@ class OverlayViewController: UIViewController {
     var currQuest:Question?
     let survey: Survey
     let parameters:SurveyParameters
-    var index:Int = 0;
-   
-    
+    var index:Int = 0{
+        didSet{
+          
+        }
+    };
+    let viewFrequency:String
+    var frequencyManager:SurveyFrequencyManager? = nil
+    var responseSubmitIndex = 1;
     lazy var container : UIView = {
         var v : UIView = UIView()
         v.backgroundColor = .lightGray
@@ -77,12 +82,14 @@ class OverlayViewController: UIViewController {
         return b
     }()
     
-    init(survey: Survey, parameters:SurveyParameters) {
+    init(survey: Survey, parameters:SurveyParameters, viewFrequency:String) {
         self.survey = survey
         self.parameters = parameters
+        self.viewFrequency = viewFrequency
         self.followupManager=AliumAiFollowupManager(survey: survey)
         currQuest = survey.questions?.first
         super.init(nibName: nil, bundle: nil)
+       
         self.followupManager.delegate = self
         guard currQuest != nil else{
             print("Curre Question is nil")
@@ -96,13 +103,21 @@ class OverlayViewController: UIViewController {
     
     required init?(coder: NSCoder) { fatalError() }
 
+    // MARK: -  ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
+        do{
+              self.frequencyManager = try FrequencyManagerFactory.getFrequencyManager(key: parameters.screenName, srvShowFreq: viewFrequency, customFreqSurveyData: nil)
+        }catch{
+            print(error)
+        }
         view.backgroundColor = UIColor.black.withAlphaComponent(0.2)
         setupUi()
          
         
     }
+    
+    // MARK: - setupUI
     func setupUi(){
         setupContainer()
         setupCloseBtn()
@@ -110,7 +125,6 @@ class OverlayViewController: UIViewController {
         setupResponseContainer()
         setupNextBtn()
         showCurrentQuestion()
-        
     }
     
     func setupContainer(){
@@ -126,6 +140,16 @@ class OverlayViewController: UIViewController {
             container.widthAnchor.constraint(lessThanOrEqualToConstant: maxWidth > UIScreen.main.bounds.width ? UIScreen.main.bounds.width - 20 : maxWidth),
             container.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             leading,trailing
+        ])
+    }
+    func setupCloseBtn(){
+        container.addSubview(closeBtn)
+        closeBtn.activateConstraints([
+            closeBtn.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: -10)
+            ,
+            closeBtn.topAnchor.constraint(equalTo: container.topAnchor, constant: 10)
+            ,
+            
         ])
     }
     func setupResponseContainer(){
@@ -145,16 +169,6 @@ class OverlayViewController: UIViewController {
     }
     
     
-    func setupCloseBtn(){
-        container.addSubview(closeBtn)
-        closeBtn.activateConstraints([
-            closeBtn.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: -10)
-            ,
-            closeBtn.topAnchor.constraint(equalTo: container.topAnchor, constant: 10)
-            ,
-            
-        ])
-    }
     func setupNextBtn(){
         container.addSubview(nextBtn)
         nextBtnCenterX = nextBtn.centerXAnchor.constraint(equalTo: container.centerXAnchor)
@@ -169,6 +183,7 @@ class OverlayViewController: UIViewController {
         nextBtn.addTarget(self, action: #selector(onNextPress), for: .touchUpInside)
         nextBtnWidth.isActive = true
     }
+    
     func setupQuestion(){
         container.addSubview(question)
         question.activateConstraints([
@@ -179,13 +194,12 @@ class OverlayViewController: UIViewController {
             ,
             question.leadingAnchor.constraint(equalTo: container.leadingAnchor, constant: 10)
             ,
-           
-          
         ])
     }
     
     func showCurrentQuestion(){
-        response = ""
+
+        
         guard let questions = survey.questions, index <= questions.count else{
             dismiss(animated: true)
             return
@@ -195,17 +209,41 @@ class OverlayViewController: UIViewController {
             dismiss(animated: true)
             return;
         }
-       
+        response = ""
+        currQuest = questions[index]
     
-        let currentQuest = questions[index]
-        var text = (currentQuest.question ?? "")
-        if let required = currentQuest.questionSetting?.required {
-            text += required ? "*" : ""
-        }
-        question.text = text + "**"
-        updateResponseContainer()
-        enableBtn(nextBtn, flag: true)
         
+        var text = (currQuest?.question ?? "")
+        let required = currQuest?.questionSetting.required ?? false
+      
+        text += required ? "*" : ""
+        
+        question.text = text
+        updateResponseContainer()
+       
+        if index == 0 { //when survey is loaded track and save freq
+            track()
+            if viewFrequency == "o" {
+                frequencyManager?.recordSurveyTriggerOnPreferences()
+            }
+            if currQuest?.responseType == "0" {
+                responseSubmitIndex = 2
+            }
+        }
+        
+       
+    }
+    
+    func submitSurvey(){
+        print("submit survey: index: \(index), viewfrequency: \(viewFrequency), responseType:\(currQuest?.responseType), submit index:\(responseSubmitIndex)")
+        if index >= responseSubmitIndex
+            &&
+            viewFrequency == "os"
+            &&
+            currQuest?.responseType != "0"
+        {
+            frequencyManager?.recordSurveyTriggerOnPreferences()
+        }
     }
     func updateResponseContainer(){
         input.delegate = nil
@@ -216,7 +254,7 @@ class OverlayViewController: UIViewController {
         guard let questions else{
             return
         }
-        currQuest = questions[index]
+        
         guard let respType = currQuest?.responseType, let responseType = ResponseType(rawValue: respType) else {
             
             return
@@ -225,7 +263,7 @@ class OverlayViewController: UIViewController {
             
         case .start:
             nextBtn.setTitle("start", for: .normal);
-            track()
+            
         case .longText:
              addMultilineTextInput()
             
@@ -248,7 +286,7 @@ class OverlayViewController: UIViewController {
             nextBtn.setTitle("thankYou", for: .normal);
              
         }
-        updatedNextButton(responseType)
+        updateNextButton(responseType)
         
     }
     
@@ -261,13 +299,15 @@ class OverlayViewController: UIViewController {
 //            setupContainer()
           
     }
-    func updatedNextButton(_ respType:ResponseType){
-        guard let questions = survey.questions else{return}
-          currQuest = questions[index]
-        guard currQuest != nil else{
+    func updateNextButton(_ respType:ResponseType){
+        
+        
+        guard let currQuest else{
             dismiss(animated: false)
             return
         }
+        
+        enableBtn(nextBtn, flag: !currQuest.questionSetting.required)
         nextBtnCenterX.isActive = false
         nextBtnTrailing.isActive = false
          
@@ -281,6 +321,7 @@ class OverlayViewController: UIViewController {
             nextBtnTrailing.isActive = true
            
         }
+        
        
         
     }
@@ -315,7 +356,6 @@ class OverlayViewController: UIViewController {
             if(shouldStop){
                 self.index += 1;
                 self.showCurrentQuestion()
-                
                 return
             }
             followupManager.getFollowupQuestion(maxFollowups: currQuest.aiSettings.maxFrequency, currentIndex: index, originalResponse: response) { result in
@@ -335,6 +375,7 @@ class OverlayViewController: UIViewController {
             return;
         }
         index += 1;
+        submitSurvey()
         showCurrentQuestion()
     }
     func enableBtn(_ sender:UIButton, flag:Bool){
