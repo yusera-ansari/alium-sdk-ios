@@ -19,11 +19,13 @@ class OverlayViewController: UIViewController {
     var currQuest:Question?
     let survey: Survey
     let parameters:SurveyParameters
+    let delegate:SurveyStateDelegate!
     var index:Int = 0{
         didSet{
           
         }
     };
+    private var isKeyboardVisible = false
     let viewFrequency:String
     var frequencyManager:SurveyFrequencyManager? = nil
     var responseSubmitIndex = 1;
@@ -82,18 +84,20 @@ class OverlayViewController: UIViewController {
         return b
     }()
     
-    init(survey: Survey, parameters:SurveyParameters, viewFrequency:String) {
+    init(survey: Survey, parameters:SurveyParameters, viewFrequency:String, delegate:SurveyStateDelegate) {
         self.survey = survey
         self.parameters = parameters
         self.viewFrequency = viewFrequency
         self.followupManager=AliumAiFollowupManager(survey: survey)
         currQuest = survey.questions?.first
+        self.delegate = delegate
         super.init(nibName: nil, bundle: nil)
        
         self.followupManager.delegate = self
         guard currQuest != nil else{
             print("Curre Question is nil")
             dismiss(animated: false)
+            delegate.onClose(parameters.screenName)
             return
         }
         modalPresentationStyle = .overFullScreen
@@ -106,6 +110,8 @@ class OverlayViewController: UIViewController {
     // MARK: -  ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupKeyboardObservers()
+       addTapGesture()
         do{
               self.frequencyManager = try FrequencyManagerFactory.getFrequencyManager(key: parameters.screenName, srvShowFreq: viewFrequency, customFreqSurveyData: nil)
         }catch{
@@ -116,30 +122,58 @@ class OverlayViewController: UIViewController {
          
         
     }
-    
+    private func addTapGesture(){
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleViewTap))
+            tap.cancelsTouchesInView = false
+            tap.delegate = self
+            view.addGestureRecognizer(tap)
+    }
+    @objc private func handleViewTap() {
+        if isKeyboardVisible {
+            view.endEditing(true)
+        }else{
+            dismiss(animated: true)
+            delegate.onClose(parameters.screenName)
+        }
+        
+    }
     // MARK: - setupUI
     func setupUi(){
+       
         setupContainer()
+        containerWidth.isActive = true
         setupCloseBtn()
         setupQuestion()
         setupResponseContainer()
         setupNextBtn()
         showCurrentQuestion()
     }
-    
+    var containerBottomConstraint : NSLayoutConstraint!
+    let maxWidth:CGFloat = 450
+    var containerWidth : NSLayoutConstraint!
+    var leading:NSLayoutConstraint!
+    var trailing:NSLayoutConstraint!
+    var containerHeightAnchor:NSLayoutConstraint!
     func setupContainer(){
+      
         view.addSubview(container);
-        let leading = container.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 10)
-           let trailing = container.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -10)
-        let maxWidth:CGFloat = 600
+        containerWidth = container.widthAnchor.constraint(equalToConstant: maxWidth > UIScreen.main.bounds.width ? UIScreen.main.bounds.width - 20 : maxWidth)
+         leading = container.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 10)
+            trailing = container.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -10)
+        containerHeightAnchor = container.heightAnchor.constraint(equalTo: view.heightAnchor)
         leading.priority = .defaultHigh
           trailing.priority = .defaultHigh
+        
+        
+        containerBottomConstraint =  container.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20)
+        
             container.activateConstraints([
-            container.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
+           containerBottomConstraint,
+           
 //            container.heightAnchor.constraint(greaterThanOrEqualToConstant: 200),
-            container.widthAnchor.constraint(lessThanOrEqualToConstant: maxWidth > UIScreen.main.bounds.width ? UIScreen.main.bounds.width - 20 : maxWidth),
+         
             container.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            leading,trailing
+//            leading,trailing
         ])
     }
     func setupCloseBtn(){
@@ -202,11 +236,13 @@ class OverlayViewController: UIViewController {
         
         guard let questions = survey.questions, index <= questions.count else{
             dismiss(animated: true)
+            delegate.onClose(parameters.screenName)
             return
         }
         
         if index == ( questions.count ){
             dismiss(animated: true)
+            delegate.onClose(parameters.screenName)
             return;
         }
         response = ""
@@ -290,20 +326,51 @@ class OverlayViewController: UIViewController {
         
     }
     
-    func handleNextQuestion(){
-        
-    }
+//    Mark: Handle Traits
+   
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
-      
+        print("trait class changedddd... \(traitCollection.horizontalSizeClass != previousTraitCollection?.horizontalSizeClass || traitCollection.verticalSizeClass != previousTraitCollection?.verticalSizeClass),  ")
+        print(traitCollection.horizontalSizeClass)
+        print(traitCollection.verticalSizeClass)
+        print(previousTraitCollection?.horizontalSizeClass )
+        print(previousTraitCollection?.verticalSizeClass)
 //            setupContainer()
+        guard traitCollection.horizontalSizeClass != previousTraitCollection?.horizontalSizeClass || traitCollection.verticalSizeClass != previousTraitCollection?.verticalSizeClass else {return}
+        print("screen width: \(UIScreen.main.bounds.width)")
+        containerHeightAnchor.isActive = false
+        handleSizeClassChange()
           
     }
+    private func handleSizeClassChange() {
+        let screenWidth = view.bounds.width
+        switch (traitCollection.horizontalSizeClass, traitCollection.verticalSizeClass) {
+
+        case (.compact, .regular): // Portrait
+              containerWidth.constant = min(maxWidth, screenWidth - 20)
+           
+        case (.regular, .compact): // Landscape
+              containerWidth.constant = min(500, screenWidth - 40)
+            containerHeightAnchor.isActive = true
+        case (.regular, .regular): // iPad
+            containerWidth.constant = 600
+            
+        default:
+            containerWidth.constant = min(maxWidth, screenWidth - 20)
+        }
+        view.layoutIfNeeded()
+        
+        print("trait: \(containerWidth) ")
+    }
+
+    
+//    Mark: - update next button
     func updateNextButton(_ respType:ResponseType){
         
         
         guard let currQuest else{
             dismiss(animated: false)
+            delegate.onClose(parameters.screenName)
             return
         }
         
@@ -326,15 +393,7 @@ class OverlayViewController: UIViewController {
         
     }
     
-    func track(){
-        print("tracking calledd....")
-        guard let trackingParams = generateTrackingParameters() else{
-            print("couldn't trackk....")
-            return
-        }
-        print(trackingParams)
-        AliumTracker.track(parameters: trackingParams )
-    }
+  
     
 
     @objc
@@ -343,6 +402,7 @@ class OverlayViewController: UIViewController {
         enableBtn(sender, flag: false)
         guard let currQuest else {
             dismiss(animated: true)
+            delegate.onClose(parameters.screenName)
             return}
         if currQuest.responseType != "0" && currQuest.responseType != "-1" {
             track()
@@ -378,14 +438,29 @@ class OverlayViewController: UIViewController {
         submitSurvey()
         showCurrentQuestion()
     }
+    
     func enableBtn(_ sender:UIButton, flag:Bool){
         sender.isEnabled = flag
         sender.alpha = flag ? 1.0 : 0.8
     }
+    
     @objc
     func onClose(_ sender:UIButton){
         dismiss(animated: true)
+        delegate.onClose(parameters.screenName)
     }
+    
+//    Mark: - Tracking parameters
+    func track(){
+        print("tracking calledd....")
+        guard let trackingParams = generateTrackingParameters() else{
+            print("couldn't trackk....")
+            return
+        }
+        print(trackingParams)
+        AliumTracker.track(parameters: trackingParams )
+    }
+    
     func generateTrackingParameters()->[String:Any]?{
         guard let currQuest else{
             return nil
@@ -397,8 +472,8 @@ class OverlayViewController: UIViewController {
         params["surveyLoadId"] = uuid
         params["surveyPath"] = parameters.screenName
         params["userId"] = ""
-//        params["custId"] = aliumPreferences.customerId
-//        params["userAgent"] = getUserAgent()
+        params["custId"] = AliumUserDefaults.shared.get("customer-id") 
+        params["userAgent"] = DeviceInfo.getUserAgent()
         params["eventType"] = ResponseType(rawValue: currQuest.responseType ?? "1") == .start ? "load" : "resp"
         params["language"] = "1"
         params["surveyType"] = 7
@@ -451,6 +526,81 @@ class OverlayViewController: UIViewController {
         }
         return params
     }
+    
+//    Mark: - KeyboardObservers
+  
+
+    private func setupKeyboardObservers(){
+        NotificationCenter.default.addObserver(self, selector: #selector(onKeyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(onKeyboardWillHide), name: UIResponder.keyboardDidHideNotification, object: nil)
+    }
+    
+    @objc
+    private func onKeyboardWillShow(_ notification: Notification){
+        print("keyboard is showing....")
+        guard
+               let userInfo = notification.userInfo,
+               let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect,
+               let duration = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double,
+               let curve = userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] as? UInt
+           else { return }
+
+           let keyboardHeight = keyboardFrame.height
+           let safeBottom = view.safeAreaInsets.bottom
+
+           containerBottomConstraint.constant = -(keyboardHeight - safeBottom + 12)
+
+           UIView.animate(
+               withDuration: duration,
+               delay: 0,
+               options: UIView.AnimationOptions(rawValue: curve << 16),
+               animations: {
+                   self.view.layoutIfNeeded()
+               }
+           )
+        isKeyboardVisible = true
+        
+    }
+    @objc
+    private func onKeyboardWillHide(_ notification: Notification){
+        print("keyboard will hide now!!")
+        guard
+            let userInfo = notification.userInfo,
+            let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect,
+            let duration = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double,
+            let curve = userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] as? UInt
+        else{return}
+        containerBottomConstraint.constant = -20
+        UIView.animate(withDuration: duration, delay: 0,
+                       options: UIView.AnimationOptions(rawValue: curve << 16))
+        {
+            self.view.layoutIfNeeded()
+        }
+        isKeyboardVisible = false
+    }
+    
+//   Mark: - Dismiss
+    override func viewDidDisappear(_ animated: Bool) {
+        if isBeingDismissed {
+            delegate.onClose(parameters.screenName)
+        }
+    }
+//     Mark: - deinit
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
 }
 
 
+// Mark: - OverlayViewController : UIGestureRecognizerDelegate
+extension OverlayViewController : UIGestureRecognizerDelegate{
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+        let location = touch.location(in: view)
+        
+        if container.frame.contains(location) {
+            return false
+        }
+        return true
+    }
+}

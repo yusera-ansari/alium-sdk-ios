@@ -2,7 +2,7 @@
 //  InavlidCustomFrequencyTypeException.swift
 //  Pods
 //
-//  Created by Abcom on 02/01/26.
+//  Created by yusera-ansari on 02/01/26.
 //
 
 final class InavlidCustomFrequencyTypeException:Error {

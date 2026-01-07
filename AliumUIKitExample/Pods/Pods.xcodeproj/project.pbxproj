@@ -53,9 +53,12 @@
 		E3C4D02042AA0F2B55D0B29C54737722 /* alium_sdk-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 99A8DA0E7BA6D1BF9B1D58AB04CD5CBE /* alium_sdk-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E8ADF1438A037FE9C590A882688639B5 /* SurveyParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B18AFA843B3981400CD3A70860C5E3 /* SurveyParameters.swift */; };
 		EA19D425472AE0771AD46DB5AD628A82 /* Alium.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65664CB42F3A5F5EB6FE14F3C0073A /* Alium.swift */; };
+		EF0C0EE32F0CE30B00DABFCE /* SurveyStateDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0C0EE22F0CE30000DABFCE /* SurveyStateDelegate.swift */; };
 		EF6783412F053D2B00DA6080 /* FollowupDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6783402F053D2400DA6080 /* FollowupDelegate.swift */; };
 		EF6783432F054CCE00DA6080 /* FollowUpTextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6783422F054CC300DA6080 /* FollowUpTextInput.swift */; };
 		EF6783452F054CF500DA6080 /* FollowupInputDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6783442F054CED00DA6080 /* FollowupInputDelegate.swift */; };
+		EF88F36C2F0BC525002CD604 /* DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF88F36B2F0BC521002CD604 /* DeviceInfo.swift */; };
+		EF88F36E2F0BC979002CD604 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF88F36D2F0BC976002CD604 /* Util.swift */; };
 		EF9D93032F079E0400251FEC /* SurveyFrequencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9D93022F079DF800251FEC /* SurveyFrequencyManager.swift */; };
 		EF9D93052F079E9900251FEC /* AliumUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9D93042F079E8F00251FEC /* AliumUserDefaults.swift */; };
 		EF9D93072F07A6F500251FEC /* FrequencyManagerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9D93062F07A6EF00251FEC /* FrequencyManagerFactory.swift */; };
@@ -182,9 +185,12 @@
 		ECCDC10499576072872634111B9CA8CE /* Pods-AliumUIKitExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AliumUIKitExample-acknowledgements.markdown"; sourceTree = "<group>"; };
 		ED18A1C1B020BB827474B6151213FD2D /* alium_sdk.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = alium_sdk.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		ED9AF1B6594DC1617FC81B3372328A69 /* Pods-AliumUIKitExampleTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AliumUIKitExampleTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		EF0C0EE22F0CE30000DABFCE /* SurveyStateDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyStateDelegate.swift; sourceTree = "<group>"; };
 		EF6783402F053D2400DA6080 /* FollowupDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowupDelegate.swift; sourceTree = "<group>"; };
 		EF6783422F054CC300DA6080 /* FollowUpTextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowUpTextInput.swift; sourceTree = "<group>"; };
 		EF6783442F054CED00DA6080 /* FollowupInputDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowupInputDelegate.swift; sourceTree = "<group>"; };
+		EF88F36B2F0BC521002CD604 /* DeviceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfo.swift; sourceTree = "<group>"; };
+		EF88F36D2F0BC976002CD604 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		EF9D93022F079DF800251FEC /* SurveyFrequencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyFrequencyManager.swift; sourceTree = "<group>"; };
 		EF9D93042F079E8F00251FEC /* AliumUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliumUserDefaults.swift; sourceTree = "<group>"; };
 		EF9D93062F07A6EF00251FEC /* FrequencyManagerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrequencyManagerFactory.swift; sourceTree = "<group>"; };
@@ -408,6 +414,9 @@
 		B5315AD02F92DB39F368260BA84E910A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				EF0C0EE22F0CE30000DABFCE /* SurveyStateDelegate.swift */,
+				EF88F36D2F0BC976002CD604 /* Util.swift */,
+				EF88F36B2F0BC521002CD604 /* DeviceInfo.swift */,
 				EF6783442F054CED00DA6080 /* FollowupInputDelegate.swift */,
 				EF6783422F054CC300DA6080 /* FollowUpTextInput.swift */,
 				EF6783402F053D2400DA6080 /* FollowupDelegate.swift */,
@@ -737,16 +746,19 @@
 				4448CECB4696804EA8FD05BB577C47C9 /* AiSettings.swift in Sources */,
 				EFC9CDBB2EFA9FFC00ED853B /* AliumInputDelegate.swift in Sources */,
 				EA19D425472AE0771AD46DB5AD628A82 /* Alium.swift in Sources */,
+				EF88F36C2F0BC525002CD604 /* DeviceInfo.swift in Sources */,
 				CDD1634BD6C03F7910EE6716D28E7096 /* alium_sdk-dummy.m in Sources */,
 				EF9D93092F07A7A300251FEC /* CustomFreqSurveyData.swift in Sources */,
 				D1483374DBCE3C90CF497E49CE6A3A75 /* AliumRequest.swift in Sources */,
 				2721049B9ADAC42CB5C93A499546E375 /* AliumRequestManager.swift in Sources */,
 				EFD8AC7F2F03D698009071C6 /* FollowupHistory.swift in Sources */,
 				EF6783412F053D2B00DA6080 /* FollowupDelegate.swift in Sources */,
+				EF88F36E2F0BC979002CD604 /* Util.swift in Sources */,
 				7F86C30572CEA696AF25E4E0F42834D3 /* AliumSurveyLoader.swift in Sources */,
 				B2F77645F8B2F0FA76C9D0A5A2747B0F /* App.swift in Sources */,
 				269D9FBBD2068C0571BB65611ABDECB6 /* CheckboxGroup.swift in Sources */,
 				EF9D930F2F07B64A00251FEC /* CustomFrequencyManager.swift in Sources */,
+				EF0C0EE32F0CE30B00DABFCE /* SurveyStateDelegate.swift in Sources */,
 				EF9D93072F07A6F500251FEC /* FrequencyManagerFactory.swift in Sources */,
 				EF9D93032F079E0400251FEC /* SurveyFrequencyManager.swift in Sources */,
 				CAC41E89513C13B98581F4E60E13A883 /* CheckboxView.swift in Sources */,

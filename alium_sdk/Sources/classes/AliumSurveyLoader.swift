@@ -29,8 +29,11 @@ import SwiftUI
 class AliumSurveyLoader{
     let surveyConfig = Alium.shared.surveyConfig;
     let parameters:SurveyParameters
-    init(parameters: SurveyParameters) {
+    let delegate : SurveyStateDelegate!
+    private var overlay:OverlayViewController?
+    init(parameters: SurveyParameters, delegate:SurveyStateDelegate) {
         self.parameters = parameters
+        self.delegate = delegate
     }
     @MainActor func showSurvey(){
         
@@ -56,9 +59,12 @@ class AliumSurveyLoader{
     
     func loadSurveyIfShouldBeLoaded(_ info:SurInfo){
         guard let path = info.tps?.app?.spath, let surPath = URL(string:path ) else{
+            print("path not found")
             return ;
         }
-        guard let  vf = info.tps?.app?.vf else {return}
+        guard let  vf = info.tps?.app?.vf else {
+            print("vf not found")
+            return}
 //        should survey load / implementation pending
         do{
             let freqManager = try FrequencyManagerFactory.getFrequencyManager(key: parameters.screenName, srvShowFreq: vf, customFreqSurveyData: nil)
@@ -81,10 +87,21 @@ class AliumSurveyLoader{
     func showSurveyOnScreen(_ survey:Survey,_ vf:String){
         NSLog("Show Survey is running....")
 //        if(isUIKitApp()){
-        
+     
+
             if let topVC = ViewControllerFinder.topViewController() {
-                let overlay = OverlayViewController(survey: survey, parameters: parameters, viewFrequency:vf)
-                topVC.present(overlay, animated: true, completion: nil)
+                if let topVC = topVC as? OverlayViewController {
+                    overlay = OverlayViewController(survey: survey, parameters: parameters, viewFrequency:vf, delegate: delegate)
+  //                overlay?.modalPresentationStyle = .overCurrentContext
+  //                topVC.definesPresentationContext = true
+                    topVC.presentingViewController?.present(overlay!, animated: true, completion: nil)
+                    return
+                }
+                  overlay = OverlayViewController(survey: survey, parameters: parameters, viewFrequency:vf, delegate: delegate)
+//                overlay?.modalPresentationStyle = .overCurrentContext
+//                topVC.definesPresentationContext = true
+                topVC.present(overlay!, animated: true, completion: nil)
+               
             }
         
 //        }else{
@@ -92,6 +109,12 @@ class AliumSurveyLoader{
 //        }
         return;
        
+    }
+    func stop(){
+        print("loader will stop the survey...\(parameters.screenName)")
+        guard let overlay else{return}
+        overlay.dismiss(animated: true)
+        
     }
     func makeNetworkRequest(url:URL, _ completion : @escaping (_ survey:Survey)->Void){
         var configuration = URLSessionConfiguration.default

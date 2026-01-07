@@ -20,6 +20,10 @@ final class RatingItemView: UIControl {
      private let imageView = UIImageView()
      private let label = UILabel()
      private let style: RatingStyle
+    private let bgColor:UIColor
+    private let textColor:UIColor
+    private let selectedBgColor:UIColor
+    private let selectedTextColor:UIColor
         private let emojiTypes = ["line_md_emoji_cry","line_md_emoji_frown","mingcute_emoji_smile","ic_baseline_emoji_emotions","fluent_emoji_laugh"]
      override var isSelected: Bool {
          didSet {
@@ -27,9 +31,13 @@ final class RatingItemView: UIControl {
              updateUI() }
      }
 
-     init(index: Int, style: RatingStyle) {
+     init(index: Int, style: RatingStyle,_ backgroundColor:UIColor,_ textColor:UIColor, _ selectedBackgroundColor:UIColor,_ selectedTextColor:UIColor ) {
          self.index = index
          self.style = style
+         self.bgColor = backgroundColor
+         self.textColor = textColor
+         self.selectedBgColor = selectedBackgroundColor
+         self.selectedTextColor = selectedTextColor
          super.init(frame: .zero)
          setupUI()
      }
@@ -97,19 +105,21 @@ final class RatingItemView: UIControl {
          case .emoji:
              guard let bundle = AliumBundle.getBundle() else{return}
              imageView.image = UIImage(named:isSelected ? emojiTypes[min(index, emojiTypes.count - 1)] : "line_md_emoji_smile", in:bundle , compatibleWith: nil)?.withRenderingMode(.alwaysTemplate)
-             imageView.tintColor = .black
+//             imageView.tintColor = .black
              label.isHidden = true
 
          case .buttons:
-             layer.cornerRadius = 8
-             layer.borderWidth = 1
+             layer.cornerRadius = 4
+             layer.borderWidth = 0
              label.text = "\(index + 1)"
+             label.textColor = isSelected ? selectedTextColor : textColor
+             layer.backgroundColor = isSelected ? selectedBgColor.cgColor : bgColor.cgColor
              imageView.isHidden = true
          }
      }
 
      private func updateUI() {
-         let tint = isSelected ? tintColor : .systemGray3
+         let tint = isSelected ? selectedBgColor : bgColor
          imageView.tintColor = tint
 //         label.textColor = tint
 //         layer.borderColor = tint?.cgColor

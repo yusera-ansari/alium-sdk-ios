@@ -25,7 +25,7 @@ public struct QuestionSetting: Codable, CustomStringConvertible {
             // Decode safely with defaults
             self.required = try container.decodeIfPresent(Bool.self, forKey: .required) ?? false
             self.otherOption = try container.decodeIfPresent(Bool.self, forKey: .otherOption) ?? false
-            self.ratingType = try container.decodeIfPresent(String.self, forKey: .ratingType) ?? RatingStyle.tick.rawValue
+            self.ratingType = try container.decodeIfPresent(String.self, forKey: .ratingType) ?? RatingStyle.star.rawValue
         }
 
     public var description: String {

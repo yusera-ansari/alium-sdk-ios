@@ -153,7 +153,17 @@ extension OverlayViewController{
         let currQuest = questions[index]
          let type = currQuest.questionSetting.ratingType
         let responseType = RatingStyle(rawValue: type) ?? RatingStyle.star
-        let ratingGroup = RatingGroupView(responseOptions: currQuest.responseOptions, style: responseType)
+        //        --color19 - #fff Rating Button Background Color
+        //        --color20 - #333 Rating Button Text Color
+        //        --color21 - #ffc100 Rating Button selected bg
+        //        --color22 - #333 Rating utton selected text color
+        
+        let backgroundColor : UIColor = .init(hexString: survey.surveyInfo.themeColors.color19)
+        let textColor:UIColor = .init(hexString: survey.surveyInfo.themeColors.color20 )
+        let selectedBg:UIColor = .init(hexString: survey.surveyInfo.themeColors.color21 )
+        let selectedText:UIColor = .init(hexString: survey.surveyInfo.themeColors.color22 )
+        
+        let ratingGroup = RatingGroupView(responseOptions: currQuest.responseOptions, style: responseType, backgroundColor: backgroundColor, textColor: textColor, selectedBackgroundColor: selectedBg,selectedTextColor: selectedText)
         ratingGroup.delegate = self
         ratingGroup.tintColor = .magenta
         
@@ -161,7 +171,7 @@ extension OverlayViewController{
         responseContainer.addSubview(ratingGroup)
         //        ratingGroup.pin(to: responseContainer)}
         ratingGroup.activateConstraints([
-            ratingGroup.widthAnchor.constraint(equalTo: responseContainer.widthAnchor, multiplier: 0.85),
+            ratingGroup.widthAnchor.constraint(equalTo: responseContainer.widthAnchor, multiplier: 0.75),
             ratingGroup.topAnchor.constraint(equalTo: responseContainer.topAnchor),
             ratingGroup.bottomAnchor.constraint(equalTo: responseContainer.bottomAnchor),
             ratingGroup.centerXAnchor.constraint(equalTo: responseContainer.centerXAnchor)

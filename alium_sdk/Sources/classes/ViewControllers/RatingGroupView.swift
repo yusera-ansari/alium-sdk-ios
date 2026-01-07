@@ -10,7 +10,7 @@ final class RatingGroupView: UIView {
      weak var delegate: ALiumInputDelegate?
      private let stackView = UIStackView()
      private var items: [RatingItemView] = []
-
+    
      private let responseOptions: [String]
      private let style: RatingStyle
 
@@ -23,12 +23,12 @@ final class RatingGroupView: UIView {
          return responseOptions[index]
      }
 
-     init(responseOptions: [String], style: RatingStyle) {
+    init(responseOptions: [String], style: RatingStyle, backgroundColor:UIColor, textColor:UIColor, selectedBackgroundColor:UIColor, selectedTextColor:UIColor ) {
          self.responseOptions = responseOptions
          self.style = style
          super.init(frame: .zero)
          setupStack()
-         createItems()
+         createItems(backgroundColor, textColor, selectedBackgroundColor, selectedTextColor)
      }
 
      required init?(coder: NSCoder) {
@@ -37,7 +37,7 @@ final class RatingGroupView: UIView {
 
      private func setupStack() {
          stackView.axis = .horizontal
-         stackView.spacing = 8
+         stackView.spacing = 4
          stackView.alignment = .fill
          stackView.distribution = .fillEqually
          stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -46,9 +46,9 @@ final class RatingGroupView: UIView {
          stackView.pin(to: self)
      }
 
-     private func createItems() {
+     private func createItems( _ backgroundColor:UIColor,_ textColor:UIColor, _ selectedBackgroundColor:UIColor,_ selectedTextColor:UIColor) {
          for index in 0..<responseOptions.count {
-             let item = RatingItemView(index: index, style: style)
+             let item = RatingItemView(index: index, style: style, backgroundColor, textColor, selectedBackgroundColor, selectedTextColor)
              item.addTarget(self, action: #selector(itemSelected(_:)), for: .valueChanged)
              items.append(item)
              stackView.addArrangedSubview(item)

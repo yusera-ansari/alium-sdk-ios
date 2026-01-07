@@ -8,15 +8,26 @@
 import UIKit
 import alium_sdk
 class MainViewController: UIViewController {
-
+    override func viewDidAppear(_ animated: Bool) {
+        Alium.trigger( parameters: SurveyParameters(screenName: "screen3"))
+        Alium.trigger( parameters: SurveyParameters(screenName: "screen3"))
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         print("view did loaddddd")
-        
-        Alium.trigger( parameters: SurveyParameters(screenName: "screen3"))
+        view.backgroundColor = .green
+      
         // Do any additional setup after loading the view.
+        DispatchQueue.main.asyncAfter(deadline: .now()+5, execute: {
+            let controller = SecondViewController()
+            controller.view.backgroundColor = .systemPink
+            self.navigationController?.pushViewController(controller, animated: true)
+        })
     }
-    
+    override func viewWillDisappear(_ animated: Bool) {
+        print("main will disappear")
+        Alium.stop(on: "screen3")
+    }
 
     /*
     // MARK: - Navigation

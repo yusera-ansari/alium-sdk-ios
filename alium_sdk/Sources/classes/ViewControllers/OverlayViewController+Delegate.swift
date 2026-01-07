@@ -47,7 +47,8 @@ extension OverlayViewController : ALiumInputDelegate, FollowupDelegate, Followup
         
     }
     func enableNext(flag: Bool) {
-        enableBtn(nextBtn, flag: (currQuest!.questionSetting.required && flag) ? true : false )
+        print("enable Next: \(flag)")
+        enableBtn(nextBtn, flag: (currQuest!.questionSetting.required) ? flag : true    )
 //        enableBtn(nextBtn, flag: (currQuest!.questionSetting.required  &&  !resp.isEmpty) ? true : false )
     }
     

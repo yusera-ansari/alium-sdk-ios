@@ -65,15 +65,11 @@
 		};
 		EF6324582EE6A31800130691 /* AliumUIKitExampleTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
 			path = AliumUIKitExampleTests;
 			sourceTree = "<group>";
 		};
 		EF6324622EE6A31800130691 /* AliumUIKitExampleUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
 			path = AliumUIKitExampleUITests;
 			sourceTree = "<group>";
 		};
@@ -365,9 +361,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AliumUIKitExample/Pods-AliumUIKitExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AliumUIKitExample/Pods-AliumUIKitExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -382,9 +382,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AliumUIKitExample-AliumUIKitExampleUITests/Pods-AliumUIKitExample-AliumUIKitExampleUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AliumUIKitExample-AliumUIKitExampleUITests/Pods-AliumUIKitExample-AliumUIKitExampleUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

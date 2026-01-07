@@ -1,10 +1,14 @@
 // The Swift Programming Language
 // https://docs.swift.org/swift-book
 import Foundation
-
+public enum AppType:String{
+    case SwiftUI
+    case UIKit
+}
 @MainActor
 public final class Alium{
     static let shared = Alium()
+     var appType:AppType = .UIKit
     private var configUrl:String?
     var surveyConfig:SurveyConfig?=nil;
     private var requestQueue:[AliumRequest] = [];
@@ -12,16 +16,21 @@ public final class Alium{
     public static func testAlium(){
         print("ALium is running!");
     }
-    
+    private init(){
+        AliumUserDefaults.shared.set(for: "customer-id", Util.generateCustomerId())
+    }
     public static func config(key:String){
         guard shared.configUrl == nil else {
             NSLog("config url is already set to: \(shared.configUrl)")
             return;
         }
+        
         shared.configUrl = key;
         shared.fetchConfigJson()
     }
-    
+    public static func setAppType(_ type:AppType){
+        Alium.shared.appType = type
+    }
     public static func trigger( parameters:SurveyParameters){
         guard shared.configUrl != nil else{return}
         NSLog("appending trigger request...")
