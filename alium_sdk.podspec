@@ -136,6 +136,6 @@ spec.platform     = :ios, "13.0"
 
 
   spec.resource_bundles = {
-    "alium_sdk" => ["alium_sdk/Assets.xcassets"]
+    "alium" => ["alium_sdk/AliumAssets.xcassets"]
   }
 end

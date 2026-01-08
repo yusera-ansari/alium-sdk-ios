@@ -11,7 +11,6 @@ let package = Package(
         .library(
             name: "alium_sdk",
             targets: ["alium_sdk"]),
-
     ],
     
     targets: [
@@ -20,14 +19,19 @@ let package = Package(
         .target(
             name: "alium_sdk",
             path: "alium_sdk",
+            exclude: [
+                "../AliumSwiftUIExample",
+                "../AliumUIKitExample",
+                "../LICENSE",
+                "../alium_sdk.podspec"
+            ],
+               sources: [
+                   "Sources/Classes"
+               ],
+           
             resources: [
-                .process("alium_sdk/Assets.xcassets")
+                .process("AliumAssets.xcassets")
             ]
-        
-        ),
-        .testTarget(
-            name: "alium-sdk-iosTests",
-            dependencies: ["alium_sdk"]
         ),
         
     ]

@@ -7,9 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C5474C092D167B81275A929 /* Pods_AliumUIKitExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBCFF4C8339D72D25CFEBF37 /* Pods_AliumUIKitExample.framework */; };
-		610598F96EC082D47F9CE2A9 /* Pods_AliumUIKitExample_AliumUIKitExampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A416F5B1F924A7B76BAC0E6 /* Pods_AliumUIKitExample_AliumUIKitExampleUITests.framework */; };
-		69E04E8DC74CFEF1D60C8793 /* Pods_AliumUIKitExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDBF3277D03656E1A6038B97 /* Pods_AliumUIKitExampleTests.framework */; };
+		EF5BE9ED2F0FD4F6004F1AB7 /* alium_sdk in Frameworks */ = {isa = PBXBuildFile; productRef = EF5BE9EC2F0FD4F6004F1AB7 /* alium_sdk */; };
+		EF5BE9EF2F0FD610004F1AB7 /* alium_sdk in Frameworks */ = {isa = PBXBuildFile; productRef = EF5BE9EE2F0FD610004F1AB7 /* alium_sdk */; };
+		EF5BE9F22F0FD62B004F1AB7 /* alium_sdk in Frameworks */ = {isa = PBXBuildFile; productRef = EF5BE9F12F0FD62B004F1AB7 /* alium_sdk */; };
+		EF5BE9F52F0FD695004F1AB7 /* alium_sdk in Frameworks */ = {isa = PBXBuildFile; productRef = EF5BE9F42F0FD695004F1AB7 /* alium_sdk */; };
+		EF5BE9F82F0FD6BD004F1AB7 /* alium_sdk in Frameworks */ = {isa = PBXBuildFile; productRef = EF5BE9F72F0FD6BD004F1AB7 /* alium_sdk */; };
+		EF5BE9FB2F0FD7D1004F1AB7 /* alium_sdk in Frameworks */ = {isa = PBXBuildFile; productRef = EF5BE9FA2F0FD7D1004F1AB7 /* alium_sdk */; };
+		EF5BEA462F0FDB08004F1AB7 /* alium_sdk in Frameworks */ = {isa = PBXBuildFile; productRef = EF5BEA452F0FDB08004F1AB7 /* alium_sdk */; };
+		EF5BEA492F0FDB74004F1AB7 /* alium_sdk in Frameworks */ = {isa = PBXBuildFile; productRef = EF5BEA482F0FDB74004F1AB7 /* alium_sdk */; };
+		EF5BEA642F0FDC38004F1AB7 /* alium_sdk in Frameworks */ = {isa = PBXBuildFile; productRef = EF5BEA632F0FDC38004F1AB7 /* alium_sdk */; };
+		EF5BEA7F2F0FDD20004F1AB7 /* alium_sdk in Frameworks */ = {isa = PBXBuildFile; productRef = EF5BEA7E2F0FDD20004F1AB7 /* alium_sdk */; };
+		EF5BEA9B2F0FDF1B004F1AB7 /* alium_sdk in Frameworks */ = {isa = PBXBuildFile; productRef = EF5BEA9A2F0FDF1B004F1AB7 /* alium_sdk */; };
+		EF5BEAB62F0FDF7A004F1AB7 /* alium_sdk in Frameworks */ = {isa = PBXBuildFile; productRef = EF5BEAB52F0FDF7A004F1AB7 /* alium_sdk */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,18 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2EFDD2B4396BE8204570C74C /* Pods-AliumUIKitExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AliumUIKitExampleTests.release.xcconfig"; path = "Target Support Files/Pods-AliumUIKitExampleTests/Pods-AliumUIKitExampleTests.release.xcconfig"; sourceTree = "<group>"; };
-		4AA3B24FEF3E6B1D207F3161 /* Pods-AliumUIKitExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AliumUIKitExample.release.xcconfig"; path = "Target Support Files/Pods-AliumUIKitExample/Pods-AliumUIKitExample.release.xcconfig"; sourceTree = "<group>"; };
-		5F522B78F74605348497F153 /* Pods-AliumUIKitExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AliumUIKitExample.debug.xcconfig"; path = "Target Support Files/Pods-AliumUIKitExample/Pods-AliumUIKitExample.debug.xcconfig"; sourceTree = "<group>"; };
-		7A416F5B1F924A7B76BAC0E6 /* Pods_AliumUIKitExample_AliumUIKitExampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AliumUIKitExample_AliumUIKitExampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AB6686DF19949C357616A376 /* Pods-AliumUIKitExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AliumUIKitExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-AliumUIKitExampleTests/Pods-AliumUIKitExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
-		B7F1D76BE6AA412B4F14F4D6 /* Pods-AliumUIKitExample-AliumUIKitExampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AliumUIKitExample-AliumUIKitExampleUITests.debug.xcconfig"; path = "Target Support Files/Pods-AliumUIKitExample-AliumUIKitExampleUITests/Pods-AliumUIKitExample-AliumUIKitExampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		BDBF3277D03656E1A6038B97 /* Pods_AliumUIKitExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AliumUIKitExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EBCFF4C8339D72D25CFEBF37 /* Pods_AliumUIKitExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AliumUIKitExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF63243F2EE6A31200130691 /* AliumUIKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AliumUIKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF6324552EE6A31800130691 /* AliumUIKitExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AliumUIKitExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF63245F2EE6A31800130691 /* AliumUIKitExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AliumUIKitExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F46CA0126E2BF64B4D1F8483 /* Pods-AliumUIKitExample-AliumUIKitExampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AliumUIKitExample-AliumUIKitExampleUITests.release.xcconfig"; path = "Target Support Files/Pods-AliumUIKitExample-AliumUIKitExampleUITests/Pods-AliumUIKitExample-AliumUIKitExampleUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -80,7 +80,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C5474C092D167B81275A929 /* Pods_AliumUIKitExample.framework in Frameworks */,
+				EF5BE9EF2F0FD610004F1AB7 /* alium_sdk in Frameworks */,
+				EF5BE9ED2F0FD4F6004F1AB7 /* alium_sdk in Frameworks */,
+				EF5BEAB62F0FDF7A004F1AB7 /* alium_sdk in Frameworks */,
+				EF5BEA642F0FDC38004F1AB7 /* alium_sdk in Frameworks */,
+				EF5BEA492F0FDB74004F1AB7 /* alium_sdk in Frameworks */,
+				EF5BE9FB2F0FD7D1004F1AB7 /* alium_sdk in Frameworks */,
+				EF5BE9F52F0FD695004F1AB7 /* alium_sdk in Frameworks */,
+				EF5BEA9B2F0FDF1B004F1AB7 /* alium_sdk in Frameworks */,
+				EF5BEA462F0FDB08004F1AB7 /* alium_sdk in Frameworks */,
+				EF5BE9F82F0FD6BD004F1AB7 /* alium_sdk in Frameworks */,
+				EF5BEA7F2F0FDD20004F1AB7 /* alium_sdk in Frameworks */,
+				EF5BE9F22F0FD62B004F1AB7 /* alium_sdk in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +99,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69E04E8DC74CFEF1D60C8793 /* Pods_AliumUIKitExampleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,24 +106,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				610598F96EC082D47F9CE2A9 /* Pods_AliumUIKitExample_AliumUIKitExampleUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D9A090100E0BD27366ECFEE1 /* Pods */ = {
+		EF5BE9EA2F0FD3F2004F1AB7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5F522B78F74605348497F153 /* Pods-AliumUIKitExample.debug.xcconfig */,
-				4AA3B24FEF3E6B1D207F3161 /* Pods-AliumUIKitExample.release.xcconfig */,
-				B7F1D76BE6AA412B4F14F4D6 /* Pods-AliumUIKitExample-AliumUIKitExampleUITests.debug.xcconfig */,
-				F46CA0126E2BF64B4D1F8483 /* Pods-AliumUIKitExample-AliumUIKitExampleUITests.release.xcconfig */,
-				AB6686DF19949C357616A376 /* Pods-AliumUIKitExampleTests.debug.xcconfig */,
-				2EFDD2B4396BE8204570C74C /* Pods-AliumUIKitExampleTests.release.xcconfig */,
 			);
-			path = Pods;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		EF6324362EE6A31200130691 = {
@@ -123,8 +126,7 @@
 				EF6324582EE6A31800130691 /* AliumUIKitExampleTests */,
 				EF6324622EE6A31800130691 /* AliumUIKitExampleUITests */,
 				EF6324402EE6A31200130691 /* Products */,
-				D9A090100E0BD27366ECFEE1 /* Pods */,
-				F947E3D83156BE130AC07AAA /* Frameworks */,
+				EF5BE9EA2F0FD3F2004F1AB7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,16 +140,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F947E3D83156BE130AC07AAA /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				EBCFF4C8339D72D25CFEBF37 /* Pods_AliumUIKitExample.framework */,
-				7A416F5B1F924A7B76BAC0E6 /* Pods_AliumUIKitExample_AliumUIKitExampleUITests.framework */,
-				BDBF3277D03656E1A6038B97 /* Pods_AliumUIKitExampleTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -155,11 +147,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF6324682EE6A31800130691 /* Build configuration list for PBXNativeTarget "AliumUIKitExample" */;
 			buildPhases = (
-				22A90675D2C2A771AF9F9771 /* [CP] Check Pods Manifest.lock */,
 				EF63243B2EE6A31200130691 /* Sources */,
 				EF63243C2EE6A31200130691 /* Frameworks */,
 				EF63243D2EE6A31200130691 /* Resources */,
-				B46A031E8DA34E63F7B824DE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -177,7 +167,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF63246D2EE6A31800130691 /* Build configuration list for PBXNativeTarget "AliumUIKitExampleTests" */;
 			buildPhases = (
-				96B93749F32CBF0C55472CA9 /* [CP] Check Pods Manifest.lock */,
 				EF6324512EE6A31800130691 /* Sources */,
 				EF6324522EE6A31800130691 /* Frameworks */,
 				EF6324532EE6A31800130691 /* Resources */,
@@ -199,11 +188,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF6324702EE6A31800130691 /* Build configuration list for PBXNativeTarget "AliumUIKitExampleUITests" */;
 			buildPhases = (
-				AFFAC749C7E686CFAAD78F78 /* [CP] Check Pods Manifest.lock */,
 				EF63245B2EE6A31800130691 /* Sources */,
 				EF63245C2EE6A31800130691 /* Frameworks */,
 				EF63245D2EE6A31800130691 /* Resources */,
-				CDA05F9C306F2739B894620D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -250,6 +237,9 @@
 			);
 			mainGroup = EF6324362EE6A31200130691;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				EF5BEAB42F0FDF7A004F1AB7 /* XCLocalSwiftPackageReference "../../alium-sdk-ios" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = EF6324402EE6A31200130691 /* Products */;
 			projectDirPath = "";
@@ -285,117 +275,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		22A90675D2C2A771AF9F9771 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AliumUIKitExample-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		96B93749F32CBF0C55472CA9 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AliumUIKitExampleTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AFFAC749C7E686CFAAD78F78 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AliumUIKitExample-AliumUIKitExampleUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B46A031E8DA34E63F7B824DE /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AliumUIKitExample/Pods-AliumUIKitExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AliumUIKitExample/Pods-AliumUIKitExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AliumUIKitExample/Pods-AliumUIKitExample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CDA05F9C306F2739B894620D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AliumUIKitExample-AliumUIKitExampleUITests/Pods-AliumUIKitExample-AliumUIKitExampleUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AliumUIKitExample-AliumUIKitExampleUITests/Pods-AliumUIKitExample-AliumUIKitExampleUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AliumUIKitExample-AliumUIKitExampleUITests/Pods-AliumUIKitExample-AliumUIKitExampleUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EF63243B2EE6A31200130691 /* Sources */ = {
@@ -437,7 +316,6 @@
 /* Begin XCBuildConfiguration section */
 		EF6324692EE6A31800130691 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5F522B78F74605348497F153 /* Pods-AliumUIKitExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -468,7 +346,6 @@
 		};
 		EF63246A2EE6A31800130691 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4AA3B24FEF3E6B1D207F3161 /* Pods-AliumUIKitExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -620,7 +497,6 @@
 		};
 		EF63246E2EE6A31800130691 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AB6686DF19949C357616A376 /* Pods-AliumUIKitExampleTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -640,7 +516,6 @@
 		};
 		EF63246F2EE6A31800130691 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2EFDD2B4396BE8204570C74C /* Pods-AliumUIKitExampleTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -660,7 +535,6 @@
 		};
 		EF6324712EE6A31800130691 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B7F1D76BE6AA412B4F14F4D6 /* Pods-AliumUIKitExample-AliumUIKitExampleUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -678,7 +552,6 @@
 		};
 		EF6324722EE6A31800130691 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F46CA0126E2BF64B4D1F8483 /* Pods-AliumUIKitExample-AliumUIKitExampleUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -734,6 +607,64 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		EF5BEAB42F0FDF7A004F1AB7 /* XCLocalSwiftPackageReference "../../alium-sdk-ios" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../../alium-sdk-ios";
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EF5BE9EC2F0FD4F6004F1AB7 /* alium_sdk */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = alium_sdk;
+		};
+		EF5BE9EE2F0FD610004F1AB7 /* alium_sdk */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = alium_sdk;
+		};
+		EF5BE9F12F0FD62B004F1AB7 /* alium_sdk */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = alium_sdk;
+		};
+		EF5BE9F42F0FD695004F1AB7 /* alium_sdk */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = alium_sdk;
+		};
+		EF5BE9F72F0FD6BD004F1AB7 /* alium_sdk */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = alium_sdk;
+		};
+		EF5BE9FA2F0FD7D1004F1AB7 /* alium_sdk */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = alium_sdk;
+		};
+		EF5BEA452F0FDB08004F1AB7 /* alium_sdk */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = alium_sdk;
+		};
+		EF5BEA482F0FDB74004F1AB7 /* alium_sdk */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = alium_sdk;
+		};
+		EF5BEA632F0FDC38004F1AB7 /* alium_sdk */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = alium_sdk;
+		};
+		EF5BEA7E2F0FDD20004F1AB7 /* alium_sdk */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = alium_sdk;
+		};
+		EF5BEA9A2F0FDF1B004F1AB7 /* alium_sdk */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = alium_sdk;
+		};
+		EF5BEAB52F0FDF7A004F1AB7 /* alium_sdk */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = alium_sdk;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EF6324372EE6A31200130691 /* Project object */;
 }

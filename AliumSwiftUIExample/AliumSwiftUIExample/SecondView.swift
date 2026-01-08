@@ -12,7 +12,7 @@ struct SecondView:View{
             Text("Second View")
         }.onAppear{
             print("second view appeared")
-//            Alium.trigger(parameters: SurveyParameters(screenName: "screen3"))
+            Alium.trigger(parameters: SurveyParameters(screenName: "screen3"))
         }
       
         .onDisappear{

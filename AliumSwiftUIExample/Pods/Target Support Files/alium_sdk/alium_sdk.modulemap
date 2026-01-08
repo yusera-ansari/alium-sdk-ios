@@ -1,6 +1,0 @@
-framework module alium_sdk {
-  umbrella header "alium_sdk-umbrella.h"
-
-  export *
-  module * { export * }
-}

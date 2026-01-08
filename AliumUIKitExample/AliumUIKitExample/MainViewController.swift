@@ -11,6 +11,7 @@ class MainViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         Alium.trigger( parameters: SurveyParameters(screenName: "screen3"))
         Alium.trigger( parameters: SurveyParameters(screenName: "screen3"))
+       
     }
     override func viewDidLoad() {
         super.viewDidLoad()
